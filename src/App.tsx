@@ -6,6 +6,7 @@ export function App() {
   return (
     <div>
       <h1>Hello World</h1>
+      <p>Contet Test</p>
       <button onClick={toggleTheme}>Toggle Theme</button>
     </div>
   );
