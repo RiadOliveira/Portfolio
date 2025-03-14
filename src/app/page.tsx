@@ -1,4 +1,6 @@
-export function App() {
+'use client';
+
+export default function Home() {
   function toggleTheme() {
     document.documentElement.classList.toggle('dark');
   }
