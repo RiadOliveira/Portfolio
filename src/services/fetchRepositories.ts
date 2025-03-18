@@ -1,5 +1,5 @@
-import { GITHUB_URLS } from 'constants/urls';
 import { USER } from 'constants/user';
+import { GITHUB_URLS } from 'constants/requests';
 import { APIRepository } from 'types/APIRepository';
 import { cachedJSONFetch } from 'utils/cachedJSONFetch';
 
