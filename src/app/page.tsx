@@ -1,6 +1,8 @@
-'use client';
+import { getPortfolioData } from 'services/getPortfolioData';
 
-export default function Home() {
+export default async function Home() {
+  const portfolioData = await getPortfolioData();
+
   function toggleTheme() {
     document.documentElement.classList.toggle('dark');
   }
@@ -9,7 +11,6 @@ export default function Home() {
     <div>
       <h1>Hello World</h1>
       <p>Contet Test</p>
-      <button onClick={toggleTheme}>Toggle Theme</button>
     </div>
   );
 }
