@@ -2,7 +2,7 @@ import { APIRepository } from './APIRepository';
 
 export type DisplayData = {
   coverImage: string;
-  technologies: string[];
+  technologyIds: number[];
 };
 
 export type RepositoryData = Omit<APIRepository, 'owner'> & {
