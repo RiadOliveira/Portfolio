@@ -5,6 +5,7 @@
 @theme {
   --color-primary: #4056f4;
   --color-secondary: #e71d36;
+  --color-tertiary: #fcb045;
   --color-light: #f0f7f4;
   --color-dark: #0e1116;
 
@@ -20,4 +21,27 @@
   p {
     @apply font-secondary;
   }
+}
+
+@keyframes animate-gradient {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-tertiary) 100%
+  );
+  background-size: 200% 200%;
+  animation: animate-gradient 5s ease-in-out infinite;
+
+  box-shadow: 0 -2px 16px var(--color-secondary);
 }

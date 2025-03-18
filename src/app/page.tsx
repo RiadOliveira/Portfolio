@@ -1,3 +1,4 @@
+import { Header } from 'components/Header';
 import { getPortfolioData } from 'services/getPortfolioData';
 
 export default async function Home() {
@@ -8,9 +9,13 @@ export default async function Home() {
   }
 
   return (
-    <div>
-      <h1>Hello World</h1>
-      <p>Contet Test</p>
+    <div className="flex flex-col items-center">
+      <Header />
+
+      <main>
+        <h1>Hello World</h1>
+        <p>Contet Test</p>
+      </main>
     </div>
   );
 }
