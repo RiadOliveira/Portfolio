@@ -51,7 +51,7 @@ export const USER: UserData = {
     },
     {
       Icon: FaWhatsapp,
-      href: 'https://web.whatsapp.com/send?phone=+55(84)9.8884-5152',
+      href: 'https://api.whatsapp.com/send?phone=5584988845152',
       alt: 'WhatsApp',
       colorStyles:
         'hover:bg-green-500 hover:border-green-600 active:bg-green-500 active:border-green-600',
