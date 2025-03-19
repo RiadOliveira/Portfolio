@@ -14,8 +14,13 @@
 }
 
 @layer base {
-  html {
-    @apply bg-light dark:bg-dark font-primary text-dark dark:text-light transition-colors duration-300;
+  html,
+  body {
+    @apply w-full h-full font-primary;
+  }
+
+  main {
+    @apply bg-light dark:bg-dark text-dark dark:text-light transition-colors duration-300;
   }
 
   p {
@@ -33,7 +38,7 @@
   }
 }
 
-.bg-gradient {
+.animated-gradient {
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
@@ -42,6 +47,4 @@
   );
   background-size: 200% 200%;
   animation: animate-gradient 5s ease-in-out infinite;
-
-  box-shadow: 0 -2px 16px var(--color-secondary);
 }

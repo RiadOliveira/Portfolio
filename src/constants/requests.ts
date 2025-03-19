@@ -7,4 +7,5 @@ export const DEFAULT_NEXT_FETCH_CONFIG: NextFetchRequestConfig = {
 export const GITHUB_URLS = {
   API: 'https://api.github.com/users',
   CONTENT: 'https://raw.githubusercontent.com',
+  AVATAR: 'https://avatars.githubusercontent.com/u',
 } as const;

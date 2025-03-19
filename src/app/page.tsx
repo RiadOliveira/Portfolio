@@ -1,21 +1,15 @@
 import { Header } from 'components/Header';
-import { getPortfolioData } from 'services/getPortfolioData';
+import { Main } from 'components/Main';
 
 export default async function Home() {
-  const portfolioData = await getPortfolioData();
-
   function toggleTheme() {
     document.documentElement.classList.toggle('dark');
   }
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col w-full h-full animated-gradient">
       <Header />
-
-      <main>
-        <h1>Hello World</h1>
-        <p>Contet Test</p>
-      </main>
+      <Main />
     </div>
   );
 }
