@@ -7,13 +7,15 @@ import SocialLink from './SocialLink';
 export function Header() {
   return (
     <header className="flex justify-center gap-4 pt-7 pb-8">
-      <div className="relative w-[6.4rem] h-[6.4rem]">
+      <div className="relative w-[6.4rem] h-[6.4rem] sm:w-40 sm:h-40">
         <Image
           src={`${GITHUB_URLS.AVATAR}/${USER.ID}?v=4`}
           alt={USER.FULL_NAME}
-          quality={100}
+          sizes="(max-width: 40rem) 6.4rem, 10rem"
           className="rounded-2xl"
-          fill={true}
+          quality={100}
+          priority
+          fill
         />
       </div>
 

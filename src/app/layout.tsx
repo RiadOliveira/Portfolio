@@ -1,9 +1,9 @@
 import './globals.css';
 
+export { metadata } from 'constants/metadata';
+
 import type { DefaultProps } from 'types/DefaultProps';
 import { POPPINS, SPACE_GROTESK } from 'constants/fonts';
-
-export { metadata } from 'constants/metadata';
 
 export default function RootLayout({ children }: DefaultProps) {
   return (
