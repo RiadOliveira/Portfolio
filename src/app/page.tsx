@@ -1,13 +1,9 @@
 import { Header } from 'components/header';
-import { Main } from 'components/Main';
+import { Main } from 'components/main';
 
-export default async function Home() {
-  function toggleTheme() {
-    document.documentElement.classList.toggle('dark');
-  }
-
+export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full animated-gradient">
+    <div className="p-2.5 animated-gradient">
       <Header />
       <Main />
     </div>

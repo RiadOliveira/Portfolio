@@ -1,7 +1,7 @@
 import { IconType } from 'react-icons';
-import { BiLogoGmail } from 'react-icons/bi';
 import { FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { TbFileCv } from 'react-icons/tb';
 
 export type SocialData = {
   Icon: IconType;
@@ -23,6 +23,13 @@ export const USER: UserData = {
   FULL_NAME: 'Ríad Oliveira de Morais',
   SOCIALS: [
     {
+      Icon: TbFileCv,
+      href: 'https://drive.google.com/file/d/1UsKq6PGbjTbgeK2aUvhPzoCNKlDdSBoC/view?usp=sharing',
+      alt: 'CV',
+      colorStyles:
+        'hover:bg-purple-500 hover:border-purple-600 active:bg-purple-500 active:border-purple-600',
+    },
+    {
       Icon: FaGithub,
       href: 'https://github.com/RiadOliveira',
       alt: 'Github',
@@ -42,12 +49,6 @@ export const USER: UserData = {
       alt: 'E-mail',
       colorStyles:
         'hover:bg-orange-500 hover:border-orange-600 active:bg-orange-500 active:border-orange-600',
-    },
-    {
-      Icon: BiLogoGmail,
-      href: 'mailto:riad.oliveira@gmail.com',
-      alt: 'Gmail',
-      colorStyles: 'hover:bg-red-500 hover:border-red-600 active:bg-red-500 active:border-red-600',
     },
     {
       Icon: FaWhatsapp,

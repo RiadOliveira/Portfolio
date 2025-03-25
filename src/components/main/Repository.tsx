@@ -1,7 +1,7 @@
-import { USER } from 'constants/user';
 import { RepositoryData } from 'types/RepositoryData';
-import { ImageContainer } from './ImageContainer';
+import { ImageContainer } from '../ImageContainer';
 import { FaNodeJs, FaReact } from 'react-icons/fa';
+import { USER } from 'constants/user';
 
 const EXAMPLE_REPOSITORY: RepositoryData = {
   id: 0,
@@ -14,13 +14,13 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
   },
 } as const;
 
-export async function Main() {
+export function Repository() {
   return (
-    <main className="w-[calc(100%-1rem)] flex flex-col flex-1 items-center mb-2 mx-auto py-3 px-6 rounded-md">
+    <div className="p-2 border-2 border-zinc-400 rounded-md">
       <div className="flex w-full items-center justify-between mb-4">
         <h1 className="text-lg">{EXAMPLE_REPOSITORY.name}</h1>
 
-        <div className="flex gap-2 border-2 border-zinc-400 p-2 rounded">
+        <div className="flex gap-2">
           <FaReact size={24} color="blue" />
           <FaNodeJs size={24} color="green" />
         </div>
@@ -34,6 +34,6 @@ export async function Main() {
       />
 
       <p>{EXAMPLE_REPOSITORY.description}</p>
-    </main>
+    </div>
   );
 }

@@ -7,7 +7,7 @@
   --color-secondary: #e71d36;
   --color-tertiary: #fcb045;
   --color-light: #f0f7f4;
-  --color-dark: #0e1116;
+  --color-dark: #071e22;
 
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Space Grotesk', sans-serif;
@@ -25,6 +25,10 @@
 
   p {
     @apply font-secondary;
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 }
 
