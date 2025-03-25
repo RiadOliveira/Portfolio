@@ -24,7 +24,7 @@
   }
 
   p {
-    @apply font-secondary;
+    @apply font-secondary text-sm;
   }
 
   button {

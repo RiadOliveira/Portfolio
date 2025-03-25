@@ -16,9 +16,9 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
 
 export function Repository() {
   return (
-    <div className="p-2 border-2 border-zinc-400 rounded-md">
-      <div className="flex w-full items-center justify-between mb-4">
-        <h1 className="text-lg">{EXAMPLE_REPOSITORY.name}</h1>
+    <div className="pt-3 border-2 border-zinc-400 rounded-md space-y-2">
+      <div className="flex px-3 items-center justify-between">
+        <h1>{EXAMPLE_REPOSITORY.name}</h1>
 
         <div className="flex gap-2">
           <FaReact size={24} color="blue" />
@@ -26,14 +26,14 @@ export function Repository() {
         </div>
       </div>
 
+      <p className="px-3 text-justify">{EXAMPLE_REPOSITORY.description}</p>
+
       <ImageContainer
-        className="rounded-xl overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
+        className="rounded-b-sm overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
         src={`https://user-images.githubusercontent.com/${USER.ID}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
         alt={EXAMPLE_REPOSITORY.name}
         sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}
       />
-
-      <p>{EXAMPLE_REPOSITORY.description}</p>
     </div>
   );
 }
