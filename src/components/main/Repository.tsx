@@ -20,7 +20,7 @@ export function Repository() {
   return (
     <Link
       href="/"
-      className="block pb-4 text-light rounded-lg space-y-2 bg-gradient-to-br from-48% from-emerald-600/80"
+      className="block pb-4 text-light rounded-lg space-y-2 bg-gradient-to-br from-60% from-emerald-600/80"
       style={{ boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.4)' }}
     >
       <ImageContainer

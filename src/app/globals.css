@@ -20,7 +20,7 @@
   }
 
   main {
-    @apply bg-light/40 dark:bg-dark/40 text-dark dark:text-light transition-colors duration-300;
+    @apply bg-light/35 dark:bg-dark/35 text-dark dark:text-light transition-colors duration-300;
   }
 
   p {
