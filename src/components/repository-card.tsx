@@ -7,7 +7,7 @@ import { USER } from 'constants/user';
 
 const EXAMPLE_REPOSITORY: RepositoryData = {
   id: 0,
-  name: 'Tradelous Desktop',
+  name: 'Tradelous-Desktop',
   description:
     'An app developed in order to provide an easy way to manage stocks and sales of varied companies.',
   displayData: {
@@ -19,7 +19,7 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
 export function RepositoryCard() {
   return (
     <Link
-      href="/"
+      href={`/${EXAMPLE_REPOSITORY.name}`}
       className="block pb-4 text-light rounded-md space-y-2 bg-gradient-to-br from-55% from-emerald-600/80"
       style={{ boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.4)' }}
     >

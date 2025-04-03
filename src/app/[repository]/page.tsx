@@ -1,9 +1,15 @@
 import { MainTitle } from 'components/main-title';
 
-export default function RepositoryView() {
+type Params = {
+  params: Promise<{ repository: string }>;
+};
+
+export default async function RepositoryView({ params }: Params) {
+  const { repository } = await params;
+
   return (
     <>
-      <MainTitle>Repository Name</MainTitle>
+      <MainTitle>{repository}</MainTitle>
     </>
   );
 }
