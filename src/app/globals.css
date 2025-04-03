@@ -19,10 +19,6 @@
     @apply w-full h-full font-primary;
   }
 
-  main {
-    @apply bg-light/35 dark:bg-dark/35 text-dark dark:text-light transition-colors duration-300;
-  }
-
   p {
     @apply font-secondary text-sm;
   }

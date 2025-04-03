@@ -1,7 +1,7 @@
 import { GITHUB_URLS } from 'constants/requests';
 import { USER } from 'constants/user';
-import { SocialLink } from './SocialLink';
-import { ImageContainer } from 'components/ImageContainer';
+import { SocialLink } from './social-link';
+import { ImageContainer } from '../image-container';
 
 export function Header() {
   return (
