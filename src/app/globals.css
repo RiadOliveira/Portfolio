@@ -16,7 +16,7 @@
 @layer base {
   html,
   body {
-    @apply w-full h-full font-primary;
+    @apply w-full h-full font-primary text-light;
   }
 
   p {

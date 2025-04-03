@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <MainTitle>Portfolio Projects</MainTitle>
 
-      <section className="px-2.5 space-y-6">
+      <section className="pt-5.5 px-2.5 space-y-6">
         <RepositoryCard />
         <RepositoryCard />
         <RepositoryCard />

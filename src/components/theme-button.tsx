@@ -16,7 +16,7 @@ export function ThemeButton() {
     <button
       type="button"
       onClick={handleThemeToggle}
-      className="size-8.5 p-1 rounded-full text-light hover:bg-dark/85 dark:hover:bg-light/85 dark:hover:text-dark active:bg-dark/85 dark:active:bg-light/85 dark:active:text-dark duration-300"
+      className="size-8.5 p-1 rounded-full hover:bg-dark/85 dark:hover:bg-light/85 dark:hover:text-dark active:bg-dark/85 dark:active:bg-light/85 dark:active:text-dark duration-300"
     >
       {darkTheme ? (
         <MdOutlineLightMode className="size-full" />

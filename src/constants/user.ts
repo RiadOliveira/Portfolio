@@ -11,17 +11,17 @@ export type SocialData = {
 };
 
 type UserData = {
-  ID: number;
-  LOGIN: string;
-  FULL_NAME: string;
-  SOCIALS: SocialData[];
+  id: number;
+  login: string;
+  fullName: string;
+  socials: SocialData[];
 };
 
 export const USER: UserData = {
-  ID: 69125013,
-  LOGIN: 'RiadOliveira',
-  FULL_NAME: 'Ríad Oliveira de Morais',
-  SOCIALS: [
+  id: 69125013,
+  login: 'RiadOliveira',
+  fullName: 'Ríad Oliveira de Morais',
+  socials: [
     {
       Icon: TbFileCv,
       href: 'https://drive.google.com/file/d/1UsKq6PGbjTbgeK2aUvhPzoCNKlDdSBoC/view?usp=sharing',
