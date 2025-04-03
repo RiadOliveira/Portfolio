@@ -16,15 +16,15 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
   },
 } as const;
 
-export function ProjectCard() {
+export function RepositoryCard() {
   return (
     <Link
       href="/"
-      className="block pb-4 text-light rounded-lg space-y-2 bg-gradient-to-br from-55% from-emerald-600/80"
+      className="block pb-4 text-light rounded-md space-y-2 bg-gradient-to-br from-55% from-emerald-600/80"
       style={{ boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.4)' }}
     >
       <ImageContainer
-        className="rounded-t-lg overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
+        className="rounded-t-md overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
         src={`https://user-images.githubusercontent.com/${USER.ID}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
         alt={EXAMPLE_REPOSITORY.name}
         sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}
