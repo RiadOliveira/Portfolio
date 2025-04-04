@@ -1,8 +1,10 @@
-import { ImageContainer } from 'components/image-container';
-import { MainTitle } from 'components/main-title';
+import Link from 'next/link';
+
+import { ImageContainer } from 'components/utilities/image-container';
+import { MainTitle } from 'components/utilities/main-title';
 import { USER } from 'constants/user';
 import { RepositoryData } from 'types/RepositoryData';
-import { TechnologyBadge } from 'components/technology-badge';
+import { TechnologyBadge } from 'components/utilities/technology-badge';
 
 type Params = {
   params: Promise<{ repository: string }>;
@@ -26,17 +28,17 @@ export default async function RepositoryView({ params }: Params) {
     <>
       <MainTitle>{repository}</MainTitle>
 
-      <section className="relative pt-3 flex-1">
+      <section className="relative pt-2 flex-1">
         <p className="text-base text-justify mb-4">{EXAMPLE_REPOSITORY.description}</p>
 
         <ImageContainer
-          className="border-x-2 border-t-2 border-light/40 shadow-md rounded-t-md overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
+          className="bg-emerald-600/60 border-t-1 border-x-1 border-light/40 shadow-md rounded-t-md overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
           src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
           alt={EXAMPLE_REPOSITORY.name}
           sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}
         />
 
-        <div className="shadow-md flex flex-wrap border-x-2 border-b-2 border-light/40 rounded-b-md py-3 gap-2 justify-center">
+        <div className="bg-emerald-600/60 shadow-md flex flex-wrap border-x-1 border-b-1 border-light/40 rounded-b-md py-3 gap-2 justify-center">
           <TechnologyBadge technology="React" />
           <TechnologyBadge technology="NodeJs" />
           <TechnologyBadge technology="Expo" />
@@ -45,8 +47,9 @@ export default async function RepositoryView({ params }: Params) {
         </div>
 
         <div className="absolute bottom-0 w-full flex justify-between">
-          <button>Go Back</button>
-          <button>Redirect to Github</button>
+          <Link href="/" className="flex justify-center py-2.5 gap-3 w-5/12 rounded bg-dark">
+            Go Back
+          </Link>
         </div>
       </section>
     </>

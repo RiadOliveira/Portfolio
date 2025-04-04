@@ -1,6 +1,6 @@
 import { USER } from 'constants/user';
 import { SocialLink } from './social-link';
-import { ImageContainer } from '../image-container';
+import { ImageContainer } from '../utilities/image-container';
 
 export function Header() {
   return (

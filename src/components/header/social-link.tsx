@@ -1,10 +1,10 @@
 import { SocialData } from 'constants/user';
 import { mergeStyles } from 'utils/mergeStyles';
 
-export function SocialLink({ Icon, href, alt, colorStyles }: SocialData) {
+export function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
   return (
     <a
-      key={alt}
+      key={name}
       href={href}
       target="_blank"
       className={mergeStyles([
