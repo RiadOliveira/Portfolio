@@ -36,13 +36,13 @@ export default async function RepositoryView({ params }: Params) {
           <p className="text-base text-justify mb-4.5">{EXAMPLE_REPOSITORY.description}</p>
 
           <ImageContainer
-            className="bg-emerald-500/60 border-t-1 border-x-1 border-light/40 shadow-md rounded-t-md overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
+            className="bg-emerald-500/45 border-t-1 border-x-1 border-light/40 shadow-md rounded-t-md overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
             src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
             alt={EXAMPLE_REPOSITORY.name}
             sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}
           />
 
-          <div className="bg-emerald-500/60 shadow-md flex flex-wrap border-x-1 border-b-1 border-light/40 rounded-b-md py-3 gap-2 justify-center">
+          <div className="bg-emerald-500/45 shadow-md flex flex-wrap border-x-1 border-b-1 border-light/40 rounded-b-md py-3 gap-2 justify-center">
             <TechnologyBadge technology="React" />
             <TechnologyBadge technology="NodeJs" />
             <TechnologyBadge technology="Expo" />
@@ -51,7 +51,7 @@ export default async function RepositoryView({ params }: Params) {
           </div>
         </div>
 
-        <div className="flex justify-end gap-6 sm:justify-center sm:pt-10">
+        <div className="flex justify-end gap-6 sm:justify-center sm:pt-8">
           <Link
             href="/"
             className="size-10 p-2 rounded-md hover:bg-light/30 active:bg-light/30 transition-colors duration-400"

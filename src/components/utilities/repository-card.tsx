@@ -20,7 +20,7 @@ export function RepositoryCard() {
   return (
     <Link
       href={`/${EXAMPLE_REPOSITORY.name}`}
-      className="shadow-md block pb-4 rounded-md space-y-2 bg-gradient-to-br from-55% from-emerald-600/80"
+      className="shadow-md block pb-4 rounded-md space-y-2 bg-gradient-to-br from-70% from-emerald-600/60"
     >
       <ImageContainer
         className="shadow rounded-t-md overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
