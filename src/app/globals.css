@@ -16,7 +16,7 @@
 @layer base {
   html,
   body {
-    @apply w-full h-full font-primary text-light;
+    @apply w-full h-full font-primary text-light overflow-y-scroll;
   }
 
   p,
