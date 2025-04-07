@@ -19,7 +19,8 @@
     @apply w-full h-full font-primary text-light;
   }
 
-  p {
+  p,
+  span {
     @apply font-secondary text-sm;
   }
 
