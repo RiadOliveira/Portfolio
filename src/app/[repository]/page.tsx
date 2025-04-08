@@ -65,6 +65,7 @@ export default async function RepositoryView({ params }: Params) {
 
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href={`https://github.com/RiadOliveira/${EXAMPLE_REPOSITORY.name}`}
             className="shadow bg-gray-800 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200"
           >
