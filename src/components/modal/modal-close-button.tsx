@@ -4,7 +4,7 @@ import { MODAL_CLASSES, MODAL_ID } from 'constants/modal';
 import { useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
 
-export function ReadmeCloseButton() {
+export function ModalCloseButton() {
   useEffect(() => {
     const readmeModal = document.getElementById(MODAL_ID) as HTMLDialogElement;
 

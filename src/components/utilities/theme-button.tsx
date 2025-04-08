@@ -1,7 +1,6 @@
 'use client';
 
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
-import { toggleTheme } from 'utils/toggleTheme';
 
 export function ThemeButton() {
   return (
@@ -14,4 +13,8 @@ export function ThemeButton() {
       <MdOutlineDarkMode className="absolute inset-0 m-auto size-6.5 visible dark:invisible dark:opacity-0 transition-opacity duration-500" />
     </button>
   );
+}
+
+function toggleTheme() {
+  document.documentElement.classList.toggle('dark');
 }

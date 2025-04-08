@@ -7,8 +7,9 @@ import { RepositoryData } from 'types/RepositoryData';
 import { TechnologyBadge } from 'components/utilities/technology-badge';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
-import { ReadmePreviewButton } from 'components/readme/readme-preview-button';
 import { ReadmeModal } from 'components/readme/readme-modal';
+import { ModalContainer } from 'components/modal/modal-container';
+import { ReadmePreviewButton } from 'components/readme/readme-preview-button';
 
 type Params = {
   params: Promise<{ repository: string }>;
@@ -55,7 +56,7 @@ export default async function RepositoryView({ params }: Params) {
         <div className="flex justify-end gap-6 sm:justify-center sm:pt-8">
           <Link
             href="/"
-            className="size-10 p-2 rounded-md hover:bg-light/30 active:bg-light/30 transition-colors duration-400"
+            className="size-10 p-2 rounded-md hover:bg-light/30 active:bg-light/30 hover:scale-105 active:scale-105 transition-normal duration-200"
           >
             <MdArrowBackIosNew className="size-6 -ml-0.5" />
           </Link>
@@ -65,7 +66,7 @@ export default async function RepositoryView({ params }: Params) {
           <a
             target="_blank"
             href={`https://github.com/RiadOliveira/${EXAMPLE_REPOSITORY.name}`}
-            className="bg-gray-800 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200"
+            className="shadow bg-gray-800 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200"
           >
             <FaGithub size={24} />
             <span className="text-base font-semibold">Github</span>
@@ -73,7 +74,9 @@ export default async function RepositoryView({ params }: Params) {
         </div>
       </section>
 
-      <ReadmeModal />
+      <ModalContainer>
+        <ReadmeModal repositoryName={repository} />
+      </ModalContainer>
     </>
   );
 }

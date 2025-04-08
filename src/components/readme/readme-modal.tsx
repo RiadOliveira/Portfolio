@@ -1,15 +1,22 @@
-import { DialogHTMLAttributes } from 'react';
-import { ReadmeCloseButton } from './readme-close-button';
-import { MODAL_ID } from 'constants/modal';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkEmoji from 'remark-emoji';
+import rehypeRaw from 'rehype-raw';
 
-export function ReadmeModal(props: Omit<DialogHTMLAttributes<HTMLDialogElement>, 'children'>) {
+import { fetchReadme } from 'services/fetchReadme';
+
+type Props = {
+  repositoryName: string;
+};
+
+export async function ReadmeModal({ repositoryName }: Props) {
+  const readmeContent = await fetchReadme(repositoryName);
+
   return (
-    <dialog
-      id={MODAL_ID}
-      className="w-full h-full max-w-[calc(100%-1.25rem)] max-h-[calc(100%-1.25rem)] mt-2.5 mx-auto rounded p-2.5 bg-light dark:bg-dark text-dark dark:text-light shadow-md animated-modal"
-      {...props}
-    >
-      <ReadmeCloseButton />
-    </dialog>
+    <div className="prose dark:prose-invert bg-light dark:bg-dark text-dark dark:text-light">
+      <ReactMarkdown remarkPlugins={[remarkGfm, remarkEmoji]} rehypePlugins={[rehypeRaw]}>
+        {readmeContent}
+      </ReactMarkdown>
+    </div>
   );
 }
