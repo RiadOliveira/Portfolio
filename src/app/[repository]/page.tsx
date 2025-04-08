@@ -5,9 +5,10 @@ import { MainTitle } from 'components/utilities/main-title';
 import { USER } from 'constants/user';
 import { RepositoryData } from 'types/RepositoryData';
 import { TechnologyBadge } from 'components/utilities/technology-badge';
-import { IoReader } from 'react-icons/io5';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
+import { ReadmePreviewButton } from 'components/readme/readme-preview-button';
+import { ReadmeModal } from 'components/readme/readme-modal';
 
 type Params = {
   params: Promise<{ repository: string }>;
@@ -59,21 +60,20 @@ export default async function RepositoryView({ params }: Params) {
             <MdArrowBackIosNew className="size-6 -ml-0.5" />
           </Link>
 
-          <a
-            href={`https://github.com/RiadOliveira/${EXAMPLE_REPOSITORY.name}`}
-            target="_blank"
-            className="bg-violet-700 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200"
-          >
-            <IoReader size={24} />
-            <span className="text-base font-semibold">Preview</span>
-          </a>
+          <ReadmePreviewButton />
 
-          <button className="bg-gray-800 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200">
+          <a
+            target="_blank"
+            href={`https://github.com/RiadOliveira/${EXAMPLE_REPOSITORY.name}`}
+            className="bg-gray-800 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200"
+          >
             <FaGithub size={24} />
             <span className="text-base font-semibold">Github</span>
-          </button>
+          </a>
         </div>
       </section>
+
+      <ReadmeModal />
     </>
   );
 }
