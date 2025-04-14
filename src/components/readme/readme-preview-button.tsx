@@ -8,7 +8,7 @@ export function ReadmePreviewButton() {
     <button
       type="button"
       onClick={showModal}
-      className="shadow bg-violet-700 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200"
+      className="shadow bg-amber-500/80 h-10 px-3 flex items-center justify-center gap-2 rounded-md hover:scale-105 active:scale-105 transition-normal duration-200"
     >
       <IoReader size={24} />
       <span className="text-base font-semibold">Preview</span>
