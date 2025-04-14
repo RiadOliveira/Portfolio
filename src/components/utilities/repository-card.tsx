@@ -23,7 +23,7 @@ export function RepositoryCard() {
       className="shadow-md block pb-4 rounded-md space-y-2 bg-gradient-to-br from-70% from-emerald-600/60"
     >
       <ImageContainer
-        className="shadow rounded-t-md overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
+        className="shadow rounded-t-md rounded-br-4xl overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
         src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
         alt={EXAMPLE_REPOSITORY.name}
         sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}

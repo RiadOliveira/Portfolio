@@ -1,12 +1,12 @@
 @import 'tailwindcss';
-@plugin "@tailwindcss/typography";
+
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-primary: #4056f4;
   --color-secondary: #e71d36;
-  --color-tertiary: #fcb045;
   --color-light: #f0f7f4;
   --color-dark: #071e22;
 
@@ -36,18 +36,13 @@
     background-position: 0% 0%;
   }
   50% {
-    background-position: 50% 50%;
+    background-position: 50% 0%;
   }
 }
 
 .animated-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-tertiary) 100%
-  );
-  background-size: 200% 200%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  background-size: 200% 100%;
   animation: animate-gradient 5s ease-in-out infinite;
 }
 
