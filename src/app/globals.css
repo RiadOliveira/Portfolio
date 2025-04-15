@@ -30,6 +30,59 @@
   }
 }
 
+@layer utilities {
+  .prose {
+    h1:first-child {
+      @apply mt-0;
+    }
+
+    p:first-of-type {
+      @apply mb-4;
+    }
+
+    :is(h1, h2, h3) {
+      @apply mt-4 mb-2;
+    }
+
+    :is(p, pre) {
+      @apply m-0;
+    }
+
+    ul {
+      @apply my-0;
+    }
+
+    img {
+      @apply mt-0 mb-1 rounded-sm;
+    }
+
+    kbd {
+      @apply inline-block px-[6px] pt-[6px] pb-[10px] text-[11px] leading-[10px] font-mono border border-[#d1d5da] rounded-[6px] shadow-[inset_0_-1px_0_#d1d5da];
+
+      a {
+        @apply block;
+      }
+
+      img {
+        @apply rounded-sm;
+      }
+
+      img,
+      p {
+        @apply m-0;
+      }
+    }
+
+    #socials {
+      @apply flex flex-wrap gap-2;
+
+      .badge {
+        @apply rounded-[2px] m-0;
+      }
+    }
+  }
+}
+
 @keyframes animate-gradient {
   0%,
   100% {
