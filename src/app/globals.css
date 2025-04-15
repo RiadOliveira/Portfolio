@@ -57,7 +57,7 @@
     }
 
     kbd {
-      @apply inline-block px-[6px] pt-[6px] pb-[10px] text-[11px] leading-[10px] font-mono border border-[#d1d5da] rounded-[6px] shadow-[inset_0_-1px_0_#d1d5da];
+      @apply inline-block p-1.5 pb-2 text-[11px] leading-[10px] font-mono border border-[#d1d5da] rounded-[6px] shadow-[inset_0_-1px_0_#d1d5da];
 
       a {
         @apply block;
@@ -67,9 +67,8 @@
         @apply rounded-sm;
       }
 
-      img,
-      p {
-        @apply m-0;
+      p:first-of-type {
+        @apply -mt-4 mb-0;
       }
     }
 
