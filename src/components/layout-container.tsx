@@ -4,11 +4,11 @@ import { ThemeButton } from './utilities/theme-button';
 
 export function LayoutContainer({ children }: DefaultProps) {
   return (
-    <div className="p-2.5 w-full min-h-full flex flex-col animated-gradient">
+    <div className="animated-gradient flex min-h-full w-full flex-col p-2.5">
       <Header />
 
-      <main className="flex-1 flex flex-col relative pt-3 pb-6.5 px-4 rounded bg-light/27 dark:bg-dark/32.5 transition-colors duration-300">
-        <section className="w-[calc(100%-2rem)] h-11 absolute left-4 flex items-center justify-end pb-2 border-b-2 border-light/80">
+      <main className="bg-light/27 dark:bg-dark/32.5 relative flex flex-1 flex-col rounded px-4 pt-3 pb-6.5 transition-colors duration-300">
+        <section className="border-light/80 absolute left-4 flex h-11 w-[calc(100%-2rem)] items-center justify-end border-b-2 pb-2">
           <ThemeButton />
         </section>
 

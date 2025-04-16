@@ -15,7 +15,7 @@ const eslintConfig = [
   {
     files: ['**/*.{js,jsx,ts,tsx,mjs}'],
     plugins: {
-      prettier: prettier,
+      prettier,
     },
     rules: {
       'prettier/prettier': 'error',

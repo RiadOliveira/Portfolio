@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="flex justify-center gap-5 pt-3 pb-6.5">
       <ImageContainer
-        className="rounded-2xl overflow-hidden size-26 sm:size-40"
+        className="size-26 overflow-hidden rounded-2xl sm:size-40"
         src="/avatar.jpg"
         alt={USER.fullName}
         sizes={{
@@ -16,10 +16,10 @@ export function Header() {
         priority
       />
 
-      <div className="py-1 flex flex-col justify-between">
+      <div className="flex flex-col justify-between py-1">
         <section>
-          <h1 className="font-bold text-lg leading-none">{USER.fullName}</h1>
-          <h2 className="font-secondary font-semibold text-lg">Full Stack Developer</h2>
+          <h1 className="text-lg leading-none font-bold">{USER.fullName}</h1>
+          <h2 className="font-secondary text-lg font-semibold">Full Stack Developer</h2>
         </section>
 
         <section className="flex justify-between">{USER.socials.map(SocialLink)}</section>

@@ -20,16 +20,16 @@ export function RepositoryCard() {
   return (
     <Link
       href={`/${EXAMPLE_REPOSITORY.name}`}
-      className="shadow-md block pb-4 rounded-md space-y-2 bg-gradient-to-br from-70% from-emerald-600/60"
+      className="block space-y-2 rounded-md bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md"
     >
       <ImageContainer
-        className="shadow rounded-t-md rounded-br-4xl overflow-hidden aspect-video w-full max-w-4xl lg:w-4xl"
+        className="aspect-video w-full max-w-4xl overflow-hidden rounded-t-md rounded-br-4xl shadow lg:w-4xl"
         src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
         alt={EXAMPLE_REPOSITORY.name}
         sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}
       />
 
-      <div className="flex px-3 items-center justify-between">
+      <div className="flex items-center justify-between px-3">
         <h1>{EXAMPLE_REPOSITORY.name}</h1>
 
         <div className="flex gap-2">

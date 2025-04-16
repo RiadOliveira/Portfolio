@@ -7,10 +7,10 @@ export function ThemeButton() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="relative size-8.5 p-1 rounded-full hover:bg-dark/85 dark:hover:bg-light/85 dark:hover:text-dark active:bg-dark/85 dark:active:bg-light/85 dark:active:text-dark duration-300"
+      className="hover:bg-dark/85 dark:hover:bg-light/85 dark:hover:text-dark active:bg-dark/85 dark:active:bg-light/85 dark:active:text-dark relative size-8.5 rounded-full p-1 duration-300"
     >
-      <MdOutlineLightMode className="absolute inset-0 m-auto size-6.5 invisible opacity-0 dark:visible dark:opacity-100 transition-opacity duration-500" />
-      <MdOutlineDarkMode className="absolute inset-0 m-auto size-6.5 visible dark:invisible dark:opacity-0 transition-opacity duration-500" />
+      <MdOutlineLightMode className="invisible absolute inset-0 m-auto size-6.5 opacity-0 transition-opacity duration-500 dark:visible dark:opacity-100" />
+      <MdOutlineDarkMode className="visible absolute inset-0 m-auto size-6.5 transition-opacity duration-500 dark:invisible dark:opacity-0" />
     </button>
   );
 }

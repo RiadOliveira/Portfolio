@@ -9,7 +9,7 @@ export function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
       target="_blank"
       rel="noopener noreferrer"
       className={mergeStyles([
-        'border-2 size-9 p-1 border-light/50 rounded-md hover:border-1 active:border-1 transition duration-400',
+        'border-light/50 size-9 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1',
         colorStyles,
       ])}
     >

@@ -40,11 +40,31 @@
       @apply mb-4;
     }
 
-    :is(h1, h2, h3) {
-      @apply mt-4 mb-2;
+    h1,
+    h2,
+    h3,
+    h4 {
+      @apply mb-2;
     }
 
-    :is(p, pre) {
+    h1 {
+      @apply mt-2;
+    }
+
+    h2 {
+      @apply mt-4.5;
+    }
+
+    h3 {
+      @apply mt-5.5;
+    }
+
+    h4 {
+      @apply mt-3;
+    }
+
+    p,
+    pre {
       @apply m-0;
     }
 

@@ -14,7 +14,7 @@ export async function ReadmeModal({ repositoryName }: Props) {
   const readmeContent = await fetchReadme(repositoryName);
 
   return (
-    <div className="prose prose-sm dark:prose-invert bg-light dark:bg-dark text-dark dark:text-light">
+    <div className="prose prose-sm dark:prose-invert bg-light dark:bg-dark text-dark dark:text-light p-5">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkEmoji]}
         rehypePlugins={[rehypeRaw]}
