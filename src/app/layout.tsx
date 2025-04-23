@@ -4,7 +4,7 @@ export { metadata } from 'constants/metadata';
 
 import type { DefaultProps } from 'types/DefaultProps';
 import { POPPINS, SPACE_GROTESK } from 'constants/fonts';
-import { LayoutContainer } from 'components/layout-container';
+import { LayoutContainer } from 'components/container/layout-container';
 
 export default function RootLayout({ children }: DefaultProps) {
   return (

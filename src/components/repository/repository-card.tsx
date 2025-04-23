@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 import { RepositoryData } from 'types/RepositoryData';
-import { ImageContainer } from './image-container';
 import { FaNodeJs, FaReact } from 'react-icons/fa';
 import { USER } from 'constants/user';
+import { ImageContainer } from '../container/image-container';
 
 const EXAMPLE_REPOSITORY: RepositoryData = {
   id: 0,

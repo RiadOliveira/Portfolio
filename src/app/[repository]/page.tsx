@@ -1,13 +1,14 @@
 import Link from 'next/link';
 
-import { ImageContainer } from 'components/utilities/image-container';
-import { MainTitle } from 'components/utilities/main-title';
 import { USER } from 'constants/user';
 import { RepositoryData } from 'types/RepositoryData';
-import { TechnologyBadge } from 'components/utilities/technology-badge';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
-import { ReadmePreviewButton } from 'components/readme/readme-preview-button';
+import { IoReader } from 'react-icons/io5';
+import { ImageContainer } from 'components/container/image-container';
+import { ToggleModalButton } from 'components/client/toggle-modal-button';
+import { MainTitle } from 'components/main-title';
+import { TechnologyBadge } from 'components/repository/technology-badge';
 
 interface RepositoryViewParams {
   params: Promise<{ repository: string }>;
@@ -59,7 +60,13 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             <MdArrowBackIosNew className="-ml-0.5 size-6" />
           </Link>
 
-          <ReadmePreviewButton />
+          <ToggleModalButton
+            kind="show"
+            className="flex h-10 items-center justify-center gap-2 rounded-md bg-rose-500/80 px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105"
+          >
+            <IoReader size={24} />
+            <span className="text-base font-semibold">Preview</span>
+          </ToggleModalButton>
 
           <a
             target="_blank"

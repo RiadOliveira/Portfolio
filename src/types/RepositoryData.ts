@@ -1,10 +1,10 @@
 import { APIRepository } from './APIRepository';
 
-export type DisplayData = {
+export interface DisplayData {
   coverImage: string;
   technologyIds: number[];
-};
+}
 
-export type RepositoryData = Omit<APIRepository, 'owner'> & {
+export interface RepositoryData extends Omit<APIRepository, 'owner'> {
   displayData: DisplayData;
-};
+}

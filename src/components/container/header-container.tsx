@@ -1,8 +1,8 @@
-import { USER } from 'constants/user';
-import { SocialLink } from './social-link';
-import { ImageContainer } from '../utilities/image-container';
+import { SocialData, USER } from 'constants/user';
+import { ImageContainer } from './image-container';
+import { mergeStyles } from 'utils/mergeStyles';
 
-export function Header() {
+export function HeaderContainer() {
   return (
     <header className="flex justify-center gap-5 pt-3 pb-6.5">
       <ImageContainer
@@ -25,5 +25,22 @@ export function Header() {
         <section className="flex justify-between">{USER.socials.map(SocialLink)}</section>
       </div>
     </header>
+  );
+}
+
+function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
+  return (
+    <a
+      key={name}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={mergeStyles([
+        'border-light/50 size-9 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1',
+        colorStyles,
+      ])}
+    >
+      <Icon className="size-full" />
+    </a>
   );
 }

@@ -1,4 +1,4 @@
-import { ModalContainer } from 'components/modal/modal-container';
+import { ModalContainer } from 'components/container/modal-container';
 import { DefaultProps } from 'types/DefaultProps';
 
 export default function RepositoryModalLayout({ children }: DefaultProps) {

@@ -4,13 +4,13 @@ import remarkEmoji from 'remark-emoji';
 import rehypeRaw from 'rehype-raw';
 
 import { fetchReadme } from 'services/fetchReadme';
-import { ReadmeLink } from 'components/readme/readme-link';
+import { ReadmeLink } from 'components/client/readme-link';
 
-interface Props {
+interface RepositoryModalProps {
   params: Promise<{ repository: string }>;
 }
 
-export default async function RepositoryModal({ params }: Props) {
+export default async function RepositoryModal({ params }: RepositoryModalProps) {
   const { repository } = await params;
   const readmeContent = await fetchReadme(repository);
 

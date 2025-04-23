@@ -1,5 +1,5 @@
-import { MainTitle } from 'components/utilities/main-title';
-import { RepositoryCard } from 'components/utilities/repository-card';
+import { MainTitle } from 'components/main-title';
+import { RepositoryCard } from 'components/repository/repository-card';
 
 export default function Home() {
   return (
