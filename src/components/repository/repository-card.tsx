@@ -20,7 +20,7 @@ export function RepositoryCard() {
   return (
     <Link
       href={`/${EXAMPLE_REPOSITORY.name}`}
-      className="block space-y-2 rounded-md bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md"
+      className="block snap-center space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-104 hover:from-emerald-600/80 hover:shadow-lg"
     >
       <ImageContainer
         className="aspect-video w-full max-w-4xl overflow-hidden rounded-t-md rounded-br-4xl shadow lg:w-4xl"

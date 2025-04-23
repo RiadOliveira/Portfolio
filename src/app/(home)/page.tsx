@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <MainTitle>Portfolio Projects</MainTitle>
 
-      <section className="space-y-6 px-2.5 pt-5.5">
+      <section className="no-scrollbar snap-y snap-mandatory space-y-6 overflow-y-scroll px-2.5 py-4">
         <RepositoryCard />
         <RepositoryCard />
         <RepositoryCard />
