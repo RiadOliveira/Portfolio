@@ -1,20 +1,21 @@
 import { MODAL_CLASSES, MODAL_ID } from 'constants/modal';
 
-export function showModal() {
+export function showModal(pushState = true) {
   const modal = getModalElement();
-  if (modal.open) return;
+  if (modal === null || modal.open) return;
 
   modal.showModal();
   modal.classList.add(MODAL_CLASSES.showing);
-  addModalListeners(modal);
 
-  window.history.pushState({ modal: true }, '');
+  if (pushState) window.history.pushState({ modalOpen: true }, '');
+  addModalListeners(modal);
 }
 
-export function closeModal() {
+export function closeModal(popState = true) {
   const modal = getModalElement();
-  const { classList } = modal;
+  if (modal === null || !modal.open) return;
 
+  const { classList } = modal;
   classList.remove(MODAL_CLASSES.showing);
   classList.add(MODAL_CLASSES.closing);
 
@@ -26,7 +27,7 @@ export function closeModal() {
     },
     { once: true },
   );
-  removeModalListeners(modal);
+  if (popState) window.history.back();
 }
 
 function addModalListeners(modal: HTMLDialogElement) {
@@ -34,13 +35,8 @@ function addModalListeners(modal: HTMLDialogElement) {
   modal.addEventListener('cancel', handleCancel);
 }
 
-function removeModalListeners(modal: HTMLDialogElement) {
-  window.removeEventListener('popstate', handlePopState);
-  modal.removeEventListener('cancel', handleCancel);
-}
-
-function handlePopState(_event: PopStateEvent) {
-  if (getModalElement().open) closeModal();
+function handlePopState({ state: { modalOpen } }: PopStateEvent) {
+  (!modalOpen ? closeModal : showModal)(false);
 }
 
 function handleCancel(event: Event) {
@@ -49,5 +45,5 @@ function handleCancel(event: Event) {
 }
 
 function getModalElement() {
-  return document.getElementById(MODAL_ID) as HTMLDialogElement;
+  return document.getElementById(MODAL_ID) as HTMLDialogElement | null;
 }
