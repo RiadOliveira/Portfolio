@@ -7,13 +7,11 @@ import { RepositoryData } from 'types/RepositoryData';
 import { TechnologyBadge } from 'components/utilities/technology-badge';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
-import { ReadmeModal } from 'components/readme/readme-modal';
-import { ModalContainer } from 'components/modal/modal-container';
 import { ReadmePreviewButton } from 'components/readme/readme-preview-button';
 
-type Params = {
+interface RepositoryViewParams {
   params: Promise<{ repository: string }>;
-};
+}
 
 const EXAMPLE_REPOSITORY: RepositoryData = {
   id: 0,
@@ -26,7 +24,7 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
   },
 } as const;
 
-export default async function RepositoryView({ params }: Params) {
+export default async function RepositoryView({ params }: RepositoryViewParams) {
   const { repository } = await params;
 
   return (
@@ -74,10 +72,6 @@ export default async function RepositoryView({ params }: Params) {
           </a>
         </div>
       </section>
-
-      <ModalContainer>
-        <ReadmeModal repositoryName={repository} />
-      </ModalContainer>
     </>
   );
 }

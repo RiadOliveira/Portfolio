@@ -4,23 +4,22 @@ import remarkEmoji from 'remark-emoji';
 import rehypeRaw from 'rehype-raw';
 
 import { fetchReadme } from 'services/fetchReadme';
-import { ReadmeLink } from './readme-link';
+import { ReadmeLink } from 'components/readme/readme-link';
 
-type Props = {
-  repositoryName: string;
-};
+interface Props {
+  params: Promise<{ repository: string }>;
+}
 
-export async function ReadmeModal({ repositoryName }: Props) {
-  const readmeContent = await fetchReadme(repositoryName);
+export default async function RepositoryModal({ params }: Props) {
+  const { repository } = await params;
+  const readmeContent = await fetchReadme(repository);
 
   return (
     <div className="prose prose-sm dark:prose-invert bg-light dark:bg-dark text-dark dark:text-light p-5">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkEmoji]}
         rehypePlugins={[rehypeRaw]}
-        components={{
-          a: ReadmeLink,
-        }}
+        components={{ a: ReadmeLink }}
       >
         {readmeContent}
       </ReactMarkdown>

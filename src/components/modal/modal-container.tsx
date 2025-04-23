@@ -1,5 +1,5 @@
 import { MODAL_ID } from 'constants/modal';
-import { DialogHTMLAttributes, Suspense } from 'react';
+import { DialogHTMLAttributes } from 'react';
 import { ModalCloseButton } from './modal-close-button';
 
 export function ModalContainer({ children, ...props }: DialogHTMLAttributes<HTMLDialogElement>) {
@@ -13,7 +13,7 @@ export function ModalContainer({ children, ...props }: DialogHTMLAttributes<HTML
         <ModalCloseButton />
       </header>
 
-      <Suspense>{children}</Suspense>
+      {children}
     </dialog>
   );
 }

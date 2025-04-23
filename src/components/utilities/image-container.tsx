@@ -12,13 +12,13 @@ type SizeDefinition = {
   value: string;
 };
 
-type Props = Omit<ImageProps, 'fill' | 'sizes'> & {
+interface ImageContainerProps extends Omit<ImageProps, 'fill' | 'sizes'> {
   imageStyles?: string;
   sizes: {
     definitions: SizeDefinition[];
     defaultValue: string;
   };
-};
+}
 
 export function ImageContainer({
   alt,
@@ -27,7 +27,7 @@ export function ImageContainer({
   imageStyles,
   sizes: { definitions, defaultValue },
   ...props
-}: Props) {
+}: ImageContainerProps) {
   const sizes = definitions.reduce(
     (prev, { threshold, value }) => prev + `(max-width: ${THRESHHOLDS[threshold]}) ${value}, `,
     '',
