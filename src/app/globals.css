@@ -67,6 +67,10 @@
     scrollbar-width: none;
   }
 
+  .scroll-fade {
+    @apply [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_30px,black_calc(100%-30px),transparent)] [mask-image:linear-gradient(to_bottom,transparent,black_30px,black_calc(100%-30px),transparent)];
+  }
+
   .prose {
     h1:first-child {
       @apply mt-0;

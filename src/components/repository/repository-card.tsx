@@ -30,7 +30,7 @@ export function RepositoryCard() {
       />
 
       <div className="flex items-center justify-between px-3">
-        <h1>{EXAMPLE_REPOSITORY.name}</h1>
+        <h1 className="text-base">{EXAMPLE_REPOSITORY.name}</h1>
 
         <div className="flex gap-2">
           <FaReact size={22} color="white" />
