@@ -32,7 +32,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
     <>
       <MainTitle>{repository}</MainTitle>
 
-      <section className="relative flex flex-1 flex-col justify-between pt-2">
+      <section className="no-scrollbar relative mt-2 flex flex-1 flex-col justify-between overflow-y-scroll">
         <div>
           <p className="mb-4.5 text-justify text-base">{EXAMPLE_REPOSITORY.description}</p>
 
@@ -52,7 +52,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           </div>
         </div>
 
-        <div className="flex justify-end gap-6 pb-6.5 sm:justify-center sm:pt-8">
+        <div className="flex justify-end gap-6 pt-6.5 pb-3 sm:justify-center sm:pt-8">
           <Link
             href="/"
             className="hover:bg-light/30 active:bg-light/30 size-10 rounded-md p-2 transition-normal duration-200 hover:scale-105 active:scale-105"
