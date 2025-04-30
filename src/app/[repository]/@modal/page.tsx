@@ -10,12 +10,14 @@ interface RepositoryModalProps {
   params: Promise<{ repository: string }>;
 }
 
-export default async function RepositoryModal({ params }: RepositoryModalProps) {
+export default async function RepositoryModal({
+  params,
+}: RepositoryModalProps) {
   const { repository } = await params;
   const readmeContent = await fetchReadme(repository);
 
   return (
-    <div className="prose prose-sm dark:prose-invert bg-light dark:bg-dark text-dark dark:text-light p-5">
+    <div className="prose prose-sm dark:prose-invert text-dark dark:text-light overflow-y-scroll p-5">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkEmoji]}
         rehypePlugins={[rehypeRaw]}

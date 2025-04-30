@@ -9,7 +9,8 @@ export function fetchRepositories() {
     sort: 'created',
     per_page: '100',
   });
-  const API_URL = `${GITHUB_URLS.api}/${USER.login}/repos?${queryParams}` as const;
+  const API_URL =
+    `${GITHUB_URLS.api}/${USER.login}/repos?${queryParams}` as const;
 
   const FETCH_PROPS = {
     headers: {

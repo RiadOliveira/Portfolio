@@ -26,7 +26,10 @@ export function RepositoryCard() {
         className="aspect-video w-full max-w-4xl overflow-hidden rounded-t-md rounded-br-4xl shadow lg:w-4xl"
         src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
         alt={EXAMPLE_REPOSITORY.name}
-        sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}
+        sizes={{
+          definitions: [{ threshold: 'LG', value: '56rem' }],
+          defaultValue: '100%',
+        }}
       />
 
       <div className="flex items-center justify-between px-3">

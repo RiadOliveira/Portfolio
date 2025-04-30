@@ -19,10 +19,14 @@ export function HeaderContainer() {
       <div className="flex flex-col justify-between py-1">
         <section>
           <h1 className="text-lg leading-none font-bold">{USER.fullName}</h1>
-          <h2 className="font-secondary text-lg font-semibold">Full Stack Developer</h2>
+          <h2 className="font-secondary text-lg font-semibold">
+            Full Stack Developer
+          </h2>
         </section>
 
-        <section className="flex justify-between">{USER.socials.map(SocialLink)}</section>
+        <section className="flex justify-between">
+          {USER.socials.map(SocialLink)}
+        </section>
       </div>
     </header>
   );

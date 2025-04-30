@@ -29,13 +29,20 @@ export function ImageContainer({
   ...props
 }: ImageContainerProps) {
   const sizes = definitions.reduce(
-    (prev, { threshold, value }) => prev + `(max-width: ${THRESHHOLDS[threshold]}) ${value}, `,
+    (prev, { threshold, value }) =>
+      prev + `(max-width: ${THRESHHOLDS[threshold]}) ${value}, `,
     '',
   );
 
   return (
     <div className={mergeStyles(['relative', className])}>
-      <Image alt={alt} className={imageStyles} fill sizes={`${sizes}${defaultValue}`} {...props} />
+      <Image
+        alt={alt}
+        className={imageStyles}
+        fill
+        sizes={`${sizes}${defaultValue}`}
+        {...props}
+      />
       {children}
     </div>
   );

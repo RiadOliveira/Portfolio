@@ -7,6 +7,10 @@ interface TechnologyBadgeProps {
 
 export function TechnologyBadge({ technology }: TechnologyBadgeProps) {
   return (
-    <Image src={TECHNOLOGY_BADGES[technology]} alt={technology} className="rounded-[2px] shadow" />
+    <Image
+      src={TECHNOLOGY_BADGES[technology]}
+      alt={technology}
+      className="rounded-[2px] shadow"
+    />
   );
 }

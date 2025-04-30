@@ -8,7 +8,9 @@ import { cachedJSONFetch } from 'utils/cachedJSONFetch';
 export async function getPortfolioData() {
   const repositories = await fetchRepositories();
 
-  const repositoriesDataPromises = repositories.map(generateRepositoryDataPromise);
+  const repositoriesDataPromises = repositories.map(
+    generateRepositoryDataPromise,
+  );
   const promisesData = await Promise.all(repositoriesDataPromises);
 
   return promisesData.filter((data) => data !== undefined);
@@ -23,6 +25,9 @@ function generateRepositoryDataPromise({
   if (ownerId !== USER.id || name === USER.login) return undefined;
 
   return cachedJSONFetch<DisplayData>(generateDisplayDataURL(name))
-    .then((displayData) => ({ id, name, description, displayData }) as RepositoryData)
+    .then(
+      (displayData) =>
+        ({ id, name, description, displayData }) as RepositoryData,
+    )
     .catch(() => undefined);
 }

@@ -32,15 +32,20 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
     <>
       <MainTitle>{repository}</MainTitle>
 
-      <section className="no-scrollbar relative mt-2 flex flex-1 flex-col justify-between overflow-y-scroll">
+      <section className="no-scrollbar relative mt-2 flex flex-1 flex-col items-center justify-between overflow-y-scroll">
         <div>
-          <p className="mb-4.5 text-justify text-base">{EXAMPLE_REPOSITORY.description}</p>
+          <p className="mb-4.5 text-justify text-base">
+            {EXAMPLE_REPOSITORY.description}
+          </p>
 
           <ImageContainer
             className="border-light/40 aspect-video w-full max-w-4xl overflow-hidden rounded-t-md border-x-1 border-t-1 bg-emerald-500/45 shadow-md lg:w-4xl"
             src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
             alt={EXAMPLE_REPOSITORY.name}
-            sizes={{ definitions: [{ threshold: 'LG', value: '56rem' }], defaultValue: '100%' }}
+            sizes={{
+              definitions: [{ threshold: 'LG', value: '56rem' }],
+              defaultValue: '100%',
+            }}
           />
 
           <div className="border-light/40 flex flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 bg-emerald-500/45 py-3 shadow-md">
@@ -52,12 +57,12 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           </div>
         </div>
 
-        <div className="flex justify-end gap-6 pt-6.5 pb-3 sm:justify-center sm:pt-8">
+        <div className="flex w-full max-w-80 justify-between px-[3px] pt-6.5 pb-6">
           <Link
             href="/"
             className="hover:bg-light/30 active:bg-light/30 size-10 rounded-md p-2 transition-normal duration-200 hover:scale-105 active:scale-105"
           >
-            <MdArrowBackIosNew className="-ml-0.5 size-6" />
+            <MdArrowBackIosNew size={24} className="-ml-0.5" />
           </Link>
 
           <ToggleModalButton

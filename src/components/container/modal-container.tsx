@@ -1,19 +1,28 @@
+import { ThemeButton } from 'components/client/theme-button';
 import { ToggleModalButton } from '../client/toggle-modal-button';
 import { MODAL_ID } from 'constants/modal';
 import { DialogHTMLAttributes } from 'react';
 import { IoMdClose } from 'react-icons/io';
 
-export function ModalContainer({ children, ...props }: DialogHTMLAttributes<HTMLDialogElement>) {
+export function ModalContainer({
+  children,
+  ...props
+}: DialogHTMLAttributes<HTMLDialogElement>) {
   return (
     <dialog
       id={MODAL_ID}
-      className="bg-light dark:bg-dark text-dark dark:text-light animated-modal m-auto h-full max-h-[calc(100%-1.25rem)] w-full max-w-[calc(100%-1.25rem)] rounded shadow-md"
+      className="bg-light dark:bg-dark text-dark dark:text-light animated-modal m-auto flex size-full max-h-[calc(100%-1.25rem)] max-w-[calc(100%-1.25rem)] flex-col overflow-y-hidden rounded shadow-md"
       {...props}
     >
-      <header className="text-light sticky top-0 -mb-10 flex bg-gradient-to-b from-emerald-600 from-60% px-4 pt-2.5 pb-10">
-        <ToggleModalButton action="close">
-          <IoMdClose size={24} />
+      <header className="text-light z-10 flex max-h-13 min-h-13 w-full items-center justify-between bg-gradient-to-b from-emerald-600 to-emerald-400 px-5 shadow-md shadow-emerald-600/60">
+        <ToggleModalButton
+          action="close"
+          className="transition-normal duration-100 hover:scale-110 active:scale-110"
+        >
+          <IoMdClose size={26} />
         </ToggleModalButton>
+
+        <ThemeButton />
       </header>
 
       {children}
