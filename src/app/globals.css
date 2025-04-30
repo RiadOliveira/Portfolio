@@ -33,11 +33,11 @@
 @layer utilities {
   .animated-gradient {
     background: linear-gradient(
-      90deg,
+      135deg,
       var(--color-primary) 0%,
       var(--color-secondary) 100%
     );
-    background-size: 200% 100%;
+    background-size: 200% 200%;
     animation: animate-gradient 5s ease-in-out infinite;
   }
 
@@ -149,9 +149,9 @@
 @keyframes animate-gradient {
   0%,
   100% {
-    background-position: 0% 0%;
+    background-position: 20% 20%;
   }
   50% {
-    background-position: 50% 0%;
+    background-position: 70% 70%;
   }
 }
