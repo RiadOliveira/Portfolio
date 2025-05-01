@@ -6,7 +6,13 @@ export default function Home() {
     <>
       <MainTitle>Portfolio Projects</MainTitle>
 
-      <section className="no-scrollbar scroll-fade mt-[3px] flex w-full snap-y snap-proximity gap-6.5 overflow-y-scroll px-2.5 pt-4 pb-8 max-lg:flex-col lg:mt-4 lg:flex-wrap lg:gap-10 lg:px-4">
+      <section className="no-scrollbar scroll-fade mt-[3px] flex w-full snap-y snap-proximity flex-wrap gap-6.5 overflow-y-scroll px-2.5 pt-4 pb-8 max-xl:justify-center lg:mt-2">
+        <RepositoryCard />
+        <RepositoryCard />
+        <RepositoryCard />
+        <RepositoryCard />
+        <RepositoryCard />
+        <RepositoryCard />
         <RepositoryCard />
         <RepositoryCard />
         <RepositoryCard />

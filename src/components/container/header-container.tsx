@@ -4,19 +4,22 @@ import { mergeStyles } from 'utils/mergeStyles';
 
 export function HeaderContainer() {
   return (
-    <header className="flex justify-center gap-5 pb-6.5 max-lg:pt-3 lg:flex-col lg:items-center lg:pr-26">
+    <header className="flex justify-center gap-5 max-lg:pt-3 max-lg:pb-6.5 lg:mr-8 lg:w-full lg:max-w-1/3 lg:flex-col lg:items-center">
       <ImageContainer
-        className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 lg:size-48"
+        className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 lg:size-40 xl:size-48"
         src="/avatar.jpg"
         alt={USER.fullName}
         sizes={{
-          definitions: [{ threshold: 'LG', value: '6.5rem' }],
+          definitions: [
+            { threshold: 'LG', value: '6.5rem' },
+            { threshold: 'XL', value: '10rem' },
+          ],
           defaultValue: '12rem',
         }}
         priority
       />
 
-      <div className="flex flex-col py-1 max-lg:justify-between lg:gap-10">
+      <div className="flex flex-col max-lg:justify-between max-lg:py-1 lg:gap-8">
         <section className="flex flex-col lg:items-center">
           <h1 className="text-lg leading-none font-bold lg:text-2xl">
             {USER.fullName}
@@ -42,7 +45,7 @@ function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
       target="_blank"
       rel="noopener noreferrer"
       className={mergeStyles([
-        'border-light/50 group flex size-9 flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 lg:size-30 lg:shadow-md',
+        'border-light/50 group flex size-9 flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 lg:size-28 lg:shadow-md xl:size-30',
         colorStyles,
       ])}
     >

@@ -67,7 +67,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
 
           <ToggleModalButton
             action="show"
-            className="flex h-10 items-center justify-center gap-2 rounded-md bg-rose-500/80 px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105"
+            className="bg-primary/90 flex h-10 items-center justify-center gap-2 rounded-md px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105"
           >
             <IoReader size={24} />
             <span className="text-base font-semibold">Preview</span>

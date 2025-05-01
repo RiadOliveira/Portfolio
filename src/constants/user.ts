@@ -27,7 +27,7 @@ export const USER: UserData = {
       name: 'CV',
       href: 'https://drive.google.com/file/d/1UsKq6PGbjTbgeK2aUvhPzoCNKlDdSBoC/view?usp=sharing',
       colorStyles:
-        'hover:bg-purple-500 hover:border-purple-600 active:bg-purple-500 active:border-purple-600',
+        'hover:bg-secondary hover:border-secondary active:bg-secondary active:border-secondary',
     },
     {
       Icon: FaGithub,
