@@ -32,7 +32,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
     <>
       <MainTitle>{repository}</MainTitle>
 
-      <section className="no-scrollbar relative mt-2 flex flex-1 flex-col items-center justify-between overflow-y-scroll">
+      <section className="no-scrollbar relative mt-3 flex flex-1 flex-col items-center justify-between overflow-y-scroll">
         <div>
           <p className="mb-4.5 text-justify text-base">
             {EXAMPLE_REPOSITORY.description}

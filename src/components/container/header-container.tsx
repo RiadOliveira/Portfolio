@@ -4,7 +4,7 @@ import { mergeStyles } from 'utils/mergeStyles';
 
 export function HeaderContainer() {
   return (
-    <header className="flex justify-center gap-5 pb-6.5 max-lg:pt-3 lg:flex-col lg:items-center lg:pr-26 lg:pl-[84px]">
+    <header className="flex justify-center gap-5 pb-6.5 max-lg:pt-3 lg:flex-col lg:items-center lg:pr-26">
       <ImageContainer
         className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 lg:size-48"
         src="/avatar.jpg"

@@ -4,11 +4,11 @@ import { HeaderContainer } from './header-container';
 
 export function LayoutContainer({ children }: DefaultProps) {
   return (
-    <div className="animated-gradient flex h-dvh p-2.5 max-lg:flex-col lg:p-5">
+    <div className="animated-gradient flex h-dvh p-2.5 max-lg:flex-col lg:px-24 lg:py-8">
       <HeaderContainer />
 
-      <main className="bg-light/27 dark:bg-dark/32.5 relative flex flex-1 flex-col overflow-y-hidden rounded-lg px-4 pt-3 transition-colors duration-300">
-        <div className="border-light/80 absolute left-4 flex h-11 w-[calc(100%-2rem)] items-center justify-end border-b-2 pb-2">
+      <main className="bg-light/27 dark:bg-dark/32.5 relative flex flex-1 flex-col overflow-y-hidden rounded-lg px-4 transition-colors duration-300 lg:items-center lg:px-8">
+        <div className="border-light/80 absolute left-4 flex h-14 w-[calc(100%-2rem)] items-center justify-end border-b-2 pt-0.5 lg:left-8 lg:h-19 lg:w-[calc(100%-4rem)] lg:border-b-[3px] lg:pt-1">
           <ThemeButton />
         </div>
 
