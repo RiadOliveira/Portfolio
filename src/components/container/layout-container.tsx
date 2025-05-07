@@ -4,7 +4,7 @@ import { HeaderContainer } from './header-container';
 
 export function LayoutContainer({ children }: DefaultProps) {
   return (
-    <div className="animated-gradient flex h-dvh p-2.5 max-sm:flex-col sm:justify-center sm:gap-2 md:gap-6 md:p-3.5 lg:p-6">
+    <div className="animated-gradient flex h-dvh p-2.5 max-sm:flex-col sm:justify-center sm:gap-2 md:gap-6 md:p-3.5 lg:gap-12 lg:p-6">
       <HeaderContainer />
 
       <main className="bg-light/27 dark:bg-dark/32.5 relative flex flex-1 flex-col overflow-y-hidden rounded-lg px-4 transition-colors duration-300 sm:max-w-[52%] lg:px-8">
