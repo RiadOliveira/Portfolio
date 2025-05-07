@@ -46,7 +46,7 @@ function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
       target="_blank"
       rel="noopener noreferrer"
       className={mergeStyles([
-        'group border-light/50 group flex size-9 flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-24 lg:shadow-md',
+        'group border-light/50 group flex size-[37px] flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-24 lg:shadow-md',
         colorStyles,
       ])}
     >
