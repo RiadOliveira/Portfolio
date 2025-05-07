@@ -18,30 +18,34 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
 
 export function RepositoryCard() {
   return (
-    <Link
-      href={`/${EXAMPLE_REPOSITORY.name}`}
-      className="block snap-center space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-104 hover:from-emerald-600/80 hover:shadow-lg active:scale-104 active:from-emerald-600/80 active:shadow-lg lg:w-[480px]"
-    >
-      <ImageContainer
-        className="aspect-video w-full max-w-[480px] overflow-hidden rounded-t-md rounded-br-4xl shadow lg:w-[480px]"
-        src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
-        alt={EXAMPLE_REPOSITORY.name}
-        sizes={{
-          definitions: [{ threshold: 'LG', value: '480px' }],
-          defaultValue: '100%',
-        }}
-      />
+    <div className="snap-center first:pt-1 sm:snap-start">
+      <div className="h-3 max-sm:hidden" />
 
-      <div className="flex items-center justify-between px-3">
-        <h1 className="text-base">{EXAMPLE_REPOSITORY.name}</h1>
+      <Link
+        href={`/${EXAMPLE_REPOSITORY.name}`}
+        className="block space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-104 hover:from-emerald-600/80 hover:shadow-lg active:scale-104 active:from-emerald-600/80 active:shadow-lg lg:w-[480px]"
+      >
+        <ImageContainer
+          className="aspect-video w-full max-w-[480px] overflow-hidden rounded-t-md rounded-br-4xl shadow lg:w-[480px]"
+          src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
+          alt={EXAMPLE_REPOSITORY.name}
+          sizes={{
+            definitions: [{ threshold: 'LG', value: '480px' }],
+            defaultValue: '100%',
+          }}
+        />
 
-        <div className="flex gap-2">
-          <FaReact size={22} color="white" />
-          <FaNodeJs size={22} color="white" />
+        <div className="flex items-center justify-between px-3">
+          <h1 className="text-base">{EXAMPLE_REPOSITORY.name}</h1>
+
+          <div className="flex gap-2">
+            <FaReact size={22} color="white" />
+            <FaNodeJs size={22} color="white" />
+          </div>
         </div>
-      </div>
 
-      <p className="px-3 text-justify">{EXAMPLE_REPOSITORY.description}</p>
-    </Link>
+        <p className="px-3 text-justify">{EXAMPLE_REPOSITORY.description}</p>
+      </Link>
+    </div>
   );
 }
