@@ -121,7 +121,7 @@
     }
 
     kbd {
-      @apply inline-block rounded-[6px] border border-[#d1d5da] p-1.5 pb-2 font-mono text-[11px] leading-[10px] shadow-[inset_0_-1px_0_#d1d5da];
+      @apply inline-block rounded-[6] border border-[#d1d5da] p-1.5 pb-2 font-mono leading-[10] text-[11] shadow-[inset_0_-1px_0_#d1d5da];
 
       a {
         @apply block;
@@ -140,7 +140,7 @@
       @apply flex flex-wrap gap-2;
 
       .badge {
-        @apply m-0 rounded-[2px];
+        @apply m-0 rounded-[2];
       }
     }
   }
