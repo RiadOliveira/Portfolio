@@ -23,10 +23,10 @@ export function RepositoryCard() {
 
       <Link
         href={`/${EXAMPLE_REPOSITORY.name}`}
-        className="block space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-104 hover:from-emerald-600/80 hover:shadow-lg active:scale-104 active:from-emerald-600/80 active:shadow-lg lg:w-[480px]"
+        className="block space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-104 hover:from-emerald-600/80 hover:shadow-lg active:scale-104 active:from-emerald-600/80 active:shadow-lg"
       >
         <ImageContainer
-          className="aspect-video w-full max-w-[480px] overflow-hidden rounded-t-md rounded-br-4xl shadow lg:w-[480px]"
+          className="aspect-video w-full max-w-[480px] overflow-hidden rounded-t-md rounded-br-4xl shadow"
           src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
           alt={EXAMPLE_REPOSITORY.name}
           sizes={{
