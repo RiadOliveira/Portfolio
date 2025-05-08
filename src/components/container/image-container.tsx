@@ -1,24 +1,24 @@
 import Image, { ImageProps } from 'next/image';
 import { mergeStyles } from 'utils/mergeStyles';
 
-const THRESHHOLDS = {
-  SM: '40rem',
-  MD: '48rem',
-  LG: '64rem',
-  XL: '80rem',
+const THRESHHOLDS_VALUES = {
+  sm: '40rem',
+  md: '48rem',
+  lg: '64rem',
+  xl: '80rem',
 } as const;
 
+type Threshhold = keyof typeof THRESHHOLDS_VALUES;
 type SizeDefinition = {
-  threshold: keyof typeof THRESHHOLDS;
-  value: string;
+  defaultSize: string;
+  widthThreshholds: {
+    [key in Threshhold]?: string;
+  };
 };
 
 interface ImageContainerProps extends Omit<ImageProps, 'fill' | 'sizes'> {
   imageStyles?: string;
-  sizes: {
-    definitions: SizeDefinition[];
-    defaultValue: string;
-  };
+  sizes: SizeDefinition;
 }
 
 export function ImageContainer({
@@ -26,12 +26,12 @@ export function ImageContainer({
   children,
   className,
   imageStyles,
-  sizes: { definitions, defaultValue },
+  sizes: { defaultSize, widthThreshholds },
   ...props
 }: ImageContainerProps) {
-  const sizes = definitions.reduce(
-    (prev, { threshold, value }) =>
-      prev + `(min-width: ${THRESHHOLDS[threshold]}) ${value}, `,
+  const sizesDefinition = Object.entries(widthThreshholds).reduce(
+    (prev, [key, value]) =>
+      prev + `(max-width: ${THRESHHOLDS_VALUES[key as Threshhold]}) ${value}, `,
     '',
   );
 
@@ -41,7 +41,7 @@ export function ImageContainer({
         alt={alt}
         className={imageStyles}
         fill
-        sizes={`${sizes}${defaultValue}`}
+        sizes={`${sizesDefinition}${defaultSize}`}
         {...props}
       />
       {children}

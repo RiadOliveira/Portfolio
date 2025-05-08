@@ -10,20 +10,20 @@ export function HeaderContainer() {
         src="/avatar.jpg"
         alt={USER.fullName}
         sizes={{
-          definitions: [
-            { threshold: 'SM', value: '7.5rem' },
-            { threshold: 'MD', value: '8.5rem' },
-            { threshold: 'LG', value: '11rem' },
-            { threshold: 'XL', value: '12rem' },
-          ],
-          defaultValue: '6.5rem',
+          defaultSize: '12rem',
+          widthThreshholds: {
+            sm: '6.5rem',
+            md: '7.5rem',
+            lg: '8.5rem',
+            xl: '11rem',
+          },
         }}
         priority
       />
 
       <div className="flex flex-col py-1 max-sm:justify-between sm:gap-3 sm:py-2 lg:w-full lg:gap-10 lg:pt-3">
         <section className="flex flex-col sm:items-center lg:gap-1">
-          <h1 className="text-lg leading-none font-bold md:text-xl lg:text-[22px] xl:text-2xl">
+          <h1 className="m-0 text-lg leading-none font-bold md:text-xl lg:text-[22px] xl:text-2xl">
             {USER.fullName}
           </h1>
           <h2 className="font-secondary text-lg font-semibold md:text-xl lg:text-[22px] xl:text-2xl">
@@ -47,12 +47,12 @@ function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
       target="_blank"
       rel="noopener noreferrer"
       className={mergeStyles([
-        'group border-light/50 group flex size-[37px] flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-24 lg:shadow-md xl:size-27',
+        'group border-light/50 group flex size-[37px] flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-22 lg:shadow-md xl:size-27',
         colorStyles,
       ])}
     >
-      <Icon className="size-full group-hover:scale-105 group-active:scale-105 lg:size-12" />
-      <span className="font-semibold max-lg:hidden">{name}</span>
+      <Icon className="size-full group-hover:scale-105 group-active:scale-105 lg:size-9.5" />
+      <span className="text-sm font-semibold max-lg:hidden">{name}</span>
     </a>
   );
 }
