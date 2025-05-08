@@ -8,7 +8,7 @@ export function LayoutContainer({ children }: DefaultProps) {
       <HeaderContainer />
 
       <main className="bg-light/27 dark:bg-dark/32.5 relative flex flex-1 flex-col overflow-y-hidden rounded-lg px-4 transition-colors duration-300 sm:max-w-[52%] lg:px-6">
-        <div className="border-light/80 absolute left-4 flex h-14 w-[calc(100%-2rem)] items-center justify-end border-b-2 pt-0.5 sm:h-12 md:h-14 lg:left-6 lg:h-15 lg:w-[calc(100%-3rem)] lg:border-b-[3px]">
+        <div className="border-light/80 absolute left-4 flex h-14 w-[calc(100%-2rem)] items-center justify-end border-b-2 pt-0.5 sm:h-12 md:h-14 lg:left-6 lg:h-15.5 lg:w-[calc(100%-3rem)] lg:border-b-[3px]">
           <ThemeButton />
         </div>
 

@@ -31,7 +31,7 @@ export function ImageContainer({
 }: ImageContainerProps) {
   const sizes = definitions.reduce(
     (prev, { threshold, value }) =>
-      prev + `(max-width: ${THRESHHOLDS[threshold]}) ${value}, `,
+      prev + `(min-width: ${THRESHHOLDS[threshold]}) ${value}, `,
     '',
   );
 

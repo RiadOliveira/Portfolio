@@ -6,26 +6,27 @@ export function HeaderContainer() {
   return (
     <header className="flex justify-center gap-5 max-sm:pt-3 max-sm:pb-6.5 sm:w-2/5 sm:flex-col sm:items-center sm:gap-3">
       <ImageContainer
-        className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 sm:size-30 md:size-[8.5rem] lg:size-48"
+        className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 sm:size-30 md:size-[8.5rem] lg:size-44 xl:size-48"
         src="/avatar.jpg"
         alt={USER.fullName}
         sizes={{
           definitions: [
-            { threshold: 'SM', value: '6.5rem' },
-            { threshold: 'MD', value: '7.5rem' },
-            { threshold: 'LG', value: '8.5rem' },
+            { threshold: 'SM', value: '7.5rem' },
+            { threshold: 'MD', value: '8.5rem' },
+            { threshold: 'LG', value: '11rem' },
+            { threshold: 'XL', value: '12rem' },
           ],
-          defaultValue: '12rem',
+          defaultValue: '6.5rem',
         }}
         priority
       />
 
       <div className="flex flex-col py-1 max-sm:justify-between sm:gap-3 sm:py-2 lg:w-full lg:gap-10 lg:pt-3">
         <section className="flex flex-col sm:items-center lg:gap-1">
-          <h1 className="text-lg leading-none font-bold md:text-xl lg:text-[23px]">
+          <h1 className="text-lg leading-none font-bold md:text-xl lg:text-[22px] xl:text-2xl">
             {USER.fullName}
           </h1>
-          <h2 className="font-secondary text-lg font-semibold md:text-xl lg:text-[23px]">
+          <h2 className="font-secondary text-lg font-semibold md:text-xl lg:text-[22px] xl:text-2xl">
             Full Stack Developer
           </h2>
         </section>
@@ -46,7 +47,7 @@ function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
       target="_blank"
       rel="noopener noreferrer"
       className={mergeStyles([
-        'group border-light/50 group flex size-[37px] flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-24 lg:shadow-md',
+        'group border-light/50 group flex size-[37px] flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-24 lg:shadow-md xl:size-27',
         colorStyles,
       ])}
     >
