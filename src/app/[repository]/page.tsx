@@ -39,19 +39,18 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           </p>
 
           <ImageContainer
-            className="border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 bg-emerald-500/45 shadow-md sm:max-w-80 lg:max-w-96"
+            className="border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 bg-emerald-500/45 shadow-md sm:max-w-[350px]"
             src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
             alt={EXAMPLE_REPOSITORY.name}
             sizes={{
               widthThreshholds: {
-                sm: '20rem',
-                lg: '24rem',
+                sm: '350px',
               },
               defaultSize: '100%',
             }}
           />
 
-          <div className="border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 bg-emerald-500/45 py-3 shadow-md sm:max-w-80 lg:max-w-96">
+          <div className="border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 bg-emerald-500/45 p-3 shadow-md sm:max-w-[350px]">
             <TechnologyBadge technology="React" />
             <TechnologyBadge technology="NodeJs" />
             <TechnologyBadge technology="Expo" />
@@ -60,19 +59,19 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           </div>
         </div>
 
-        <div className="flex w-full justify-between px-2 pt-6.5 pb-6">
+        <div className="flex w-full max-w-[350px] justify-between px-2 pt-6.5 pb-6">
           <Link
             href="/"
-            className="hover:bg-light/30 active:bg-light/30 size-10 rounded-md p-2 transition-normal duration-200 hover:scale-105 active:scale-105"
+            className="hover:bg-light/30 active:bg-light/30 size-10 rounded-md p-2 transition-normal duration-200 hover:scale-105 active:scale-105 sm:h-11"
           >
-            <MdArrowBackIosNew className="size-6 max-sm:-ml-0.5" />
+            <MdArrowBackIosNew className="-ml-0.5 size-6 sm:size-7" />
           </Link>
 
           <ToggleModalButton
             action="show"
-            className="bg-primary/90 flex h-10 items-center justify-center gap-2 rounded-md px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105"
+            className="bg-primary/90 flex h-10 items-center justify-center gap-2 rounded-md px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105 sm:h-11 sm:gap-3 sm:px-3.5"
           >
-            <IoReader className="size-6" />
+            <IoReader className="size-6 sm:size-7" />
             <span className="text-base font-semibold">Preview</span>
           </ToggleModalButton>
 
@@ -80,9 +79,9 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             target="_blank"
             rel="noopener noreferrer"
             href={`https://github.com/RiadOliveira/${EXAMPLE_REPOSITORY.name}`}
-            className="flex h-10 items-center justify-center gap-2 rounded-md bg-gray-800/90 px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105"
+            className="flex h-10 items-center justify-center gap-2 rounded-md bg-gray-800/90 px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105 sm:h-11 sm:gap-3 sm:px-3.5"
           >
-            <FaGithub className="size-6" />
+            <FaGithub className="size-6 sm:size-7" />
             <span className="text-base font-semibold">Github</span>
           </a>
         </div>
