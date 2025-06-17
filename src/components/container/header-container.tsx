@@ -23,15 +23,15 @@ export function HeaderContainer() {
 
       <div className="flex flex-col py-1 max-sm:justify-between sm:gap-3 sm:py-2 lg:w-full lg:items-center lg:gap-10 lg:pt-3">
         <section className="flex flex-col sm:items-center lg:gap-1">
-          <h1 className="m-0 text-lg leading-none font-bold md:text-xl lg:text-[22]">
+          <h1 className="m-0 text-lg leading-none font-bold md:text-xl lg:text-[22px]">
             {USER.fullName}
           </h1>
-          <h2 className="font-secondary text-lg font-semibold md:text-xl lg:text-[22]">
+          <h2 className="font-secondary text-lg font-semibold md:text-xl lg:text-[22px]">
             Full Stack Developer
           </h2>
         </section>
 
-        <section className="flex flex-wrap max-sm:justify-between sm:w-full sm:gap-2.5 md:gap-3 lg:w-[304] lg:justify-center lg:gap-5">
+        <section className="flex flex-wrap max-sm:justify-between sm:w-full sm:gap-2.5 md:gap-3 lg:w-[304px] lg:justify-center lg:gap-5">
           {USER.socials.map(SocialLink)}
         </section>
       </div>
@@ -47,7 +47,7 @@ function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
       target="_blank"
       rel="noopener noreferrer"
       className={mergeStyles([
-        'group border-light/50 group flex size-[37] flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-22 lg:shadow-md',
+        'group border-light/50 group flex size-[37px] flex-col items-center justify-center gap-2 rounded-md border-2 p-1 transition duration-400 hover:border-1 active:border-1 sm:size-9.5 md:size-11.5 lg:size-22 lg:shadow-md',
         colorStyles,
       ])}
     >

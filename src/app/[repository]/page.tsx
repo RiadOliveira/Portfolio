@@ -43,8 +43,8 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
             alt={EXAMPLE_REPOSITORY.name}
             sizes={{
-              definitions: [{ threshold: 'LG', value: '56rem' }],
-              defaultValue: '100%',
+              widthThreshholds: { lg: '56rem' },
+              defaultSize: '100%',
             }}
           />
 
@@ -57,7 +57,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           </div>
         </div>
 
-        <div className="flex w-full max-w-80 justify-between px-[3] pt-6.5 pb-6">
+        <div className="flex w-full max-w-80 justify-between px-[3px] pt-6.5 pb-6">
           <Link
             href="/"
             className="hover:bg-light/30 active:bg-light/30 size-10 rounded-md p-2 transition-normal duration-200 hover:scale-105 active:scale-105"
