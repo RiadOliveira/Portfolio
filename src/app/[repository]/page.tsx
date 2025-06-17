@@ -62,16 +62,16 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
         <div className="flex w-full max-w-[350px] justify-between px-2 pt-6.5 pb-6">
           <Link
             href="/"
-            className="hover:bg-light/30 active:bg-light/30 size-10 rounded-md p-2 transition-normal duration-200 hover:scale-105 active:scale-105 sm:h-11"
+            className="hover:bg-light/30 active:bg-light/30 size-10 rounded-md p-2 transition-normal duration-200 hover:scale-105 active:scale-105"
           >
-            <MdArrowBackIosNew className="-ml-0.5 size-6 sm:size-7" />
+            <MdArrowBackIosNew className="-ml-0.5 size-6" />
           </Link>
 
           <ToggleModalButton
             action="show"
-            className="bg-primary/90 flex h-10 items-center justify-center gap-2 rounded-md px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105 sm:h-11 sm:gap-3 sm:px-3.5"
+            className="bg-primary/90 flex h-10 items-center justify-center gap-2 rounded-md px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105"
           >
-            <IoReader className="size-6 sm:size-7" />
+            <IoReader className="size-6" />
             <span className="text-base font-semibold">Preview</span>
           </ToggleModalButton>
 
@@ -79,9 +79,9 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             target="_blank"
             rel="noopener noreferrer"
             href={`https://github.com/RiadOliveira/${EXAMPLE_REPOSITORY.name}`}
-            className="flex h-10 items-center justify-center gap-2 rounded-md bg-gray-800/90 px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105 sm:h-11 sm:gap-3 sm:px-3.5"
+            className="flex h-10 items-center justify-center gap-2 rounded-md bg-gray-800/90 px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105"
           >
-            <FaGithub className="size-6 sm:size-7" />
+            <FaGithub className="size-6" />
             <span className="text-base font-semibold">Github</span>
           </a>
         </div>
