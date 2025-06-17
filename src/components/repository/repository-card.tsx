@@ -24,7 +24,7 @@ export function RepositoryCard() {
         className="block max-w-96 space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-102 hover:from-emerald-600/80 hover:shadow-lg active:scale-102 active:from-emerald-600/80 active:shadow-lg"
       >
         <ImageContainer
-          className="aspect-video w-full max-w-96 overflow-hidden rounded-t-md rounded-br-4xl shadow"
+          className="aspect-video w-full overflow-hidden rounded-t-md rounded-br-4xl shadow lg:max-w-96"
           src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
           alt={EXAMPLE_REPOSITORY.name}
           sizes={{

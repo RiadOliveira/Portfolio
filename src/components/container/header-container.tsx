@@ -14,8 +14,8 @@ export function HeaderContainer() {
           widthThreshholds: {
             sm: '6.5rem',
             md: '7.5rem',
-            lg: '10rem',
-            xl: '10rem',
+            lg: '8.5rem',
+            '2xl': '10rem',
           },
         }}
         priority

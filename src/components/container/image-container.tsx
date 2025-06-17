@@ -6,6 +6,7 @@ const THRESHHOLDS_VALUES = {
   md: '48rem',
   lg: '64rem',
   xl: '80rem',
+  '2xl': '96rem',
 } as const;
 
 type Threshhold = keyof typeof THRESHHOLDS_VALUES;

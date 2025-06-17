@@ -44,9 +44,9 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             alt={EXAMPLE_REPOSITORY.name}
             sizes={{
               widthThreshholds: {
-                sm: '350px',
+                sm: '100%',
               },
-              defaultSize: '100%',
+              defaultSize: '350px',
             }}
           />
 
