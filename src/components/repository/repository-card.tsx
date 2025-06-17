@@ -18,7 +18,7 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
 
 export function RepositoryCard() {
   return (
-    <div className="snap-center first:pt-1 sm:snap-start">
+    <div className="snap-center max-xl:first:pt-1 sm:snap-start">
       <div className="h-3 max-sm:hidden" />
 
       <Link
