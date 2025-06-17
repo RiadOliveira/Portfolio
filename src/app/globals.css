@@ -75,6 +75,12 @@
     @apply [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)] [mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)];
   }
 
+  @media (min-width: 640px) {
+    .sm\:scroll-fade {
+      @apply [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)] [mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)];
+    }
+  }
+
   .prose {
     h1:first-child {
       @apply mt-0;
