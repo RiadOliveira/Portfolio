@@ -18,12 +18,10 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
 
 export function RepositoryCard() {
   return (
-    <div className="snap-center max-xl:first:pt-1 sm:snap-start">
-      <div className="h-3 max-sm:hidden" />
-
+    <div className="snap-center first:scroll-mt-2.5 max-xl:first:pt-1 sm:first:scroll-mt-3">
       <Link
         href={`/${EXAMPLE_REPOSITORY.name}`}
-        className="block max-w-96 space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-104 hover:from-emerald-600/80 hover:shadow-lg active:scale-104 active:from-emerald-600/80 active:shadow-lg"
+        className="block max-w-96 space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-102 hover:from-emerald-600/80 hover:shadow-lg active:scale-102 active:from-emerald-600/80 active:shadow-lg"
       >
         <ImageContainer
           className="aspect-video w-full max-w-96 overflow-hidden rounded-t-md rounded-br-4xl shadow"
