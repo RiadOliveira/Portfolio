@@ -51,7 +51,7 @@ function SocialLink({ Icon, name, href, colorStyles }: SocialData) {
         colorStyles,
       ])}
     >
-      <Icon className="size-full group-hover:scale-105 group-active:scale-105 lg:size-9 2xl:size-12" />
+      <Icon className="size-full lg:size-9 lg:group-hover:scale-105 lg:group-active:scale-105 2xl:size-12" />
       <span className="text-sm font-semibold max-lg:hidden">{name}</span>
     </a>
   );
