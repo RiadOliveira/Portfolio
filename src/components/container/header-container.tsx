@@ -31,7 +31,7 @@ export function HeaderContainer() {
           </h2>
         </section>
 
-        <section className="flex flex-wrap max-sm:justify-between sm:w-full sm:gap-2.5 md:gap-3 lg:justify-center lg:gap-5">
+        <section className="flex flex-wrap max-sm:justify-between sm:w-full sm:gap-2.5 md:gap-3 lg:justify-center lg:gap-4">
           {USER.socials.map(SocialLink)}
         </section>
       </div>
