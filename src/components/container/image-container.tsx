@@ -12,7 +12,7 @@ const THRESHHOLDS_VALUES = {
 type Threshhold = keyof typeof THRESHHOLDS_VALUES;
 type SizeDefinition = {
   defaultSize: string;
-  widthThreshholds: {
+  widthThreshholds?: {
     [key in Threshhold]?: string;
   };
 };
@@ -27,7 +27,7 @@ export function ImageContainer({
   children,
   className,
   imageStyles,
-  sizes: { defaultSize, widthThreshholds },
+  sizes: { defaultSize, widthThreshholds = {} },
   ...props
 }: ImageContainerProps) {
   const sizesDefinition = Object.entries(widthThreshholds).reduce(
