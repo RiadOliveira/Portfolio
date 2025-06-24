@@ -1,7 +1,13 @@
 'use client';
 
+import { useEffect } from 'react';
 import { DefaultProps } from 'types/DefaultProps';
-import { closeModal, showModal } from 'utils/modal';
+import {
+  addModalListeners,
+  closeModal,
+  removeModalListeners,
+  showModal,
+} from 'utils/modal';
 
 export interface ModalButtonProps extends DefaultProps {
   action: 'show' | 'close';
@@ -9,8 +15,13 @@ export interface ModalButtonProps extends DefaultProps {
 }
 
 export function ToggleModalButton({ action, ...props }: ModalButtonProps) {
+  useEffect(() => {
+    addModalListeners();
+    return () => removeModalListeners();
+  }, []);
+
   function handleClick() {
-    return (action === 'show' ? showModal : closeModal)();
+    (action === 'show' ? showModal : closeModal)();
   }
 
   return <button type="button" onClick={handleClick} {...props} />;

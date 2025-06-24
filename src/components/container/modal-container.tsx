@@ -17,7 +17,7 @@ export function ModalContainer({
       <header className="text-light z-10 flex max-h-[50px] min-h-[50px] w-full items-center justify-between bg-gradient-to-b from-emerald-600 to-emerald-400 px-3.5 shadow-lg shadow-emerald-600/60">
         <ToggleModalButton
           action="close"
-          className="transition-normal duration-100 hover:scale-110 active:scale-110"
+          className="transition-normal duration-100 hover:scale-120 active:scale-120"
         >
           <IoMdClose className="size-7 sm:size-6.5 md:size-7.5 lg:size-8" />
         </ToggleModalButton>
