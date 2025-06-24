@@ -28,6 +28,10 @@
   button {
     @apply cursor-pointer;
   }
+
+  dialog {
+    @apply size-full max-h-none max-w-none bg-black/65;
+  }
 }
 
 @layer utilities {
@@ -43,9 +47,16 @@
 
   .animated-modal {
     opacity: 0;
-    transform: scale(0.95);
-    transition: 0.4s ease;
     pointer-events: none;
+
+    &,
+    & div {
+      transition: 0.4s ease;
+    }
+
+    div {
+      transform: scale(0.95);
+    }
 
     &[open] {
       pointer-events: auto;
@@ -53,12 +64,18 @@
 
     &.showing {
       opacity: 1;
-      transform: scale(1);
+
+      div {
+        transform: scale(1);
+      }
     }
 
     &.closing {
       opacity: 0;
-      transform: scale(0.9);
+
+      div {
+        transform: scale(0.95);
+      }
     }
   }
 
