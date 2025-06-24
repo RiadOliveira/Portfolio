@@ -35,6 +35,36 @@
 }
 
 @layer utilities {
+  .loader {
+    @apply relative flex w-full max-w-[120px] items-center justify-center md:max-w-40;
+  }
+
+  .loader::before,
+  .loader::after {
+    @apply absolute rounded-full bg-transparent transition-[box-shadow] ease-in-out;
+
+    content: '';
+    animation: pulse-loop 1.8s infinite;
+    filter: drop-shadow(0 0 1rem rgba(7, 30, 34, 0.5));
+  }
+
+  .loader::before {
+    width: 100%;
+    padding-bottom: 100%;
+    animation-name: pulse-loop;
+  }
+
+  .loader::after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  .dark .loader::before,
+  .dark .loader::after {
+    filter: drop-shadow(0 0 1rem rgba(240, 247, 244, 0.3));
+  }
+
   .animated-gradient {
     background: linear-gradient(
       135deg,
@@ -176,5 +206,28 @@
   }
   50% {
     background-position: 65% 65%;
+  }
+}
+
+@keyframes pulse-loop {
+  0% {
+    box-shadow: 0 0 0 0 var(--color-secondary);
+    opacity: 0.2;
+  }
+  25% {
+    box-shadow: 0 0 0 0.5rem #d73d60;
+    opacity: 0.6;
+  }
+  50% {
+    box-shadow: 0 0 0 1rem var(--color-primary);
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 0 0.5rem #a240c8;
+    opacity: 0.6;
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--color-secondary);
+    opacity: 0.2;
   }
 }
