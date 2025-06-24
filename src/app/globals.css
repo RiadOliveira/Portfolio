@@ -30,7 +30,9 @@
   }
 
   dialog {
-    @apply size-full max-h-none max-w-none bg-black/65;
+    @apply bg-dark/30 size-full max-h-none max-w-none;
+
+    backdrop-filter: blur(4px);
   }
 }
 
