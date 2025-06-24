@@ -10,7 +10,7 @@ export function TechnologyBadge({ technology }: TechnologyBadgeProps) {
     <Image
       src={TECHNOLOGY_BADGES[technology]}
       alt={technology}
-      className="w-auto rounded-[2px] shadow 2xl:h-9"
+      className="w-auto rounded-sm shadow 2xl:h-9"
     />
   );
 }

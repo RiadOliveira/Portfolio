@@ -39,7 +39,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           </p>
 
           <ImageContainer
-            className="border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 bg-emerald-500/45 shadow-md sm:w-11/12 lg:max-w-[560px] 2xl:max-w-[700px]"
+            className="border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 bg-emerald-500/45 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-t-2 2xl:max-w-[700px]"
             src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
             alt={EXAMPLE_REPOSITORY.name}
             sizes={{
@@ -50,7 +50,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             }}
           />
 
-          <div className="border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 bg-emerald-500/45 p-3 shadow-md sm:w-11/12 lg:max-w-[560px] 2xl:max-w-[700px]">
+          <div className="border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 bg-emerald-500/45 p-3 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-b-2 2xl:max-w-[700px]">
             <TechnologyBadge technology="React" />
             <TechnologyBadge technology="NodeJs" />
             <TechnologyBadge technology="Expo" />
