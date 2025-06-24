@@ -111,6 +111,15 @@
     }
   }
 
+  .no-scroll-bg {
+    scrollbar-color: #999 transparent;
+  }
+
+  .no-scroll-bg::-webkit-scrollbar-track:hover,
+  .no-scroll-bg::-webkit-scrollbar-thumb:hover {
+    background: transparent !important;
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
