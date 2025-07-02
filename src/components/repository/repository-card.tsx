@@ -38,7 +38,7 @@ export function RepositoryCard({
         />
 
         <div className="flex items-center justify-between px-3">
-          <h1 className="m-0 text-base">{name}</h1>
+          <h1 className="m-0 text-base">{displayData.title}</h1>
 
           <div className="flex gap-2">
             <TechnologyIcons technologies={displayData.technologies} />

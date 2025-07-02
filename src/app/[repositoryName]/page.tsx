@@ -23,14 +23,14 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
   const repositories = await getRepositoriesData();
 
   const repository = repositories.find(({ name }) => name === repositoryName);
-  if (!repository) redirect('/');
+  if (!repository) return redirect('/');
 
   const { name, description, displayData } = repository;
   const { container } = COLORS_DATA[displayData.highlightColor];
 
   return (
     <>
-      <MainTitle>{name}</MainTitle>
+      <MainTitle>{displayData.title}</MainTitle>
 
       <section className="no-scrollbar scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3">
         <div className="flex flex-col items-center sm:max-w-[96%] lg:max-w-[99%]">

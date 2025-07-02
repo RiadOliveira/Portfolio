@@ -2,6 +2,7 @@ import { ThemeButton } from 'components/client/theme-button';
 import { ToggleModalButton } from 'components/client/toggle-modal-button';
 import { COLORS_DATA } from 'constants/colorsData';
 import { MODAL_ID } from 'constants/modal';
+import { redirect } from 'next/navigation';
 import { IoMdClose } from 'react-icons/io';
 import { getRepositoriesData } from 'services/getRepositoriesData';
 import { DefaultProps } from 'types/DefaultProps';
@@ -18,9 +19,12 @@ export default async function RepositoryModalLayout({
   const { repositoryName } = await params;
   const repositories = await getRepositoriesData();
 
+  const repository = repositories.find(({ name }) => name === repositoryName);
+  if (!repository) return redirect('/');
+
   const {
     displayData: { highlightColor },
-  } = repositories.find(({ name }) => name === repositoryName)!;
+  } = repository;
   const { modal } = COLORS_DATA[highlightColor];
 
   return (

@@ -3,6 +3,7 @@ import { APIRepository } from './APIRepository';
 import { HighlightColor } from './HighlightColor';
 
 export interface DisplayData {
+  title: string;
   coverImage: string;
   highlightColor: HighlightColor;
   technologies: Technology[];
