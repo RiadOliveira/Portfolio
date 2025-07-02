@@ -32,7 +32,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
     <>
       <MainTitle>{name}</MainTitle>
 
-      <section className="no-scrollbar sm:scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3">
+      <section className="no-scrollbar scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3">
         <div className="flex flex-col items-center sm:max-w-[96%] lg:max-w-[99%]">
           <p className="mb-4.5 text-justify text-base lg:mb-6 lg:text-center lg:text-lg xl:mb-3.5 2xl:mb-8 2xl:text-xl">
             {description}
