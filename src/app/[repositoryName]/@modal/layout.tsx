@@ -3,11 +3,25 @@ import { ToggleModalButton } from 'components/client/toggle-modal-button';
 import { COLORS_DATA } from 'constants/colorsData';
 import { MODAL_ID } from 'constants/modal';
 import { IoMdClose } from 'react-icons/io';
+import { getRepositoriesData } from 'services/getRepositoriesData';
 import { DefaultProps } from 'types/DefaultProps';
 import { mergeStyles } from 'utils/mergeStyles';
 
-export default function RepositoryModalLayout({ children }: DefaultProps) {
-  const { modal } = COLORS_DATA.emerald;
+interface RepositoryModalLayoutParams extends DefaultProps {
+  params: Promise<{ repositoryName: string }>;
+}
+
+export default async function RepositoryModalLayout({
+  params,
+  children,
+}: RepositoryModalLayoutParams) {
+  const { repositoryName } = await params;
+  const repositories = await getRepositoriesData();
+
+  const {
+    displayData: { highlightColor },
+  } = repositories.find(({ name }) => name === repositoryName)!;
+  const { modal } = COLORS_DATA[highlightColor];
 
   return (
     <dialog id={MODAL_ID} className="animated-modal">

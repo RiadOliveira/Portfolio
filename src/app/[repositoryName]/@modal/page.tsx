@@ -7,14 +7,14 @@ import { fetchReadme } from 'services/fetchReadme';
 import { ReadmeLink } from 'components/client/readme-link';
 
 interface RepositoryModalProps {
-  params: Promise<{ repository: string }>;
+  params: Promise<{ repositoryName: string }>;
 }
 
 export default async function RepositoryModal({
   params,
 }: RepositoryModalProps) {
-  const { repository } = await params;
-  const readmeContent = await fetchReadme(repository);
+  const { repositoryName } = await params;
+  const readmeContent = await fetchReadme(repositoryName);
 
   return (
     <div className="prose prose-sm dark:prose-invert text-dark dark:text-light no-scroll-bg min-w-full overflow-y-scroll p-5">
