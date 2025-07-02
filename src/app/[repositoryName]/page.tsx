@@ -45,6 +45,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             )}
             src={`${GITHUB_URLS.images}/${USER_DATA.id}/${displayData.coverImage}`}
             alt={name}
+            quality={100}
             sizes={{
               widthThreshholds: {
                 sm: '100%',

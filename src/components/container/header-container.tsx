@@ -19,6 +19,7 @@ export function HeaderContainer() {
             '2xl': '10rem',
           },
         }}
+        loading="eager"
         priority
       />
 
