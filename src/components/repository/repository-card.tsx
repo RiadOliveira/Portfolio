@@ -1,32 +1,33 @@
 import Link from 'next/link';
 
-import { RepositoryData } from 'types/RepositoryData';
-import { FaNodeJs, FaReact } from 'react-icons/fa';
-import { USER } from 'constants/user';
 import { ImageContainer } from '../container/image-container';
+import { RepositoryData } from 'types/repository/RepositoryData';
+import { USER_DATA } from 'constants/userData';
+import { COLORS_DATA } from 'constants/colorsData';
+import { mergeStyles } from 'utils/mergeStyles';
+import { TechnologyIcons } from './technologyIcons';
 
-const EXAMPLE_REPOSITORY: RepositoryData = {
-  id: 0,
-  name: 'Tradelous-Desktop',
-  description:
-    'An app developed in order to provide an easy way to manage stocks and sales of varied companies.',
-  displayData: {
-    coverImage: '147826010-25e9ef50-474a-49a8-b486-3ead4bed8105.png',
-    technologyIds: [0, 1, 2],
-  },
-} as const;
+interface RepositoryCardProps {
+  repository: RepositoryData;
+}
 
-export function RepositoryCard() {
+export function RepositoryCard({ repository }: RepositoryCardProps) {
+  const { card } = COLORS_DATA[repository.displayData.highlightColor];
+
   return (
     <div className="snap-center scroll-mt-2.5 max-xl:first:pt-1 sm:snap-start sm:scroll-mt-3">
       <Link
-        href={`/${EXAMPLE_REPOSITORY.name}`}
-        className="block max-w-96 space-y-2 rounded-lg bg-gradient-to-br from-emerald-600/60 from-70% pb-4 shadow-md duration-200 hover:scale-102 hover:from-emerald-600/80 hover:shadow-lg active:scale-102 active:from-emerald-600/80 active:shadow-lg"
+        href={`/${repository.name}`}
+        className={mergeStyles(
+          card,
+          'block max-w-96 space-y-2 rounded-lg bg-gradient-to-br from-70% pb-4 shadow-md duration-200 hover:scale-102 hover:shadow-lg active:scale-102 active:shadow-lg',
+        )}
       >
         <ImageContainer
           className="aspect-video w-full overflow-hidden rounded-t-md rounded-br-4xl shadow lg:max-w-96"
-          src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
-          alt={EXAMPLE_REPOSITORY.name}
+          src={`https://user-images.githubusercontent.com/${USER_DATA.id}/${repository.displayData.coverImage}`}
+          alt={repository.name}
+          quality={100}
           sizes={{
             defaultSize: '24rem',
             widthThreshholds: { lg: '100%' },
@@ -34,15 +35,16 @@ export function RepositoryCard() {
         />
 
         <div className="flex items-center justify-between px-3">
-          <h1 className="m-0 text-base">{EXAMPLE_REPOSITORY.name}</h1>
+          <h1 className="m-0 text-base">{repository.name}</h1>
 
           <div className="flex gap-2">
-            <FaReact size={22} color="white" />
-            <FaNodeJs size={22} color="white" />
+            <TechnologyIcons
+              technologies={repository.displayData.technologies}
+            />
           </div>
         </div>
 
-        <p className="px-3 text-justify">{EXAMPLE_REPOSITORY.description}</p>
+        <p className="px-3 text-justify">{repository.description}</p>
       </Link>
     </div>
   );

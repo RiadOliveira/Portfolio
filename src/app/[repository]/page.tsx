@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-import { USER } from 'constants/user';
-import { RepositoryData } from 'types/RepositoryData';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 import { IoReader } from 'react-icons/io5';
@@ -9,6 +7,10 @@ import { ImageContainer } from 'components/container/image-container';
 import { ToggleModalButton } from 'components/client/toggle-modal-button';
 import { MainTitle } from 'components/main-title';
 import { TechnologyBadge } from 'components/repository/technology-badge';
+import { RepositoryData } from 'types/repository/RepositoryData';
+import { USER_DATA } from 'constants/userData';
+import { mergeStyles } from 'utils/mergeStyles';
+import { COLORS_DATA } from 'constants/colorsData';
 
 interface RepositoryViewParams {
   params: Promise<{ repository: string }>;
@@ -21,12 +23,16 @@ const EXAMPLE_REPOSITORY: RepositoryData = {
     'An app developed in order to provide an easy way to manage stocks and sales of varied companies.',
   displayData: {
     coverImage: '147826010-25e9ef50-474a-49a8-b486-3ead4bed8105.png',
-    technologyIds: [0, 1, 2],
+    technologies: ['NodeJs', 'React', 'PostgreSQL'],
+    highlightColor: 'emerald',
   },
 } as const;
 
 export default async function RepositoryView({ params }: RepositoryViewParams) {
   const { repository } = await params;
+
+  const { container } =
+    COLORS_DATA[EXAMPLE_REPOSITORY.displayData.highlightColor];
 
   return (
     <>
@@ -39,8 +45,11 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           </p>
 
           <ImageContainer
-            className="border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 bg-emerald-500/45 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-t-2 2xl:max-w-[700px]"
-            src={`https://user-images.githubusercontent.com/${USER.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
+            className={mergeStyles(
+              container,
+              'border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-t-2 2xl:max-w-[700px]',
+            )}
+            src={`https://user-images.githubusercontent.com/${USER_DATA.id}/${EXAMPLE_REPOSITORY.displayData.coverImage}`}
             alt={EXAMPLE_REPOSITORY.name}
             sizes={{
               widthThreshholds: {
@@ -50,7 +59,12 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
             }}
           />
 
-          <div className="border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 bg-emerald-500/45 p-3 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-b-2 2xl:max-w-[700px]">
+          <div
+            className={mergeStyles(
+              container,
+              'border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 p-3 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-b-2 2xl:max-w-[700px]',
+            )}
+          >
             <TechnologyBadge technology="React" />
             <TechnologyBadge technology="NodeJs" />
             <TechnologyBadge technology="Expo" />

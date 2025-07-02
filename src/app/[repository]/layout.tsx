@@ -4,7 +4,7 @@ interface RepositoryLayoutParams extends DefaultProps {
   modal: React.ReactNode;
 }
 
-export default async function RepositoryLayout({
+export default function RepositoryLayout({
   children,
   modal,
 }: RepositoryLayoutParams) {

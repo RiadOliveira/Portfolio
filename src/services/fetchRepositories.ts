@@ -1,6 +1,6 @@
-import { USER } from 'constants/user';
 import { GITHUB_URLS } from 'constants/requests';
-import { APIRepository } from 'types/APIRepository';
+import { USER_DATA } from 'constants/userData';
+import { APIRepository } from 'types/repository/APIRepository';
 import { cachedJSONFetch } from 'utils/cachedJSONFetch';
 
 export function fetchRepositories() {
@@ -10,7 +10,7 @@ export function fetchRepositories() {
     per_page: '100',
   });
   const API_URL =
-    `${GITHUB_URLS.api}/${USER.login}/repos?${queryParams}` as const;
+    `${GITHUB_URLS.api}/${USER_DATA.login}/repos?${queryParams}` as const;
 
   const FETCH_PROPS = {
     headers: {

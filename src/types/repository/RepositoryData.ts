@@ -1,8 +1,11 @@
+import { Technology } from '../technology/Technology';
 import { APIRepository } from './APIRepository';
+import { HighlightColor } from './HighlightColor';
 
 export interface DisplayData {
   coverImage: string;
-  technologyIds: number[];
+  highlightColor: HighlightColor;
+  technologies: Technology[];
 }
 
 export interface RepositoryData extends Omit<APIRepository, 'owner'> {

@@ -1,13 +1,12 @@
 import { generateDisplayDataURL } from 'utils/generateDisplayDataURL';
 import { fetchRepositories } from './fetchRepositories';
-import { USER } from 'constants/user';
-import { DisplayData, RepositoryData } from 'types/RepositoryData';
-import { APIRepository } from 'types/APIRepository';
 import { cachedJSONFetch } from 'utils/cachedJSONFetch';
+import { APIRepository } from 'types/repository/APIRepository';
+import { USER_DATA } from 'constants/userData';
+import { DisplayData, RepositoryData } from 'types/repository/RepositoryData';
 
 export async function getPortfolioData() {
   const repositories = await fetchRepositories();
-
   const repositoriesDataPromises = repositories.map(
     generateRepositoryDataPromise,
   );
@@ -22,7 +21,7 @@ function generateRepositoryDataPromise({
   description,
   owner: { id: ownerId },
 }: APIRepository) {
-  if (ownerId !== USER.id || name === USER.login) return undefined;
+  if (ownerId !== USER_DATA.id || name === USER_DATA.login) return undefined;
 
   return cachedJSONFetch<DisplayData>(generateDisplayDataURL(name))
     .then(

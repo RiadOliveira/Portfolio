@@ -1,14 +1,15 @@
-import { SocialData, USER } from 'constants/user';
+import { USER_DATA } from 'constants/userData';
 import { ImageContainer } from './image-container';
 import { mergeStyles } from 'utils/mergeStyles';
+import { SocialData } from 'types/user/SocialData';
 
 export function HeaderContainer() {
   return (
     <header className="flex justify-center gap-5 max-sm:pt-3 max-sm:pb-6.5 sm:w-2/5 sm:flex-col sm:items-center sm:gap-3 lg:w-[292px] 2xl:w-[352px]">
       <ImageContainer
         className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 sm:size-30 md:size-[8.5rem] lg:size-40 2xl:size-48"
-        src="/avatar.jpg"
-        alt={USER.fullName}
+        src={USER_DATA.avatar}
+        alt={USER_DATA.fullName}
         sizes={{
           defaultSize: '12rem',
           widthThreshholds: {
@@ -24,7 +25,7 @@ export function HeaderContainer() {
       <div className="flex flex-col py-1 max-sm:justify-between sm:gap-3 sm:py-2 lg:w-full lg:items-center lg:gap-10 lg:pt-3">
         <section className="flex flex-col sm:items-center lg:gap-1">
           <h1 className="m-0 text-lg leading-none font-bold md:text-xl lg:text-[22px]">
-            {USER.fullName}
+            {USER_DATA.fullName}
           </h1>
           <h2 className="font-secondary text-lg font-semibold md:text-xl lg:text-[22px]">
             Full Stack Developer
@@ -32,7 +33,7 @@ export function HeaderContainer() {
         </section>
 
         <section className="flex flex-wrap max-sm:justify-between sm:w-full sm:gap-2.5 md:gap-3 lg:justify-center lg:gap-4">
-          {USER.socials.map(SocialLink)}
+          {USER_DATA.socials.map(SocialLink)}
         </section>
       </div>
     </header>

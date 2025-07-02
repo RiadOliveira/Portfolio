@@ -1,26 +1,22 @@
-import { IconType } from 'react-icons';
 import { FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { TbFileCv } from 'react-icons/tb';
-
-export type SocialData = {
-  Icon: IconType;
-  name: string;
-  href: string;
-  colorStyles: string;
-};
+import { SocialData } from 'types/user/SocialData';
+import { GITHUB_URLS } from './requests';
 
 type UserData = {
   id: number;
   login: string;
   fullName: string;
+  avatar: `${typeof GITHUB_URLS.avatar}/${number}?v=4`;
   socials: SocialData[];
 };
 
-export const USER: UserData = {
+export const USER_DATA: UserData = {
   id: 69125013,
   login: 'RiadOliveira',
   fullName: 'Ríad Oliveira de Morais',
+  avatar: `${GITHUB_URLS.avatar}/69125013?v=4`,
   socials: [
     {
       Icon: TbFileCv,
