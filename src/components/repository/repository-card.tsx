@@ -5,7 +5,7 @@ import { RepositoryData } from 'types/repository/RepositoryData';
 import { USER_DATA } from 'constants/userData';
 import { COLORS_DATA } from 'constants/colorsData';
 import { mergeStyles } from 'utils/mergeStyles';
-import { TechnologyIcons } from './technologyIcons';
+import { TechnologyIcons } from './technology-icons';
 import { GITHUB_URLS } from 'constants/requests';
 
 interface RepositoryCardProps {
