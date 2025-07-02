@@ -11,6 +11,8 @@ import { USER_DATA } from 'constants/userData';
 import { mergeStyles } from 'utils/mergeStyles';
 import { COLORS_DATA } from 'constants/colorsData';
 import { getRepositoriesData } from 'services/getRepositoriesData';
+import { redirect } from 'next/navigation';
+import { GITHUB_URLS } from 'constants/requests';
 
 interface RepositoryViewParams {
   params: Promise<{ repositoryName: string }>;
@@ -20,9 +22,10 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
   const { repositoryName } = await params;
   const repositories = await getRepositoriesData();
 
-  const { name, description, displayData } = repositories.find(
-    ({ name }) => name === repositoryName,
-  )!;
+  const repository = repositories.find(({ name }) => name === repositoryName);
+  if (!repository) redirect('/');
+
+  const { name, description, displayData } = repository;
   const { container } = COLORS_DATA[displayData.highlightColor];
 
   return (
@@ -40,7 +43,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
               container,
               'border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-t-2 2xl:max-w-[700px]',
             )}
-            src={`https://user-images.githubusercontent.com/${USER_DATA.id}/${displayData.coverImage}`}
+            src={`${GITHUB_URLS.images}/${USER_DATA.id}/${displayData.coverImage}`}
             alt={name}
             sizes={{
               widthThreshholds: {
@@ -83,7 +86,7 @@ export default async function RepositoryView({ params }: RepositoryViewParams) {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={`https://github.com/RiadOliveira/${name}`}
+            href={`${GITHUB_URLS.default}/${USER_DATA.login}/${name}`}
             className="flex h-10 items-center justify-center gap-2 rounded-md bg-gray-800/90 px-3 shadow transition-normal duration-200 hover:scale-105 active:scale-105 lg:h-12 lg:px-4 2xl:h-[52px] 2xl:px-5"
           >
             <FaGithub className="size-6 lg:size-7.5 2xl:size-8" />

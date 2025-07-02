@@ -6,6 +6,7 @@ import { USER_DATA } from 'constants/userData';
 import { COLORS_DATA } from 'constants/colorsData';
 import { mergeStyles } from 'utils/mergeStyles';
 import { TechnologyIcons } from './technologyIcons';
+import { GITHUB_URLS } from 'constants/requests';
 
 interface RepositoryCardProps {
   repository: RepositoryData;
@@ -27,7 +28,7 @@ export function RepositoryCard({
       >
         <ImageContainer
           className="aspect-video w-full overflow-hidden rounded-t-md rounded-br-4xl shadow lg:max-w-96"
-          src={`https://user-images.githubusercontent.com/${USER_DATA.id}/${displayData.coverImage}`}
+          src={`${GITHUB_URLS.images}/${USER_DATA.id}/${displayData.coverImage}`}
           alt={name}
           quality={100}
           sizes={{

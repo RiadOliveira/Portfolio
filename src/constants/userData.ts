@@ -28,7 +28,7 @@ export const USER_DATA: UserData = {
     {
       Icon: FaGithub,
       name: 'Github',
-      href: 'https://github.com/RiadOliveira',
+      href: `${GITHUB_URLS.default}/RiadOliveira`,
       colorStyles:
         'hover:bg-gray-800 hover:border-gray-900 active:bg-gray-800 active:border-gray-900',
     },
