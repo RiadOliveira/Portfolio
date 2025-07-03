@@ -40,29 +40,28 @@ export default async function RepositoryView({ params }: Props) {
             {description}
           </p>
 
-          <ImageContainer
-            className={mergeStyles(
-              container,
-              'border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-t-2 2xl:max-w-[600px]',
-            )}
-            src={getRepositoryImageUrl(displayData)}
-            alt={name}
-            quality={100}
-            sizes={{
-              widthThreshholds: { sm: '100%' },
-              defaultSize: '91.6667%',
-            }}
-          />
-
           <div
             className={mergeStyles(
               container,
-              'border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 p-3 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-b-2 2xl:max-w-[600px] 2xl:gap-3 2xl:p-4',
+              'border-light/40 w-full rounded-md border-1 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-2 2xl:max-w-[600px]',
             )}
           >
-            {technologies.map((technology) => (
-              <TechnologyBadge key={technology} technology={technology} />
-            ))}
+            <ImageContainer
+              className="aspect-video overflow-hidden rounded-t-md shadow-md"
+              src={getRepositoryImageUrl(displayData)}
+              alt={name}
+              quality={100}
+              sizes={{
+                widthThreshholds: { sm: '100%' },
+                defaultSize: '91.6667%',
+              }}
+            />
+
+            <div className="flex w-full flex-wrap justify-center gap-2 rounded-b-md p-3 2xl:gap-3 2xl:p-4">
+              {technologies.map((technology) => (
+                <TechnologyBadge key={technology} technology={technology} />
+              ))}
+            </div>
           </div>
         </div>
 
