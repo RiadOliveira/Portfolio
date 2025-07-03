@@ -14,7 +14,6 @@ import { IoReader } from 'react-icons/io5';
 import { ImageContainer } from 'components/container/image-container';
 import { ToggleModalButton } from 'components/client/toggle-modal-button';
 import { MainTitle } from 'components/main-title';
-import { TechnologyBadge } from 'components/repository/technology-badge';
 import { USER_DATA } from 'constants/userData';
 import { mergeStyles } from 'utils/mergeStyles';
 import { COLORS_DATA } from 'constants/colorsData';
@@ -22,6 +21,7 @@ import { getRepositoriesData } from 'services/getRepositoriesData';
 import { redirect } from 'next/navigation';
 import { GITHUB_URLS } from 'constants/requests';
 import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
+import { TechnologyBadges } from 'components/repository/technology-badges';
 
 type Props = {
   params: Promise<{ repositoryName: string }>;
@@ -83,11 +83,7 @@ export default async function RepositoryView({ params }: Props) {
                 sizes={{ defaultSize: '100%' }}
               />
 
-              <div className="flex flex-wrap justify-center gap-2 rounded-b-md p-3 2xl:gap-3 2xl:p-4">
-                {technologies.map((technology) => (
-                  <TechnologyBadge key={technology} technology={technology} />
-                ))}
-              </div>
+              <TechnologyBadges technologies={technologies} />
             </div>
 
             <div className="flex flex-1 flex-col max-xl:gap-3 xl:h-full xl:justify-between xl:py-0.5">
