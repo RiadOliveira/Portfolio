@@ -3,16 +3,16 @@ import { redirect } from 'next/navigation';
 import { getRepositoriesData } from 'services/getRepositoriesData';
 import { DefaultProps } from 'types/DefaultProps';
 
-interface RepositoryLayoutParams extends DefaultProps {
+type Props = DefaultProps & {
   modal: React.ReactNode;
-}
+};
 
-type Props = {
+type MetadataParams = {
   params: Promise<{ repositoryName: string }>;
 };
 
 export async function generateMetadata(
-  { params }: Props,
+  { params }: MetadataParams,
   _parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { repositoryName } = await params;
@@ -28,10 +28,7 @@ export async function generateMetadata(
   return { title: `Project | ${title}`, description };
 }
 
-export default function RepositoryLayout({
-  children,
-  modal,
-}: RepositoryLayoutParams) {
+export default function RepositoryViewLayout({ children, modal }: Props) {
   return (
     <>
       {children}

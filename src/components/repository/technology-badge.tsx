@@ -15,7 +15,7 @@ export function TechnologyBadge({ technology }: TechnologyBadgeProps) {
     <Image
       src={generateBadgeFullURL(badgeComponents)}
       alt={technology}
-      width={0}
+      width={100}
       height={28}
       className="h-7 w-auto rounded shadow 2xl:h-9"
       unoptimized

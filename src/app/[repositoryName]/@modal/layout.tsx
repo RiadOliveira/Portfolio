@@ -8,14 +8,14 @@ import { getRepositoriesData } from 'services/getRepositoriesData';
 import { DefaultProps } from 'types/DefaultProps';
 import { mergeStyles } from 'utils/mergeStyles';
 
-interface RepositoryModalLayoutParams extends DefaultProps {
+type Props = DefaultProps & {
   params: Promise<{ repositoryName: string }>;
-}
+};
 
 export default async function RepositoryModalLayout({
   params,
   children,
-}: RepositoryModalLayoutParams) {
+}: Props) {
   const { repositoryName } = await params;
   const repositories = await getRepositoriesData();
 

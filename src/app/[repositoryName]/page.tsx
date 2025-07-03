@@ -14,11 +14,11 @@ import { getRepositoriesData } from 'services/getRepositoriesData';
 import { redirect } from 'next/navigation';
 import { GITHUB_URLS } from 'constants/requests';
 
-interface RepositoryViewParams {
+type Props = {
   params: Promise<{ repositoryName: string }>;
-}
+};
 
-export default async function RepositoryView({ params }: RepositoryViewParams) {
+export default async function RepositoryView({ params }: Props) {
   const { repositoryName } = await params;
   const repositories = await getRepositoriesData();
 

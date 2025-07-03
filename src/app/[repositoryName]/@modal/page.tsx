@@ -6,13 +6,11 @@ import rehypeRaw from 'rehype-raw';
 import { fetchReadme } from 'services/fetchReadme';
 import { ReadmeLink } from 'components/client/readme-link';
 
-interface RepositoryModalProps {
+type Props = {
   params: Promise<{ repositoryName: string }>;
-}
+};
 
-export default async function RepositoryModal({
-  params,
-}: RepositoryModalProps) {
+export default async function RepositoryModal({ params }: Props) {
   const { repositoryName } = await params;
   const readmeContent = await fetchReadme(repositoryName);
 
