@@ -17,7 +17,7 @@ export function TechnologyBadge({ technology }: TechnologyBadgeProps) {
       alt={technology}
       width={100}
       height={28}
-      className="h-7 w-auto rounded shadow 2xl:h-9"
+      className="h-7 w-auto rounded shadow 2xl:h-8"
       unoptimized
     />
   );
