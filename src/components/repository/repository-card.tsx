@@ -2,11 +2,10 @@ import Link from 'next/link';
 
 import { ImageContainer } from '../container/image-container';
 import { RepositoryData } from 'types/repository/RepositoryData';
-import { USER_DATA } from 'constants/userData';
 import { COLORS_DATA } from 'constants/colorsData';
 import { mergeStyles } from 'utils/mergeStyles';
 import { TechnologyIcons } from './technology-icons';
-import { GITHUB_URLS } from 'constants/requests';
+import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
 
 interface RepositoryCardProps {
   repository: RepositoryData;
@@ -15,7 +14,8 @@ interface RepositoryCardProps {
 export function RepositoryCard({
   repository: { name, description, displayData },
 }: RepositoryCardProps) {
-  const { card } = COLORS_DATA[displayData.highlightColor];
+  const { title, technologies, highlightColor } = displayData;
+  const { card } = COLORS_DATA[highlightColor];
 
   return (
     <div className="snap-center scroll-mt-2.5 max-xl:first:pt-1 sm:snap-start sm:scroll-mt-3">
@@ -28,7 +28,7 @@ export function RepositoryCard({
       >
         <ImageContainer
           className="aspect-video w-full overflow-hidden rounded-t-md rounded-br-4xl shadow lg:max-w-96"
-          src={`${GITHUB_URLS.images}/${USER_DATA.id}/${displayData.coverImage}`}
+          src={getRepositoryImageUrl(displayData)}
           alt={name}
           quality={100}
           sizes={{
@@ -38,10 +38,10 @@ export function RepositoryCard({
         />
 
         <div className="flex items-center justify-between px-3">
-          <h1 className="m-0 text-base">{displayData.title}</h1>
+          <h1 className="m-0 text-base">{title}</h1>
 
           <div className="flex gap-2">
-            <TechnologyIcons technologies={displayData.technologies} />
+            <TechnologyIcons technologies={technologies} />
           </div>
         </div>
 

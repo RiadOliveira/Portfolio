@@ -4,9 +4,10 @@ import { HighlightColor } from './HighlightColor';
 
 export type DisplayData = {
   title: string;
-  coverImage: string;
+  imageId: string;
   highlightColor: HighlightColor;
   technologies: Technology[];
+  attachmentsUrl?: true;
 };
 
 export type RepositoryData = Omit<APIRepository, 'owner'> & {

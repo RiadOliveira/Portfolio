@@ -13,6 +13,7 @@ import { COLORS_DATA } from 'constants/colorsData';
 import { getRepositoriesData } from 'services/getRepositoriesData';
 import { redirect } from 'next/navigation';
 import { GITHUB_URLS } from 'constants/requests';
+import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
 
 type Props = {
   params: Promise<{ repositoryName: string }>;
@@ -26,11 +27,12 @@ export default async function RepositoryView({ params }: Props) {
   if (!repository) return redirect('/');
 
   const { name, description, displayData } = repository;
-  const { container } = COLORS_DATA[displayData.highlightColor];
+  const { title, technologies, highlightColor } = displayData;
+  const { container } = COLORS_DATA[highlightColor];
 
   return (
     <>
-      <MainTitle>{displayData.title}</MainTitle>
+      <MainTitle>{title}</MainTitle>
 
       <section className="no-scrollbar scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3">
         <div className="flex flex-col items-center sm:max-w-[96%] lg:max-w-[99%]">
@@ -43,13 +45,11 @@ export default async function RepositoryView({ params }: Props) {
               container,
               'border-light/40 aspect-video w-full overflow-hidden rounded-t-md border-x-1 border-t-1 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-t-2 2xl:max-w-[700px]',
             )}
-            src={`${GITHUB_URLS.images}/${USER_DATA.id}/${displayData.coverImage}`}
+            src={getRepositoryImageUrl(displayData)}
             alt={name}
             quality={100}
             sizes={{
-              widthThreshholds: {
-                sm: '100%',
-              },
+              widthThreshholds: { sm: '100%' },
               defaultSize: '91.6667%',
             }}
           />
@@ -60,7 +60,7 @@ export default async function RepositoryView({ params }: Props) {
               'border-light/40 flex w-full flex-wrap justify-center gap-2 rounded-b-md border-x-1 border-b-1 p-3 shadow-md sm:w-11/12 lg:max-w-[560px] lg:border-x-2 lg:border-b-2 2xl:max-w-[700px] 2xl:gap-3 2xl:p-4',
             )}
           >
-            {displayData.technologies.map((technology) => (
+            {technologies.map((technology) => (
               <TechnologyBadge key={technology} technology={technology} />
             ))}
           </div>
