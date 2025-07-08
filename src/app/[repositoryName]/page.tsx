@@ -1,15 +1,6 @@
 import Link from 'next/link';
 
 import { MdArrowBackIosNew } from 'react-icons/md';
-import {
-  FaBarcode,
-  FaBoxOpen,
-  FaBuilding,
-  FaChartLine,
-  FaGithub,
-  FaSearch,
-  FaUsers,
-} from 'react-icons/fa';
 import { IoReader } from 'react-icons/io5';
 import { ImageContainer } from 'components/container/image-container';
 import { ToggleModalButton } from 'components/client/toggle-modal-button';
@@ -22,30 +13,12 @@ import { redirect } from 'next/navigation';
 import { GITHUB_URLS } from 'constants/requests';
 import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
 import { TechnologyBadges } from 'components/repository/technology-badges';
+import { FaGithub } from 'react-icons/fa';
+import { Features } from 'components/repository/features';
 
 type Props = {
   params: Promise<{ repositoryName: string }>;
 };
-
-const features = [
-  {
-    icon: FaUsers,
-    title: 'Gestão de Usuários',
-    description:
-      'Registro, atualização e exclusão de usuários com perfis admin e func',
-  },
-  {
-    icon: FaBuilding,
-    title: 'Gestão Empresarial',
-    description:
-      'CRUD completo de empresas com sistema de contratação e demissão',
-  },
-  {
-    icon: FaBoxOpen,
-    title: 'Controle de Produtos',
-    description: 'Cadastro e gestão de produtos com sistema de categorização',
-  },
-];
 
 export default async function RepositoryView({ params }: Props) {
   const { repositoryName } = await params;
@@ -55,7 +28,7 @@ export default async function RepositoryView({ params }: Props) {
   if (!repository) return redirect('/');
 
   const { name, description, displayData } = repository;
-  const { title, technologies, highlightColor } = displayData;
+  const { title, technologies, highlightColor, features } = displayData;
   const { container, icon } = COLORS_DATA[highlightColor];
 
   return (
@@ -87,32 +60,7 @@ export default async function RepositoryView({ params }: Props) {
             </div>
 
             <div className="flex flex-1 flex-col max-xl:gap-3 xl:h-full xl:justify-between xl:py-0.5">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group border-light/20 hover:border-light/40 bg-light/8 flex items-start gap-4 rounded-lg border p-3 shadow transition-all duration-300 hover:scale-102 hover:bg-white/13"
-                >
-                  <div
-                    className={mergeStyles(
-                      icon.background,
-                      'rounded-lg p-2 transition-colors duration-300',
-                    )}
-                  >
-                    <feature.icon
-                      className={mergeStyles(icon.color, 'size-5')}
-                    />
-                  </div>
-
-                  <div>
-                    <span className="mb-1 text-base font-semibold">
-                      {feature.title}
-                    </span>
-                    <p className="text-xs leading-relaxed lg:text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+              <Features features={features} iconStyles={icon} />
             </div>
           </div>
         </div>
