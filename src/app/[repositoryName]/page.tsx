@@ -45,7 +45,7 @@ export default async function RepositoryView({ params }: Props) {
             <div
               className={mergeStyles(
                 container,
-                'border-light/40 w-full rounded-md border-1 shadow-md lg:max-w-[540px] lg:border-2 xl:max-w-[550px] 2xl:max-w-[570px]',
+                'border-light/40 w-full rounded-md border-1 shadow-md lg:max-w-[540px] lg:border-2 xl:max-w-[550px]',
               )}
             >
               <ImageContainer

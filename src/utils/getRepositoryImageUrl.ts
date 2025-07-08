@@ -1,6 +1,6 @@
 import { GITHUB_URLS } from 'constants/requests';
 import { USER_DATA } from 'constants/userData';
-import { DisplayData } from 'types/repository/RepositoryData';
+import { DisplayData } from 'types/repository/DisplayData';
 
 export function getRepositoryImageUrl({
   imageId,
