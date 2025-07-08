@@ -40,9 +40,7 @@ export function RepositoryCard({
         <div className="flex items-center justify-between px-3">
           <h1 className="m-0 text-base">{title}</h1>
 
-          <div className="flex gap-2">
-            <TechnologyIcons technologies={technologies} />
-          </div>
+          <TechnologyIcons technologies={technologies} />
         </div>
 
         <p className="px-3 text-justify">{description}</p>

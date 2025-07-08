@@ -8,13 +8,17 @@ interface TechnologyIconsProps {
 }
 
 export function TechnologyIcons({ technologies }: TechnologyIconsProps) {
-  return TECHNOLOGY_INDICES.map((index) => {
-    const technology = technologies[index];
-    if (!technology) return undefined;
+  return (
+    <div className="flex gap-2">
+      {TECHNOLOGY_INDICES.map((index) => {
+        const technology = technologies[index];
+        if (!technology) return undefined;
 
-    const { Icon } = TECHNOLOGIES_DATA[technology];
-    return (
-      <Icon key={technology} className="size-6 rounded-[2px] text-white" />
-    );
-  });
+        const { Icon } = TECHNOLOGIES_DATA[technology];
+        return (
+          <Icon key={technology} className="size-6 rounded-[2px] text-white" />
+        );
+      })}
+    </div>
+  );
 }

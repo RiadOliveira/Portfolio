@@ -9,7 +9,7 @@ type Props = {
 
 export function TechnologyBadges({ technologies }: Props) {
   return (
-    <div className="flex flex-wrap justify-center gap-2 rounded-b-md p-3 2xl:gap-3 2xl:p-4">
+    <div className="flex flex-wrap justify-center gap-2 rounded-b-md p-3 xl:h-[108px] 2xl:gap-3 2xl:p-4">
       {technologies.map((technology) => (
         <Image
           key={technology}

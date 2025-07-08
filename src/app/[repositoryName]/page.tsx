@@ -60,9 +60,7 @@ export default async function RepositoryView({ params }: Props) {
               <TechnologyBadges technologies={technologies} />
             </div>
 
-            <div className="flex flex-1 flex-col max-xl:gap-3 max-xl:px-1 xl:h-full xl:justify-between xl:py-0.5">
-              <Features features={features} iconStyles={icon} />
-            </div>
+            <Features features={features} iconStyles={icon} />
           </div>
         </div>
 
