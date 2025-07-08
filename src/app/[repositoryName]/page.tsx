@@ -60,7 +60,7 @@ export default async function RepositoryView({ params }: Props) {
               <TechnologyBadges technologies={technologies} />
             </div>
 
-            <div className="flex flex-1 flex-col max-xl:gap-3 xl:h-full xl:justify-between xl:py-0.5">
+            <div className="flex flex-1 flex-col max-xl:gap-3 max-xl:px-1 xl:h-full xl:justify-between xl:py-0.5">
               <Features features={features} iconStyles={icon} />
             </div>
           </div>
@@ -71,10 +71,10 @@ export default async function RepositoryView({ params }: Props) {
             href="/"
             className="hover:bg-light/30 active:bg-light/30 size-10.5 rounded-md p-2 transition-normal duration-200 hover:scale-106 active:scale-106 xl:size-12"
           >
-            <MdArrowBackIosNew className="size-6 max-xl:-ml-0.5 xl:mt-0.5 xl:size-7.5" />
+            <MdArrowBackIosNew className="mt-0.5 size-6 xl:size-7.5" />
           </Link>
 
-          <div className="flex gap-5">
+          <div className="flex gap-4 md:gap-5">
             <ToggleModalButton
               action="show"
               className="bg-primary/90 flex h-10.5 items-center justify-center gap-2 rounded-md px-3 shadow transition-normal duration-200 hover:scale-106 active:scale-106 xl:h-12 xl:px-4"
