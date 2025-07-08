@@ -1,1 +1,8 @@
-export type FeatureIcon = 'boxOpen' | 'building' | 'users';
+export type FeatureIcon =
+  | 'boxOpen'
+  | 'building'
+  | 'users'
+  | 'qrcode'
+  | 'database'
+  | 'fileInvoiceDollar'
+  | 'chartBar';

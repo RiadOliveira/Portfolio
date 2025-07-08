@@ -27,8 +27,9 @@ export default async function RepositoryView({ params }: Props) {
   const repository = repositories.find(({ name }) => name === repositoryName);
   if (!repository) return redirect('/');
 
-  const { name, description, displayData } = repository;
-  const { title, technologies, highlightColor, features } = displayData;
+  const { name, displayData } = repository;
+  const { title, extendedDescription, technologies, highlightColor, features } =
+    displayData;
   const { container, icon } = COLORS_DATA[highlightColor];
 
   return (
@@ -38,7 +39,7 @@ export default async function RepositoryView({ params }: Props) {
       <section className="no-scrollbar scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3">
         <div className="flex flex-col items-center sm:max-w-[96%] lg:max-w-[98.5%]">
           <p className="mb-4.5 text-justify text-base lg:mb-6 lg:text-lg xl:mb-3.5 2xl:mb-7">
-            {description}
+            {extendedDescription}
           </p>
 
           <div className="flex items-center gap-4 max-xl:flex-col">

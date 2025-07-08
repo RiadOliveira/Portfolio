@@ -4,6 +4,7 @@ import { Feature } from './Feature';
 
 export type DisplayData = {
   title: string;
+  extendedDescription: string;
   imageId: string;
   highlightColor: HighlightColor;
   technologies: Technology[];
