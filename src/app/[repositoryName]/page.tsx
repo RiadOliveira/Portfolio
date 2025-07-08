@@ -56,7 +56,7 @@ export default async function RepositoryView({ params }: Props) {
 
   const { name, description, displayData } = repository;
   const { title, technologies, highlightColor } = displayData;
-  const { container } = COLORS_DATA[highlightColor];
+  const { container, icon } = COLORS_DATA[highlightColor];
 
   return (
     <>
@@ -90,17 +90,24 @@ export default async function RepositoryView({ params }: Props) {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group border-light/20 hover:border-light/40 flex items-start gap-4 rounded-lg border bg-white/5 p-3 transition-all duration-300 hover:scale-[1.02] hover:bg-white/10"
+                  className="group border-light/20 hover:border-light/40 bg-light/8 flex items-start gap-4 rounded-lg border p-3 shadow transition-all duration-300 hover:scale-102 hover:bg-white/13"
                 >
-                  <div className="bg-primary/20 group-hover:bg-primary/30 rounded-lg p-2 transition-colors duration-300">
-                    <feature.icon className="text-primary size-5" />
+                  <div
+                    className={mergeStyles(
+                      icon.background,
+                      'rounded-lg p-2 transition-colors duration-300',
+                    )}
+                  >
+                    <feature.icon
+                      className={mergeStyles(icon.color, 'size-5')}
+                    />
                   </div>
 
                   <div>
-                    <span className="mb-1 text-base font-semibold text-gray-100 transition-colors duration-300 group-hover:text-white lg:text-base">
+                    <span className="mb-1 text-base font-semibold">
                       {feature.title}
                     </span>
-                    <p className="text-xs leading-relaxed text-gray-300 transition-colors duration-300 group-hover:text-gray-200 lg:text-sm">
+                    <p className="text-xs leading-relaxed lg:text-sm">
                       {feature.description}
                     </p>
                   </div>
