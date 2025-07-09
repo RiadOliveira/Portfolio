@@ -9,8 +9,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-red-500/45',
     modal: 'from-red-600 to-red-400 shadow-red-600/80',
     icon: {
-      background: 'bg-red-500/25 group-hover:bg-red-500/35',
-      color: 'text-red-400',
+      background: 'bg-red-500/60 group-hover:bg-red-500/80',
+      color: 'text-red-300',
     },
   },
   orange: {
@@ -18,8 +18,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-orange-500/45',
     modal: 'from-orange-600 to-orange-400 shadow-orange-600/80',
     icon: {
-      background: 'bg-orange-500/25 group-hover:bg-orange-500/35',
-      color: 'text-orange-400',
+      background: 'bg-orange-500/60 group-hover:bg-orange-500/80',
+      color: 'text-orange-300',
     },
   },
   amber: {
@@ -27,8 +27,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-amber-500/45',
     modal: 'from-amber-600 to-amber-400 shadow-amber-600/80',
     icon: {
-      background: 'bg-amber-500/25 group-hover:bg-amber-500/35',
-      color: 'text-amber-400',
+      background: 'bg-amber-500/60 group-hover:bg-amber-500/80',
+      color: 'text-amber-300',
     },
   },
   yellow: {
@@ -36,8 +36,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-yellow-500/45',
     modal: 'from-yellow-600 to-yellow-400 shadow-yellow-600/80',
     icon: {
-      background: 'bg-yellow-500/25 group-hover:bg-yellow-500/35',
-      color: 'text-yellow-400',
+      background: 'bg-yellow-500/60 group-hover:bg-yellow-500/80',
+      color: 'text-yellow-300',
     },
   },
   lime: {
@@ -45,8 +45,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-lime-500/45',
     modal: 'from-lime-600 to-lime-400 shadow-lime-600/80',
     icon: {
-      background: 'bg-lime-500/25 group-hover:bg-lime-500/35',
-      color: 'text-lime-400',
+      background: 'bg-lime-500/60 group-hover:bg-lime-500/80',
+      color: 'text-lime-300',
     },
   },
   green: {
@@ -54,8 +54,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-green-500/45',
     modal: 'from-green-600 to-green-400 shadow-green-600/80',
     icon: {
-      background: 'bg-green-500/25 group-hover:bg-green-500/35',
-      color: 'text-green-400',
+      background: 'bg-green-500/60 group-hover:bg-green-500/80',
+      color: 'text-green-300',
     },
   },
   emerald: {
@@ -63,8 +63,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-emerald-500/45',
     modal: 'from-emerald-600 to-emerald-400 shadow-emerald-600/80',
     icon: {
-      background: 'bg-emerald-500/25 group-hover:bg-emerald-500/35',
-      color: 'text-emerald-400',
+      background: 'bg-emerald-500/60 group-hover:bg-emerald-500/80',
+      color: 'text-emerald-300',
     },
   },
   teal: {
@@ -72,8 +72,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-teal-500/45',
     modal: 'from-teal-600 to-teal-400 shadow-teal-600/80',
     icon: {
-      background: 'bg-teal-500/25 group-hover:bg-teal-500/35',
-      color: 'text-teal-400',
+      background: 'bg-teal-500/60 group-hover:bg-teal-500/80',
+      color: 'text-teal-300',
     },
   },
   cyan: {
@@ -81,8 +81,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-cyan-500/45',
     modal: 'from-cyan-600 to-cyan-400 shadow-cyan-600/80',
     icon: {
-      background: 'bg-cyan-500/25 group-hover:bg-cyan-500/35',
-      color: 'text-cyan-400',
+      background: 'bg-cyan-500/60 group-hover:bg-cyan-500/80',
+      color: 'text-cyan-300',
     },
   },
   sky: {
@@ -90,8 +90,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-sky-500/45',
     modal: 'from-sky-600 to-sky-400 shadow-sky-600/80',
     icon: {
-      background: 'bg-sky-500/25 group-hover:bg-sky-500/35',
-      color: 'text-sky-400',
+      background: 'bg-sky-500/60 group-hover:bg-sky-500/80',
+      color: 'text-sky-300',
     },
   },
   blue: {
@@ -99,8 +99,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-blue-500/45',
     modal: 'from-blue-600 to-blue-400 shadow-blue-600/80',
     icon: {
-      background: 'bg-blue-500/25 group-hover:bg-blue-500/35',
-      color: 'text-blue-400',
+      background: 'bg-blue-500/60 group-hover:bg-blue-500/80',
+      color: 'text-blue-300',
     },
   },
   indigo: {
@@ -108,8 +108,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-indigo-500/45',
     modal: 'from-indigo-600 to-indigo-400 shadow-indigo-600/80',
     icon: {
-      background: 'bg-indigo-500/25 group-hover:bg-indigo-500/35',
-      color: 'text-indigo-400',
+      background: 'bg-indigo-500/60 group-hover:bg-indigo-500/80',
+      color: 'text-indigo-300',
     },
   },
   violet: {
@@ -117,8 +117,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-violet-500/45',
     modal: 'from-violet-600 to-violet-400 shadow-violet-600/80',
     icon: {
-      background: 'bg-violet-500/25 group-hover:bg-violet-500/35',
-      color: 'text-violet-400',
+      background: 'bg-violet-500/60 group-hover:bg-violet-500/80',
+      color: 'text-violet-300',
     },
   },
   purple: {
@@ -126,8 +126,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-purple-500/45',
     modal: 'from-purple-600 to-purple-400 shadow-purple-600/80',
     icon: {
-      background: 'bg-purple-500/25 group-hover:bg-purple-500/35',
-      color: 'text-purple-400',
+      background: 'bg-purple-500/60 group-hover:bg-purple-500/80',
+      color: 'text-purple-300',
     },
   },
   fuchsia: {
@@ -135,8 +135,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-fuchsia-500/45',
     modal: 'from-fuchsia-600 to-fuchsia-400 shadow-fuchsia-600/80',
     icon: {
-      background: 'bg-fuchsia-500/25 group-hover:bg-fuchsia-500/35',
-      color: 'text-fuchsia-400',
+      background: 'bg-fuchsia-500/60 group-hover:bg-fuchsia-500/80',
+      color: 'text-fuchsia-300',
     },
   },
   pink: {
@@ -144,8 +144,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-pink-500/45',
     modal: 'from-pink-600 to-pink-400 shadow-pink-600/80',
     icon: {
-      background: 'bg-pink-500/25 group-hover:bg-pink-500/35',
-      color: 'text-pink-400',
+      background: 'bg-pink-500/60 group-hover:bg-pink-500/80',
+      color: 'text-pink-300',
     },
   },
   rose: {
@@ -153,8 +153,8 @@ export const COLORS_DATA: ColorsData = {
     container: 'bg-rose-500/45',
     modal: 'from-rose-600 to-rose-400 shadow-rose-600/80',
     icon: {
-      background: 'bg-rose-500/25 group-hover:bg-rose-500/35',
-      color: 'text-rose-400',
+      background: 'bg-rose-500/60 group-hover:bg-rose-500/80',
+      color: 'text-rose-300',
     },
   },
 } as const;
