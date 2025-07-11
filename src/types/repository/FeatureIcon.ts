@@ -5,4 +5,7 @@ export type FeatureIcon =
   | 'qrcode'
   | 'database'
   | 'fileInvoiceDollar'
-  | 'chartBar';
+  | 'chartBar'
+  | 'userShield'
+  | 'briefcase'
+  | 'chartLine';
