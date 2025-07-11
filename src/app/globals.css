@@ -20,8 +20,8 @@
     @apply font-primary text-light;
   }
 
-  p,
-  span {
+  p:not(.prose *),
+  span:not(.prose *) {
     @apply font-secondary text-sm;
   }
 
