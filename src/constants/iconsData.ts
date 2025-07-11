@@ -5,10 +5,13 @@ import {
   FaChartBar,
   FaChartLine,
   FaDatabase,
+  FaFileExport,
   FaFileInvoiceDollar,
   FaQrcode,
+  FaSearchLocation,
   FaUsers,
   FaUserShield,
+  FaUserCircle,
 } from 'react-icons/fa';
 
 import { IconType } from 'react-icons';
@@ -27,4 +30,7 @@ export const ICONS_DATA: IconsData = {
   briefcase: FaBriefcase,
   chartLine: FaChartLine,
   userShield: FaUserShield,
+  fileExport: FaFileExport,
+  searchLocation: FaSearchLocation,
+  userCircle: FaUserCircle,
 } as const;

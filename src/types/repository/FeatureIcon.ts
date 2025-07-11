@@ -8,4 +8,7 @@ export type FeatureIcon =
   | 'chartBar'
   | 'userShield'
   | 'briefcase'
-  | 'chartLine';
+  | 'chartLine'
+  | 'userCircle'
+  | 'searchLocation'
+  | 'fileExport';
