@@ -38,7 +38,7 @@ export function RepositoryCard({
         />
 
         <div className="flex items-center justify-between px-3">
-          <h1 className="m-0 text-base">{title}</h1>
+          <h1 className="m-0 text-base font-semibold">{title}</h1>
 
           <TechnologyIcons technologies={technologies} />
         </div>
