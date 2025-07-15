@@ -11,4 +11,7 @@ export type FeatureIcon =
   | 'chartLine'
   | 'userCircle'
   | 'searchLocation'
-  | 'fileExport';
+  | 'fileExport'
+  | 'clock'
+  | 'image'
+  | 'cloud';

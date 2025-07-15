@@ -12,6 +12,9 @@ import {
   FaUsers,
   FaUserShield,
   FaUserCircle,
+  FaClock,
+  FaCloud,
+  FaImage,
 } from 'react-icons/fa';
 
 import { IconType } from 'react-icons';
@@ -33,4 +36,7 @@ export const ICONS_DATA: IconsData = {
   fileExport: FaFileExport,
   searchLocation: FaSearchLocation,
   userCircle: FaUserCircle,
+  clock: FaClock,
+  cloud: FaCloud,
+  image: FaImage,
 } as const;
