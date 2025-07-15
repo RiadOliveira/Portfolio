@@ -15,6 +15,9 @@ import {
   FaClock,
   FaCloud,
   FaImage,
+  FaCalculator,
+  FaDesktop,
+  FaKeyboard,
 } from 'react-icons/fa';
 
 import { IconType } from 'react-icons';
@@ -39,4 +42,7 @@ export const ICONS_DATA: IconsData = {
   clock: FaClock,
   cloud: FaCloud,
   image: FaImage,
+  calculator: FaCalculator,
+  desktop: FaDesktop,
+  keyboard: FaKeyboard,
 } as const;

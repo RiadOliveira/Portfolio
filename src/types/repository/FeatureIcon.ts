@@ -14,4 +14,7 @@ export type FeatureIcon =
   | 'fileExport'
   | 'clock'
   | 'image'
-  | 'cloud';
+  | 'cloud'
+  | 'calculator'
+  | 'desktop'
+  | 'keyboard';
