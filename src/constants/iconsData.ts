@@ -18,6 +18,8 @@ import {
   FaCalculator,
   FaDesktop,
   FaKeyboard,
+  FaAdjust,
+  FaSearchPlus,
 } from 'react-icons/fa';
 
 import { IconType } from 'react-icons';
@@ -45,4 +47,6 @@ export const ICONS_DATA: IconsData = {
   calculator: FaCalculator,
   desktop: FaDesktop,
   keyboard: FaKeyboard,
+  adjust: FaAdjust,
+  searchPlus: FaSearchPlus,
 } as const;

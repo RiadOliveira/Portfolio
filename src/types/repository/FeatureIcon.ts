@@ -17,4 +17,6 @@ export type FeatureIcon =
   | 'cloud'
   | 'calculator'
   | 'desktop'
-  | 'keyboard';
+  | 'keyboard'
+  | 'adjust'
+  | 'searchPlus';
