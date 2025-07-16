@@ -20,6 +20,9 @@ import {
   FaKeyboard,
   FaAdjust,
   FaSearchPlus,
+  FaBalanceScale,
+  FaEye,
+  FaEyeSlash,
 } from 'react-icons/fa';
 
 import { IconType } from 'react-icons';
@@ -49,4 +52,7 @@ export const ICONS_DATA: IconsData = {
   keyboard: FaKeyboard,
   adjust: FaAdjust,
   searchPlus: FaSearchPlus,
+  balanceScale: FaBalanceScale,
+  eye: FaEye,
+  eyeSlash: FaEyeSlash,
 } as const;

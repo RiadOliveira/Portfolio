@@ -19,4 +19,7 @@ export type FeatureIcon =
   | 'desktop'
   | 'keyboard'
   | 'adjust'
-  | 'searchPlus';
+  | 'searchPlus'
+  | 'eyeSlash'
+  | 'eye'
+  | 'balanceScale';
