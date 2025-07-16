@@ -23,10 +23,13 @@ import {
   FaBalanceScale,
   FaEye,
   FaEyeSlash,
+  FaTachometerAlt,
+  FaTerminal,
 } from 'react-icons/fa';
 
 import { IconType } from 'react-icons';
 import { FeatureIcon } from 'types/repository/FeatureIcon';
+import { FaFolderTree } from 'react-icons/fa6';
 
 type IconsData = { [key in FeatureIcon]: IconType };
 
@@ -55,4 +58,7 @@ export const ICONS_DATA: IconsData = {
   balanceScale: FaBalanceScale,
   eye: FaEye,
   eyeSlash: FaEyeSlash,
+  folderTree: FaFolderTree,
+  tachometerAlt: FaTachometerAlt,
+  terminal: FaTerminal,
 } as const;

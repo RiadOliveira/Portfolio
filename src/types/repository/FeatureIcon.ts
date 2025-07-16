@@ -22,4 +22,7 @@ export type FeatureIcon =
   | 'searchPlus'
   | 'eyeSlash'
   | 'eye'
-  | 'balanceScale';
+  | 'balanceScale'
+  | 'tachometerAlt'
+  | 'terminal'
+  | 'folderTree';
