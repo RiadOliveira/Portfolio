@@ -4,7 +4,7 @@
   A dynamic personal portfolio built with Next.js and Tailwind CSS, leveraging the GitHub API to showcase selected projects. The portfolio automatically fetches public repositories, filters those with specific display configurations, and presents them in an elegant, theme-aware interface.
 </p>
 
-![image](https://github.com/user-attachments/assets/bdc0f8c7-e304-49fe-b823-0706ddd8855b)
+![image](https://github.com/user-attachments/assets/820c1a5a-52dc-422e-b697-9b735ed84664)
 ![image](https://img.shields.io/github/license/RiadOliveira/Portfolio)
 
 <br/>
