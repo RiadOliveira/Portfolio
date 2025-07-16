@@ -43,7 +43,7 @@ export function RepositoryCard({
           <TechnologyIcons technologies={technologies} />
         </div>
 
-        <p className="px-3 text-justify">{description}</p>
+        <p className="px-3 text-justify text-[15px] leading-6">{description}</p>
       </Link>
     </div>
   );
