@@ -1,7 +1,7 @@
 {
   "title": "Portfolio",
   "extendedDescription": "A dynamic personal portfolio built with Next.js and Tailwind CSS, leveraging the GitHub API to showcase selected projects. The portfolio automatically fetches public repositories, filters those with specific display configurations, and presents them in an theme-aware interface.",
-  "imageId": "8fa07bfb-80d2-443b-9e90-d951bb7b2788",
+  "imageId": "3887ca9a-bdc8-4b51-969c-7d21bcadd62b",
   "highlightColor": "rose",
   "attachmentsUrl": true,
   "technologies": [
