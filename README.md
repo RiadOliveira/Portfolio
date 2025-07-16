@@ -4,7 +4,7 @@
   A dynamic personal portfolio built with Next.js and Tailwind CSS, leveraging the GitHub API to showcase selected projects. The portfolio automatically fetches public repositories, filters those with specific display configurations, and presents them in an theme-aware interface.
 </p>
 
-![image](https://github.com/user-attachments/assets/8fa07bfb-80d2-443b-9e90-d951bb7b2788)
+![image](https://github.com/user-attachments/assets/3887ca9a-bdc8-4b51-969c-7d21bcadd62b)
 ![image](https://img.shields.io/github/license/RiadOliveira/Portfolio)
 
 <br/>
@@ -69,6 +69,8 @@ $ npm install
 $ npm run dev
 ```
 
+<br/>
+
 <h2 id="features">⚙️ Features</h2>
 
 - **Dynamic Project Showcase** - Automatically fetches and displays GitHub repositories configured with .portfolio/displayData.json.
@@ -78,7 +80,7 @@ $ npm run dev
 - **Interactive Previews** - Modal-based README viewing with background loading for seamless user experience.
 - **Technology Badges** - Automatically generated badges for all project technologies using standardized shields.io formatting.
 - **Responsive Design** - Fully responsive layout optimized for all device sizes.
-- **Dynamic Metadata** - Route-specific metadata including project titles and descriptions.
+- **Dynamic Metadata** - Route-specific metadata including project titles and descriptions. <br/><br/>
 
 <h2 id="structure">📂 Project Structure</h2>
 
@@ -96,6 +98,8 @@ type DisplayData = {
   attachmentsUrl?: boolean;    // Image URL format flag
 }
 ```
+
+<br/>
 
 <h3 id="api-integration">API Integration</h3>
 The portfolio integrates with GitHub's API to:
@@ -128,9 +132,9 @@ The portfolio integrates with GitHub's API to:
 * Shows profile information and social links.
 * Includes theme toggle in header.
 
-![image](https://github.com/user-attachments/assets/8fa07bfb-80d2-443b-9e90-d951bb7b2788)
-![image](https://github.com/user-attachments/assets/250373cd-4c89-46bf-9432-16cbe884f9d3)
-![image](https://github.com/user-attachments/assets/b36ea2c5-16b1-4acd-903a-441d9a754936)
+![image](https://github.com/user-attachments/assets/3887ca9a-bdc8-4b51-969c-7d21bcadd62b)
+![image](https://github.com/user-attachments/assets/d27a278f-c49a-4e0d-935b-3712bdd88264)
+![image](https://github.com/user-attachments/assets/507009ea-42f6-49c5-b246-2daca9827c45)
 
 <h3 id="project">Project Page</h3>
 
@@ -139,7 +143,7 @@ The portfolio integrates with GitHub's API to:
 * Highlights content with project-specific color.
 * Includes action buttons for preview and GitHub access.
 
-![image](https://github.com/user-attachments/assets/82640787-3f40-4911-b9f6-66724537c879)
+![image](https://github.com/user-attachments/assets/a4658f7a-8235-41ef-a439-b9dfc6769ce4)
 ![image](https://github.com/user-attachments/assets/f971b8d3-2dcd-446d-a12c-a2c28192f7fe)
 ![image](https://github.com/user-attachments/assets/0bb03bd7-1926-43a0-9060-c8db5aa807bd)
 
@@ -149,7 +153,7 @@ The portfolio integrates with GitHub's API to:
 * Maintains consistent styling with main UI.
 * Includes loading state during fetch.
 
-![image](https://github.com/user-attachments/assets/86547deb-6466-4a76-992f-2f4e4643801b)
+![image](https://github.com/user-attachments/assets/a822e593-bb9a-4d13-b73a-960a06cdc969)
 ![image](https://github.com/user-attachments/assets/1fa939cc-12fa-4e03-b373-89a5eb1265dd)
 ![image](https://github.com/user-attachments/assets/96c40de1-64f5-43e6-9c42-b5098b5c17ba)
 
