@@ -15,7 +15,8 @@ Contents
 * [🛠️ Technologies](#technologies)
 * [🚀 Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
-  * [Installation & Setup](#setup)
+  * [Live Demo](#demo)
+  * [Local Setup](#setup)
 * [⚙️ Features](#features)
 * [📂 Project Structure](#structure)
   * [Display Configuration](#display-config)
@@ -48,7 +49,11 @@ Before running the application, ensure the following tools are installed on your
 * [Git](https://git-scm.com)
 * [Node.js](https://nodejs.org/en/)
 
-<h3 id="setup">Installation & Setup</h3>
+<h3 id="demo">Live Demo</h3>
+The application is hosted on Vercel and can be accessed directly:
+<a href="https://portfolio-riadoliveira.vercel.app">https://portfolio-riadoliveira.vercel.app</a>
+
+<h3 id="setup">Local Setup</h3>
   
 ```bash
 # Clone the repository
