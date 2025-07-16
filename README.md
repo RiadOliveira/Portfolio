@@ -1,10 +1,10 @@
 <h1 align="center">Portfolio</h1>
 
 <p align="center">
-  A dynamic personal portfolio built with Next.js and Tailwind CSS, leveraging the GitHub API to showcase selected projects. The portfolio automatically fetches public repositories, filters those with specific display configurations, and presents them in an elegant, theme-aware interface.
+  A dynamic personal portfolio built with Next.js and Tailwind CSS, leveraging the GitHub API to showcase selected projects. The portfolio automatically fetches public repositories, filters those with specific display configurations, and presents them in an theme-aware interface.
 </p>
 
-![image](https://github.com/user-attachments/assets/bdc0f8c7-e304-49fe-b823-0706ddd8855b)
+![image](https://github.com/user-attachments/assets/8fa07bfb-80d2-443b-9e90-d951bb7b2788)
 ![image](https://img.shields.io/github/license/RiadOliveira/Portfolio)
 
 <br/>
@@ -128,7 +128,7 @@ The portfolio integrates with GitHub's API to:
 * Shows profile information and social links.
 * Includes theme toggle in header.
 
-![image](https://github.com/user-attachments/assets/bdc0f8c7-e304-49fe-b823-0706ddd8855b)
+![image](https://github.com/user-attachments/assets/8fa07bfb-80d2-443b-9e90-d951bb7b2788)
 ![image](https://github.com/user-attachments/assets/250373cd-4c89-46bf-9432-16cbe884f9d3)
 ![image](https://github.com/user-attachments/assets/b36ea2c5-16b1-4acd-903a-441d9a754936)
 
@@ -139,7 +139,7 @@ The portfolio integrates with GitHub's API to:
 * Highlights content with project-specific color.
 * Includes action buttons for preview and GitHub access.
 
-![image](https://github.com/user-attachments/assets/08cf51c8-0969-49c5-907c-cf1644f43673)
+![image](https://github.com/user-attachments/assets/82640787-3f40-4911-b9f6-66724537c879)
 ![image](https://github.com/user-attachments/assets/f971b8d3-2dcd-446d-a12c-a2c28192f7fe)
 ![image](https://github.com/user-attachments/assets/0bb03bd7-1926-43a0-9060-c8db5aa807bd)
 
@@ -149,7 +149,7 @@ The portfolio integrates with GitHub's API to:
 * Maintains consistent styling with main UI.
 * Includes loading state during fetch.
 
-![image](https://github.com/user-attachments/assets/71673560-58e5-4e9a-9d92-f3494bc11470)
+![image](https://github.com/user-attachments/assets/86547deb-6466-4a76-992f-2f4e4643801b)
 ![image](https://github.com/user-attachments/assets/1fa939cc-12fa-4e03-b373-89a5eb1265dd)
 ![image](https://github.com/user-attachments/assets/96c40de1-64f5-43e6-9c42-b5098b5c17ba)
 
