@@ -4,8 +4,8 @@
   A dynamic personal portfolio built with Next.js and Tailwind CSS, leveraging the GitHub API to showcase selected projects. The portfolio automatically fetches public repositories, filters those with specific display configurations, and presents them in an theme-aware interface.
 </p>
 
-![image](https://github.com/user-attachments/assets/3887ca9a-bdc8-4b51-969c-7d21bcadd62b)
-![image](https://img.shields.io/github/license/RiadOliveira/Portfolio)
+![Preview](https://github.com/user-attachments/assets/3887ca9a-bdc8-4b51-969c-7d21bcadd62b)
+![License](https://img.shields.io/github/license/RiadOliveira/Portfolio)
 
 <br/>
 
@@ -132,9 +132,9 @@ The portfolio integrates with GitHub's API to:
 * Shows profile information and social links.
 * Includes theme toggle in header.
 
-![image](https://github.com/user-attachments/assets/3887ca9a-bdc8-4b51-969c-7d21bcadd62b)
-![image](https://github.com/user-attachments/assets/d27a278f-c49a-4e0d-935b-3712bdd88264)
-![image](https://github.com/user-attachments/assets/507009ea-42f6-49c5-b246-2daca9827c45)
+![Home_Desktop](https://github.com/user-attachments/assets/3887ca9a-bdc8-4b51-969c-7d21bcadd62b)
+![Home_Mobile_Light](https://github.com/user-attachments/assets/d27a278f-c49a-4e0d-935b-3712bdd88264)
+![Home_Mobile_Dark](https://github.com/user-attachments/assets/507009ea-42f6-49c5-b246-2daca9827c45)
 
 <h3 id="project">Project Page</h3>
 
@@ -143,9 +143,9 @@ The portfolio integrates with GitHub's API to:
 * Highlights content with project-specific color.
 * Includes action buttons for preview and GitHub access.
 
-![image](https://github.com/user-attachments/assets/a4658f7a-8235-41ef-a439-b9dfc6769ce4)
-![image](https://github.com/user-attachments/assets/f971b8d3-2dcd-446d-a12c-a2c28192f7fe)
-![image](https://github.com/user-attachments/assets/0bb03bd7-1926-43a0-9060-c8db5aa807bd)
+![Project_Desktop](https://github.com/user-attachments/assets/a4658f7a-8235-41ef-a439-b9dfc6769ce4)
+![Project_Mobile_Light](https://github.com/user-attachments/assets/f971b8d3-2dcd-446d-a12c-a2c28192f7fe)
+![Project_Mobile_Dark](https://github.com/user-attachments/assets/0bb03bd7-1926-43a0-9060-c8db5aa807bd)
 
 <h3 id="modal">README Modal</h3>
 
@@ -153,9 +153,9 @@ The portfolio integrates with GitHub's API to:
 * Maintains consistent styling with main UI.
 * Includes loading state during fetch.
 
-![image](https://github.com/user-attachments/assets/a822e593-bb9a-4d13-b73a-960a06cdc969)
-![image](https://github.com/user-attachments/assets/1fa939cc-12fa-4e03-b373-89a5eb1265dd)
-![image](https://github.com/user-attachments/assets/96c40de1-64f5-43e6-9c42-b5098b5c17ba)
+![Readme_Desktop](https://github.com/user-attachments/assets/a822e593-bb9a-4d13-b73a-960a06cdc969)
+![Readme_Mobile_Light](https://github.com/user-attachments/assets/1fa939cc-12fa-4e03-b373-89a5eb1265dd)
+![Readme_Mobile_Dark](https://github.com/user-attachments/assets/96c40de1-64f5-43e6-9c42-b5098b5c17ba)
 
 <h2 id="license">📝 License</h2>
 This project is MIT Licensed. See <a href="https://github.com/RiadOliveira/Tradelous-desktop/blob/main/LICENSE">LICENSE</a> file for more details.
@@ -175,7 +175,8 @@ This project is MIT Licensed. See <a href="https://github.com/RiadOliveira/Trade
 ## 🌐 Socials
 
 <div id="socials">
-  <a href = "mailto:riad.oliveira@hotmail.com"><img class="badge" src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"/></a>
-  <a href = "mailto:riad.oliveira@gmail.com"><img class="badge" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"/></a>
-  <a href="https://www.linkedin.com/in/ríad-oliveira" target="_blank"><img class="badge" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"/></a>
+  <a href="https://portfolio-riadoliveira.vercel.app"><img class="badge" src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139" alt="Portfolio" target="_blank"></a>
+  <a href = "mailto:riad.oliveira@hotmail.com"><img class="badge" src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="E-mail" target="_blank"/></a>
+  <a href = "mailto:riad.oliveira@gmail.com"><img class="badge" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" target="_blank"/></a>
+  <a href="https://www.linkedin.com/in/ríad-oliveira" target="_blank"><img class="badge" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" target="_blank"/></a>
 </div>
