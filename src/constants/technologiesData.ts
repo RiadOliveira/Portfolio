@@ -127,9 +127,9 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
   JavaScript: {
     Icon: SiJavascript,
     badgeComponents: {
-      label: 'JavaScript-323330',
+      label: 'javascript-%23323330',
       logo: 'javascript',
-      logoColor: 'white',
+      logoColor: '%23F7DF1E',
     },
   },
   TypeScript: {
