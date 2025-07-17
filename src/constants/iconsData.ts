@@ -25,6 +25,9 @@ import {
   FaEyeSlash,
   FaTachometerAlt,
   FaTerminal,
+  FaProjectDiagram,
+  FaSyncAlt,
+  FaCodeBranch,
 } from 'react-icons/fa';
 
 import { IconType } from 'react-icons';
@@ -61,4 +64,7 @@ export const ICONS_DATA: IconsData = {
   folderTree: FaFolderTree,
   tachometerAlt: FaTachometerAlt,
   terminal: FaTerminal,
+  codeBranch: FaCodeBranch,
+  projectDiagram: FaProjectDiagram,
+  syncAlt: FaSyncAlt,
 } as const;

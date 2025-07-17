@@ -25,4 +25,7 @@ export type FeatureIcon =
   | 'balanceScale'
   | 'tachometerAlt'
   | 'terminal'
-  | 'folderTree';
+  | 'folderTree'
+  | 'codeBranch'
+  | 'syncAlt'
+  | 'projectDiagram';
