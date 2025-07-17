@@ -189,6 +189,11 @@
       @apply mt-0 mb-1 rounded-sm;
     }
 
+    table {
+      @apply w-full table-auto;
+      word-break: break-word;
+    }
+
     kbd {
       @apply inline-block rounded-[6px] border border-[#d1d5da] p-1.5 pb-2 font-mono text-[11px] leading-[10px] shadow-[inset_0_-1px_0_#d1d5da];
 
