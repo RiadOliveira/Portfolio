@@ -51,7 +51,7 @@ Before running the application, ensure the following tools are installed on your
 
 <h3 id="demo">Live Demo</h3>
 The application is hosted on Vercel and can be accessed directly:
-<a href="https://portfolio-riadoliveira.vercel.app">https://portfolio-riadoliveira.vercel.app</a>
+<a href="https://portfolio-riadoliveira.vercel.app">https://portfolio-riadoliveira.vercel.app</a>.
 
 <h3 id="setup">Local Setup</h3>
   
