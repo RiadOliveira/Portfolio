@@ -5,6 +5,7 @@ export type Technology =
   | 'ReactNative'
   | 'Electron'
   | 'NextJs'
+  | 'Vite'
   | 'Expo'
   | 'NestJs'
   | 'Express'

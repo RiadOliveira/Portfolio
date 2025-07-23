@@ -35,6 +35,7 @@ import {
   SiTailwindcss,
   SiTypeorm,
   SiTypescript,
+  SiVite,
 } from 'react-icons/si';
 import { BadgeComponents } from 'types/technology/BadgeComponents';
 import { Technology } from 'types/technology/Technology';
@@ -89,6 +90,14 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
     badgeComponents: {
       label: 'Next-black',
       logo: 'next.js',
+      logoColor: 'white',
+    },
+  },
+  Vite: {
+    Icon: SiVite,
+    badgeComponents: {
+      label: 'vite-%23646CFF',
+      logo: 'vite',
       logoColor: 'white',
     },
   },
