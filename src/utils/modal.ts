@@ -39,9 +39,15 @@ export function showModal(pushState = true) {
   if (modal.open) return;
 
   modal.showModal();
+  resetModalScroll(modal);
   modal.classList.add(MODAL_CLASSES.showing);
 
   if (pushState) window.history.pushState({ modalOpen: true }, '');
+}
+
+function resetModalScroll(modal: HTMLDialogElement) {
+  const scrollableContent = modal.querySelector('.overflow-y-scroll');
+  if (scrollableContent) scrollableContent.scrollTop = 0;
 }
 
 export function closeModal(popState = true) {

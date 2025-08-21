@@ -2,22 +2,16 @@ import { ImageContainer } from 'components/container/image-container';
 import { MainTitle } from 'components/main-title';
 import { mergeStyles } from 'utils/mergeStyles';
 import { COLORS_DATA } from 'constants/colorsData';
-import { getRepositoriesData } from 'services/getRepositoriesData';
 import { redirect } from 'next/navigation';
+import { findRepositoryFromParams } from 'utils/findRepositoryFromParams';
 import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
 import { TechnologyBadges } from 'components/repository/technology-badges';
 import { Features } from 'components/repository/features';
 import { ActionButtons } from 'components/repository/action-buttons';
+import { RepositoryPageParams } from 'types/repository/RepositoryPageParams';
 
-type Props = {
-  params: Promise<{ repositoryName: string }>;
-};
-
-export default async function RepositoryView({ params }: Props) {
-  const { repositoryName } = await params;
-  const repositories = await getRepositoriesData();
-
-  const repository = repositories.find(({ name }) => name === repositoryName);
+export default async function RepositoryView(params: RepositoryPageParams) {
+  const repository = await findRepositoryFromParams(params);
   if (!repository) return redirect('/');
 
   const { name, displayData } = repository;
@@ -29,7 +23,7 @@ export default async function RepositoryView({ params }: Props) {
     <>
       <MainTitle>{title}</MainTitle>
 
-      <section className="no-scrollbar scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3">
+      <section className="no-scrollbar scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3 max-sm:px-1.5">
         <div className="flex flex-col items-center sm:max-w-[96%] lg:max-w-[98.5%]">
           <p className="mb-4.5 text-justify text-base lg:mb-6 lg:text-lg xl:mb-3.5 2xl:mb-7">
             {extendedDescription}

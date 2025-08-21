@@ -4,22 +4,18 @@ import { COLORS_DATA } from 'constants/colorsData';
 import { MODAL_ID } from 'constants/modal';
 import { redirect } from 'next/navigation';
 import { IoMdClose } from 'react-icons/io';
-import { getRepositoriesData } from 'services/getRepositoriesData';
 import { DefaultProps } from 'types/DefaultProps';
+import { RepositoryPageParams } from 'types/repository/RepositoryPageParams';
+import { findRepositoryFromParams } from 'utils/findRepositoryFromParams';
 import { mergeStyles } from 'utils/mergeStyles';
 
-type Props = DefaultProps & {
-  params: Promise<{ repositoryName: string }>;
-};
+type Props = DefaultProps & RepositoryPageParams;
 
 export default async function RepositoryModalLayout({
   params,
   children,
 }: Props) {
-  const { repositoryName } = await params;
-  const repositories = await getRepositoriesData();
-
-  const repository = repositories.find(({ name }) => name === repositoryName);
+  const repository = await findRepositoryFromParams({ params });
   if (!repository) return redirect('/');
 
   const {

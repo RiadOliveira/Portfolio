@@ -13,7 +13,7 @@ type Props = {
 
 export function ActionButtons({ repositoryName }: Props) {
   return (
-    <div className="flex w-full justify-between pt-6.5 pr-1 pb-6 pl-2 md:px-3 lg:px-2 xl:px-2 xl:pt-10 2xl:px-1.5">
+    <div className="flex w-full justify-between pt-6.5 pb-6 pl-1 md:px-3 lg:px-2 xl:px-2 xl:pt-10 2xl:px-1.5">
       <Link
         href="/"
         className="hover:bg-light/30 active:bg-light/30 size-10.5 rounded-md p-2 transition-normal duration-200 hover:scale-106 active:scale-106 xl:size-12"

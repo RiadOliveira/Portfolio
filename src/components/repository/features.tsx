@@ -14,7 +14,7 @@ export function Features<T extends HighlightColor>({
   iconStyles: { background, color },
 }: Props<T>) {
   return (
-    <div className="flex flex-1 flex-col max-xl:gap-3 max-xl:px-1 xl:h-full xl:justify-between xl:py-0.5">
+    <div className="flex flex-1 flex-col max-xl:gap-3 xl:h-full xl:justify-between xl:py-0.5">
       {features.map(({ name, description, icon }) => {
         const Icon = ICONS_DATA[icon];
 
