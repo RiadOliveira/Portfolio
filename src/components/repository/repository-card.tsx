@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ImageContainer } from '../container/image-container';
 import { RepositoryData } from 'types/repository/RepositoryData';
 import { COLORS_DATA } from 'constants/colorsData';
-import { mergeStyles } from 'utils/mergeStyles';
 import { TechnologyIcons } from './technology-icons';
 import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
+import { cn } from 'cn';
 
 interface RepositoryCardProps {
   repository: RepositoryData;
@@ -21,9 +21,9 @@ export function RepositoryCard({
     <div className="snap-center scroll-mt-2.5 max-xl:first:pt-1 sm:snap-start sm:scroll-mt-3">
       <Link
         href={`/${name}`}
-        className={mergeStyles(
+        className={cn(
           card,
-          'block max-w-96 space-y-2 rounded-lg bg-gradient-to-br from-70% pb-4 shadow-md duration-200 hover:scale-102 hover:shadow-lg active:scale-102 active:shadow-lg',
+          'block max-w-96 space-y-2 rounded-lg bg-linear-to-br from-70% pb-4 shadow-md duration-200 hover:scale-102 hover:shadow-lg active:scale-102 active:shadow-lg',
         )}
       >
         <ImageContainer

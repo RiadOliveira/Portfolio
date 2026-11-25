@@ -1,3 +1,4 @@
+import { cn } from 'cn';
 import { ThemeButton } from 'components/client/theme-button';
 import { ToggleModalButton } from 'components/client/toggle-modal-button';
 import { COLORS_DATA } from 'constants/colorsData';
@@ -7,7 +8,6 @@ import { IoMdClose } from 'react-icons/io';
 import { DefaultProps } from 'types/DefaultProps';
 import { RepositoryPageParams } from 'types/repository/RepositoryPageParams';
 import { findRepositoryFromParams } from 'utils/findRepositoryFromParams';
-import { mergeStyles } from 'utils/mergeStyles';
 
 type Props = DefaultProps & RepositoryPageParams;
 
@@ -25,11 +25,11 @@ export default async function RepositoryModalLayout({
 
   return (
     <dialog id={MODAL_ID} className="animated-modal">
-      <div className="bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-[700px] flex-col overflow-y-hidden rounded-xl shadow">
+      <div className="bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-175 flex-col overflow-y-hidden rounded-xl shadow">
         <header
-          className={mergeStyles(
+          className={cn(
             modal,
-            'text-light z-10 flex max-h-[50px] min-h-[50px] w-full items-center justify-between rounded-t-lg bg-gradient-to-b px-3.5 shadow-md',
+            'text-light z-10 flex max-h-12.5 min-h-12.5 w-full items-center justify-between rounded-t-lg bg-linear-to-b px-3.5 shadow-md',
           )}
         >
           <ToggleModalButton

@@ -1,6 +1,5 @@
 import { ImageContainer } from 'components/container/image-container';
 import { MainTitle } from 'components/main-title';
-import { mergeStyles } from 'utils/mergeStyles';
 import { COLORS_DATA } from 'constants/colorsData';
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from 'utils/findRepositoryFromParams';
@@ -9,6 +8,7 @@ import { TechnologyBadges } from 'components/repository/technology-badges';
 import { Features } from 'components/repository/features';
 import { ActionButtons } from 'components/repository/action-buttons';
 import { RepositoryPageParams } from 'types/repository/RepositoryPageParams';
+import { cn } from 'cn';
 
 export default async function RepositoryView(params: RepositoryPageParams) {
   const repository = await findRepositoryFromParams(params);
@@ -31,9 +31,9 @@ export default async function RepositoryView(params: RepositoryPageParams) {
 
           <div className="flex items-center gap-4 max-xl:flex-col">
             <div
-              className={mergeStyles(
+              className={cn(
                 container,
-                'border-light/40 w-full rounded-md border-1 shadow-md lg:max-w-[540px] lg:border-2 xl:max-w-[550px]',
+                'border-light/40 w-full rounded-md border shadow-md lg:max-w-135 lg:border-2 xl:max-w-137.5',
               )}
             >
               <ImageContainer

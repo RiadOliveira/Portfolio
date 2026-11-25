@@ -1,21 +1,19 @@
-import prettier from 'eslint-plugin-prettier';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+import prettierConfig from 'eslint-config-prettier';
+import prettierPlugin from 'eslint-plugin-prettier';
 
-const eslintConfig = [
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  prettierConfig,
   {
     files: ['**/*.{js,jsx,ts,tsx,mjs}'],
     plugins: {
-      prettier,
+      prettier: prettierPlugin,
     },
     rules: {
       'prettier/prettier': 'error',
@@ -31,6 +29,7 @@ const eslintConfig = [
       '@typescript-eslint/no-unsafe-declaration-merging': 'error',
     },
   },
-];
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
+]);
 
 export default eslintConfig;

@@ -1,5 +1,5 @@
+import { cn } from 'cn';
 import Image, { ImageProps } from 'next/image';
-import { mergeStyles } from 'utils/mergeStyles';
 
 const THRESHHOLDS_VALUES = {
   sm: '40rem',
@@ -37,7 +37,7 @@ export function ImageContainer({
   );
 
   return (
-    <div className={mergeStyles(['relative', className])}>
+    <div className={cn('relative', className)}>
       <Image
         alt={alt}
         className={imageStyles}
