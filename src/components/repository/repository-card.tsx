@@ -28,7 +28,6 @@ export function RepositoryCard({
           className="aspect-video w-full overflow-hidden rounded-t-md rounded-br-4xl shadow lg:max-w-96"
           src={getRepositoryImageUrl(displayData)}
           alt={name}
-          quality={100}
           sizes={{
             defaultSize: '24rem',
             widthThreshholds: { lg: '100%' },

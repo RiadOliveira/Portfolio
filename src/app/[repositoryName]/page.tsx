@@ -40,7 +40,6 @@ export default async function RepositoryView(params: RepositoryPageParams) {
                 className="aspect-video overflow-hidden rounded-t-md shadow-md"
                 src={getRepositoryImageUrl(displayData)}
                 alt={name}
-                quality={100}
                 sizes={{ defaultSize: '100%' }}
               />
 
