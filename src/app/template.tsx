@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { DefaultProps } from 'types/DefaultProps';
+import { DefaultProps } from '@/types/DefaultProps';
 
 export default function RootTemplate({ children }: DefaultProps) {
   return (

@@ -1,4 +1,4 @@
-import { Technology } from 'types/technology/Technology';
+import { Technology } from '@/types/technology/Technology';
 import { HighlightColor } from './HighlightColor';
 import { Feature } from './Feature';
 

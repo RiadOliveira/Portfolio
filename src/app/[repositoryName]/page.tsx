@@ -1,13 +1,13 @@
-import { ImageContainer } from 'components/container/image-container';
-import { MainTitle } from 'components/main-title';
-import { COLORS_DATA } from 'constants/colorsData';
+import { ImageContainer } from '@/components/container/image-container';
+import { MainTitle } from '@/components/main-title';
+import { COLORS_DATA } from '@/constants/colorsData';
 import { redirect } from 'next/navigation';
-import { findRepositoryFromParams } from 'utils/findRepositoryFromParams';
-import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
-import { TechnologyBadges } from 'components/repository/technology-badges';
-import { Features } from 'components/repository/features';
-import { ActionButtons } from 'components/repository/action-buttons';
-import { RepositoryPageParams } from 'types/repository/RepositoryPageParams';
+import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
+import { getRepositoryImageUrl } from '@/utils/getRepositoryImageUrl';
+import { TechnologyBadges } from '@/components/repository/technology-badges';
+import { Features } from '@/components/repository/features';
+import { ActionButtons } from '@/components/repository/action-buttons';
+import { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
 import { cn } from 'cn';
 
 export default async function RepositoryView(params: RepositoryPageParams) {

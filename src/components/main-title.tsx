@@ -1,4 +1,4 @@
-import { DefaultProps } from 'types/DefaultProps';
+import { DefaultProps } from '@/types/DefaultProps';
 
 export function MainTitle({ children }: DefaultProps) {
   return (

@@ -1,8 +1,8 @@
 import { cn } from 'cn';
-import { ICONS_DATA } from 'constants/iconsData';
-import { ColorStyles } from 'types/repository/ColorStyles';
-import { Feature } from 'types/repository/Feature';
-import { HighlightColor } from 'types/repository/HighlightColor';
+import { ICONS_DATA } from '@/constants/iconsData';
+import { ColorStyles } from '@/types/repository/ColorStyles';
+import { Feature } from '@/types/repository/Feature';
+import { HighlightColor } from '@/types/repository/HighlightColor';
 
 type Props<T extends HighlightColor> = {
   features: Feature[];

@@ -1,13 +1,13 @@
 import { cn } from 'cn';
-import { ThemeButton } from 'components/client/theme-button';
-import { ToggleModalButton } from 'components/client/toggle-modal-button';
-import { COLORS_DATA } from 'constants/colorsData';
-import { MODAL_ID } from 'constants/modal';
+import { ThemeButton } from '@/components/client/theme-button';
+import { ToggleModalButton } from '@/components/client/toggle-modal-button';
+import { COLORS_DATA } from '@/constants/colorsData';
+import { MODAL_ID } from '@/constants/modal';
 import { redirect } from 'next/navigation';
 import { IoMdClose } from 'react-icons/io';
-import { DefaultProps } from 'types/DefaultProps';
-import { RepositoryPageParams } from 'types/repository/RepositoryPageParams';
-import { findRepositoryFromParams } from 'utils/findRepositoryFromParams';
+import { DefaultProps } from '@/types/DefaultProps';
+import { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 
 type Props = DefaultProps & RepositoryPageParams;
 

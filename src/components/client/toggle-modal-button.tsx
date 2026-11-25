@@ -1,13 +1,13 @@
 'use client';
 
 import { useEffect } from 'react';
-import { DefaultProps } from 'types/DefaultProps';
+import { DefaultProps } from '@/types/DefaultProps';
 import {
   addModalListeners,
   closeModal,
   removeModalListeners,
   showModal,
-} from 'utils/modal';
+} from '@/utils/modal';
 
 export interface ModalButtonProps extends DefaultProps {
   action: 'show' | 'close';

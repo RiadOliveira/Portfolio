@@ -3,8 +3,8 @@ import remarkGfm from 'remark-gfm';
 import remarkEmoji from 'remark-emoji';
 import rehypeRaw from 'rehype-raw';
 
-import { fetchReadme } from 'services/fetchReadme';
-import { ReadmeLink } from 'components/client/readme-link';
+import { fetchReadme } from '@/services/fetchReadme';
+import { ReadmeLink } from '@/components/client/readme-link';
 
 type Props = {
   params: Promise<{ repositoryName: string }>;

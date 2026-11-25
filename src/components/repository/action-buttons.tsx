@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-import { ToggleModalButton } from 'components/client/toggle-modal-button';
-import { GITHUB_URLS } from 'constants/requests';
-import { USER_DATA } from 'constants/userData';
+import { ToggleModalButton } from '@/components/client/toggle-modal-button';
+import { GITHUB_URLS } from '@/constants/requests';
+import { USER_DATA } from '@/constants/userData';
 import { FaGithub } from 'react-icons/fa';
 import { IoReader } from 'react-icons/io5';
 import { MdArrowBackIosNew } from 'react-icons/md';

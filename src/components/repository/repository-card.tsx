@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
+import { COLORS_DATA } from '@/constants/colorsData';
 import { ImageContainer } from '../container/image-container';
-import { RepositoryData } from 'types/repository/RepositoryData';
-import { COLORS_DATA } from 'constants/colorsData';
+import { RepositoryData } from '@/types/repository/RepositoryData';
 import { TechnologyIcons } from './technology-icons';
-import { getRepositoryImageUrl } from 'utils/getRepositoryImageUrl';
 import { cn } from 'cn';
+import { getRepositoryImageUrl } from '@/utils/getRepositoryImageUrl';
 
 interface RepositoryCardProps {
   repository: RepositoryData;

@@ -1,4 +1,4 @@
-import { DEFAULT_NEXT_FETCH_CONFIG } from 'constants/requests';
+import { DEFAULT_NEXT_FETCH_CONFIG } from '@/constants/requests';
 
 const RESPONSE_PARSERS = {
   JSON: (response: Response) => response.json(),

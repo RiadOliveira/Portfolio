@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import { Technology } from 'types/technology/Technology';
-import { generateTechnologyBadgeURL } from 'utils/generateTechnologyBadgeURL';
+import { Technology } from '@/types/technology/Technology';
+import { generateTechnologyBadgeURL } from '@/utils/generateTechnologyBadgeURL';
 
 type Props = {
   technologies: Technology[];

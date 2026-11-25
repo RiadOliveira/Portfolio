@@ -1,8 +1,8 @@
 import { Metadata, ResolvingMetadata } from 'next';
 import { redirect } from 'next/navigation';
-import { DefaultProps } from 'types/DefaultProps';
-import { RepositoryPageParams } from 'types/repository/RepositoryPageParams';
-import { findRepositoryFromParams } from 'utils/findRepositoryFromParams';
+import { DefaultProps } from '@/types/DefaultProps';
+import { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 
 type Props = DefaultProps & {
   modal: React.ReactNode;

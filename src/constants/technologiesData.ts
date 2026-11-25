@@ -37,8 +37,8 @@ import {
   SiTypescript,
   SiVite,
 } from 'react-icons/si';
-import { BadgeComponents } from 'types/technology/BadgeComponents';
-import { Technology } from 'types/technology/Technology';
+import { BadgeComponents } from '@/types/technology/BadgeComponents';
+import { Technology } from '@/types/technology/Technology';
 
 type TechnologiesData = {
   [key in Technology]: { Icon: IconType; badgeComponents: BadgeComponents };

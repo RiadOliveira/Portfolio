@@ -1,5 +1,5 @@
 import { ThemeButton } from '../client/theme-button';
-import { DefaultProps } from 'types/DefaultProps';
+import { DefaultProps } from '@/types/DefaultProps';
 import { HeaderContainer } from './header-container';
 
 export function LayoutContainer({ children }: DefaultProps) {
