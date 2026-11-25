@@ -7,7 +7,7 @@ export function HeaderContainer() {
   return (
     <header className="flex justify-center gap-5 max-sm:pt-3 max-sm:pb-6.5 sm:w-2/5 sm:flex-col sm:items-center sm:gap-3 lg:w-73 2xl:w-88">
       <ImageContainer
-        className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 sm:size-30 md:size-34 lg:size-40 2xl:size-48"
+        preload
         src={USER_DATA.avatar}
         alt={USER_DATA.fullName}
         sizes={{
@@ -20,7 +20,7 @@ export function HeaderContainer() {
           },
         }}
         loading="eager"
-        priority
+        className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 sm:size-30 md:size-34 lg:size-40 2xl:size-48"
       />
 
       <div className="flex flex-col py-1 max-sm:justify-between sm:gap-3 sm:py-2 lg:w-full lg:items-center lg:gap-10 lg:pt-3">
