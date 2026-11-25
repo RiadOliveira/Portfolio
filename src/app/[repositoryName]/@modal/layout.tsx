@@ -1,11 +1,11 @@
-import type { DefaultProps } from '@/types/DefaultProps';
-import type { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import type { DefaultProps } from '@/types/defaultProps';
+import type { RepositoryPageParams } from '@/types/repository/repositoryPageParams';
 
 import { MODAL_ID } from '@/constants/modal';
 import { COLORS_DATA } from '@/constants/colorsData';
 import { IoMdClose } from 'react-icons/io';
-import { ThemeButton } from '@/components/client/theme-button';
-import { ToggleModalButton } from '@/components/client/toggle-modal-button';
+import { ThemeButton } from '@/components/client/themeButton';
+import { ToggleModalButton } from '@/components/client/toggleModalButton';
 import { cn } from 'cn';
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';

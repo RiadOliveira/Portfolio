@@ -1,5 +1,5 @@
 import { MainTitle } from '@/components/main-title';
-import { RepositoryCard } from '@/components/repository/repository-card';
+import { RepositoryCard } from '@/components/repository/card';
 import { getRepositoriesData } from '@/services/getRepositoriesData';
 
 export default async function Home() {

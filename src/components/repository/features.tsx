@@ -1,6 +1,6 @@
-import type { ColorStyles } from '@/types/repository/ColorStyles';
-import type { Feature } from '@/types/repository/Feature';
-import type { HighlightColor } from '@/types/repository/HighlightColor';
+import type { ColorStyles } from '@/types/repository/colorStyles';
+import type { Feature } from '@/types/repository/feature';
+import type { HighlightColor } from '@/types/repository/highlightColor';
 
 import { ICONS_DATA } from '@/constants/iconsData';
 import { cn } from 'cn';

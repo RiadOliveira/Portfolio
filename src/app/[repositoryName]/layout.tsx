@@ -1,5 +1,5 @@
-import type { DefaultProps } from '@/types/DefaultProps';
-import type { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import type { DefaultProps } from '@/types/defaultProps';
+import type { RepositoryPageParams } from '@/types/repository/repositoryPageParams';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 import { redirect } from 'next/navigation';

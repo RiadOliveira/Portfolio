@@ -1,7 +1,7 @@
-import type { DefaultProps } from '@/types/DefaultProps';
+import type { DefaultProps } from '@/types/defaultProps';
 
-import { ThemeButton } from '../client/theme-button';
-import { HeaderContainer } from './header-container';
+import { ThemeButton } from '../client/themeButton';
+import { HeaderContainer } from './header';
 
 export function LayoutContainer({ children }: DefaultProps) {
   return (

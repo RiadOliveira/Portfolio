@@ -1,6 +1,6 @@
-import type { Feature } from './Feature';
-import type { Technology } from '@/types/technology/Technology';
-import type { HighlightColor } from './HighlightColor';
+import type { Feature } from './feature';
+import type { Technology } from '@/types/repository/technology';
+import type { HighlightColor } from './highlightColor';
 
 export type DisplayData = {
   title: string;

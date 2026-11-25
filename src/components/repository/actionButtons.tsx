@@ -4,7 +4,7 @@ import { USER_DATA } from '@/constants/userData';
 import { GITHUB_URLS } from '@/constants/requests';
 import { IoReader } from 'react-icons/io5';
 import { FaGithub } from 'react-icons/fa';
-import { ToggleModalButton } from '@/components/client/toggle-modal-button';
+import { ToggleModalButton } from '@/components/client/toggleModalButton';
 import { MdArrowBackIosNew } from 'react-icons/md';
 
 type Props = {

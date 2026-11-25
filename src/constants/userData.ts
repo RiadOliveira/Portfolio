@@ -1,4 +1,4 @@
-import type { SocialData } from '@/types/user/SocialData';
+import type { SocialData } from '@/types/socialData';
 
 import { GITHUB_URLS } from './requests';
 import { MdEmail } from 'react-icons/md';

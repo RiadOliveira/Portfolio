@@ -1,6 +1,6 @@
 'use client';
 
-import type { DefaultProps } from '@/types/DefaultProps';
+import type { DefaultProps } from '@/types/defaultProps';
 
 import { useEffect } from 'react';
 import {

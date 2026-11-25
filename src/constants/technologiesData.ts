@@ -1,6 +1,5 @@
 import type { IconType } from 'react-icons';
-import type { Technology } from '@/types/technology/Technology';
-import type { BadgeComponents } from '@/types/technology/BadgeComponents';
+import type { Technology } from '@/types/repository/technology';
 
 import {
   FaAws,
@@ -40,6 +39,12 @@ import { GrArchlinux } from 'react-icons/gr';
 import { RiNextjsFill } from 'react-icons/ri';
 import { AiFillAndroid } from 'react-icons/ai';
 import { IoLogoElectron, IoLogoFirebase } from 'react-icons/io5';
+
+type BadgeComponents = {
+  logo: string;
+  label: string;
+  logoColor: string;
+};
 
 type TechnologiesData = {
   [key in Technology]: { Icon: IconType; badgeComponents: BadgeComponents };

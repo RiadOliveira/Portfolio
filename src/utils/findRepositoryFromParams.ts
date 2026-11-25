@@ -1,4 +1,4 @@
-import type { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import type { RepositoryPageParams } from '@/types/repository/repositoryPageParams';
 
 import { getRepositoriesData } from '@/services/getRepositoriesData';
 

@@ -1,6 +1,6 @@
-import type { DisplayData } from '@/types/repository/DisplayData';
-import type { APIRepository } from '@/types/repository/APIRepository';
-import type { RepositoryData } from '@/types/repository/RepositoryData';
+import type { DisplayData } from '@/types/repository/displayData';
+import type { APIRepository } from '@/types/repository/apiRepository';
+import type { RepositoryData } from '@/types/repository/repositoryData';
 
 import { USER_DATA } from '@/constants/userData';
 import { cachedJSONFetch } from '@/utils/cachedJSONFetch';

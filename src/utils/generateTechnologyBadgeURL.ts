@@ -1,4 +1,4 @@
-import type { Technology } from '@/types/technology/Technology';
+import type { Technology } from '@/types/repository/technology';
 
 import { TECHNOLOGIES_DATA } from '@/constants/technologiesData';
 

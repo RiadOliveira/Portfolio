@@ -1,10 +1,10 @@
 import './globals.css';
 
-import type { DefaultProps } from '@/types/DefaultProps';
+import type { DefaultProps } from '@/types/defaultProps';
 
 export { metadata } from '@/constants/metadata';
 import { POPPINS, SPACE_GROTESK } from '@/constants/fonts';
-import { LayoutContainer } from '@/components/container/layout-container';
+import { LayoutContainer } from '@/components/container/layout';
 
 export default function RootLayout({ children }: DefaultProps) {
   return (

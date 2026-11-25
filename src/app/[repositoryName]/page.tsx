@@ -1,11 +1,11 @@
-import type { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import type { RepositoryPageParams } from '@/types/repository/repositoryPageParams';
 
 import { COLORS_DATA } from '@/constants/colorsData';
 import { Features } from '@/components/repository/features';
 import { MainTitle } from '@/components/main-title';
-import { ActionButtons } from '@/components/repository/action-buttons';
-import { ImageContainer } from '@/components/container/image-container';
-import { TechnologyBadges } from '@/components/repository/technology-badges';
+import { ActionButtons } from '@/components/repository/actionButtons';
+import { ImageContainer } from '@/components/container/image';
+import { TechnologyBadges } from '@/components/repository/technologyBadges';
 import { cn } from 'cn';
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';

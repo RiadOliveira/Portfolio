@@ -15,6 +15,7 @@
 }
 
 @layer base {
+
   html,
   body {
     @apply font-primary text-light;
@@ -38,12 +39,12 @@
 
 @layer utilities {
   .loader {
-    @apply relative flex w-full max-w-[120px] items-center justify-center md:max-w-40;
+    @apply relative flex w-full max-w-30 items-center justify-center md:max-w-40;
   }
 
   .loader::before,
   .loader::after {
-    @apply absolute rounded-full bg-transparent transition-[box-shadow] ease-in-out;
+    @apply absolute rounded-full bg-transparent transition-shadow ease-in-out;
 
     content: '';
     animation: pulse-loop 1.8s infinite;
@@ -68,11 +69,9 @@
   }
 
   .animated-gradient {
-    background: linear-gradient(
-      135deg,
-      var(--color-primary) 0%,
-      var(--color-secondary) 100%
-    );
+    background: linear-gradient(135deg,
+        var(--color-primary) 0%,
+        var(--color-secondary) 100%);
     background-size: 200% 200%;
     animation: animate-gradient 5s ease-in-out infinite;
   }
@@ -127,16 +126,6 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-
-  .scroll-fade {
-    @apply [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)] [mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)];
-  }
-
-  @media (min-width: 640px) {
-    .sm\:scroll-fade {
-      @apply [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)] [mask-image:linear-gradient(to_bottom,transparent,black_24px,black_calc(100%-24px),transparent)];
-    }
   }
 
   .prose {
@@ -195,7 +184,7 @@
     }
 
     kbd {
-      @apply inline-block rounded-[6px] border border-[#d1d5da] p-1.5 pb-2 font-mono text-[11px] leading-[10px] shadow-[inset_0_-1px_0_#d1d5da];
+      @apply inline-block rounded-md border border-[#d1d5da] p-1.5 pb-2 font-mono text-[11px] leading-2.5 shadow-[inset_0_-1px_0_#d1d5da];
 
       a {
         @apply block;
@@ -214,17 +203,33 @@
       @apply flex flex-wrap gap-2;
 
       .badge {
-        @apply m-0 rounded-[2px];
+        @apply m-0 rounded-xs;
       }
     }
   }
 }
 
+@utility scroll-fade {
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent,
+      black 24px,
+      black calc(100% - 24px),
+      transparent);
+
+  mask-image: linear-gradient(to bottom,
+      transparent,
+      black 24px,
+      black calc(100% - 24px),
+      transparent);
+}
+
 @keyframes animate-gradient {
+
   0%,
   100% {
     background-position: 15% 15%;
   }
+
   50% {
     background-position: 65% 65%;
   }
@@ -235,18 +240,22 @@
     box-shadow: 0 0 0 0 var(--color-secondary);
     opacity: 0.2;
   }
+
   25% {
     box-shadow: 0 0 0 0.5rem #d73d60;
     opacity: 0.6;
   }
+
   50% {
     box-shadow: 0 0 0 1rem var(--color-primary);
     opacity: 1;
   }
+
   75% {
     box-shadow: 0 0 0 0.5rem #a240c8;
     opacity: 0.6;
   }
+
   100% {
     box-shadow: 0 0 0 0 var(--color-secondary);
     opacity: 0.2;

@@ -1,4 +1,4 @@
-import type { Technology } from '@/types/technology/Technology';
+import type { Technology } from '@/types/repository/technology';
 
 import { generateTechnologyBadgeURL } from '@/utils/generateTechnologyBadgeURL';
 

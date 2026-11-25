@@ -1,4 +1,4 @@
-import type { FeatureIcon } from './FeatureIcon';
+import type { FeatureIcon } from './featureIcon';
 
 export type Feature = {
   name: string;

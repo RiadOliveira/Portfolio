@@ -1,4 +1,4 @@
-import type { APIRepository } from '@/types/repository/APIRepository';
+import type { APIRepository } from '@/types/repository/apiRepository';
 
 import { USER_DATA } from '@/constants/userData';
 import { GITHUB_URLS } from '@/constants/requests';

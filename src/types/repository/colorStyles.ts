@@ -1,4 +1,4 @@
-import type { HighlightColor } from './HighlightColor';
+import type { HighlightColor } from './highlightColor';
 
 export type ColorStyles<Color extends HighlightColor> = {
   container: `bg-${Color}-500/45`;

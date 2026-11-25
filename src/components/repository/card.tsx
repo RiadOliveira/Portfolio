@@ -1,8 +1,8 @@
-import type { RepositoryData } from '@/types/repository/RepositoryData';
+import type { RepositoryData } from '@/types/repository/repositoryData';
 
 import { COLORS_DATA } from '@/constants/colorsData';
-import { ImageContainer } from '../container/image-container';
-import { TechnologyIcons } from './technology-icons';
+import { ImageContainer } from '../container/image';
+import { TechnologyIcons } from './technologyIcons';
 import { cn } from 'cn';
 import { getRepositoryImageUrl } from '@/utils/getRepositoryImageUrl';
 
