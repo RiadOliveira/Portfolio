@@ -73,7 +73,7 @@ $ npm run dev
 
 <h2 id="features">⚙️ Features</h2>
 
-- **Dynamic Project Showcase** - Automatically fetches and displays GitHub repositories configured with .portfolio/displayData.json.
+- **Dynamic Project Showcase** - Automatically fetches and displays GitHub repositories configured with .portfolio/showcase.json.
 - **Smart Filtering** - Excludes profile repositories and only includes projects with proper display configuration.
 - **Theme-Aware UI** - Light/dark theme toggle with persistent preference storage.
 - **Optimized Performance** - Cached API responses with 1-hour expiration for both repository listings and README content.
@@ -86,7 +86,7 @@ $ npm run dev
 
 <h3 id="display-config">Display Configuration</h3>
 
-Projects are displayed when they contain a ```.portfolio/displayData.json``` file with the following structure:
+Projects are displayed when they contain a ```.portfolio/showcase.json``` file with the following structure:
 ```ts
 type RepositoryShowcase = {
   title: string;               // Display name

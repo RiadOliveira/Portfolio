@@ -7,7 +7,7 @@ import { TECHNOLOGIES_DATA } from '@/constants/technologiesData';
 
 export const URL_GENERATOR = {
   showcase(repositoryName: string) {
-    return `${GITHUB_URLS.content}/${USER_DATA.login}/${repositoryName}/main/.portfolio/displayData.json`;
+    return `${GITHUB_URLS.content}/${USER_DATA.login}/${repositoryName}/main/.portfolio/showcase.json`;
   },
 
   repositoryPage(repositoryName: string) {
