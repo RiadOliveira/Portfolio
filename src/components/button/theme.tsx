@@ -2,7 +2,7 @@
 
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
-export function ThemeButton() {
+export default function ThemeButton() {
   return (
     <button
       type="button"

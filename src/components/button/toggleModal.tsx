@@ -15,7 +15,7 @@ type Props = DefaultProps & {
   className?: string;
 };
 
-export function ToggleModalButton({ action, ...props }: Props) {
+export default function ToggleModalButton({ action, ...props }: Props) {
   useEffect(() => {
     addModalListeners();
     return () => removeModalListeners();

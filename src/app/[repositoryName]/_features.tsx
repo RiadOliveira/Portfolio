@@ -10,7 +10,7 @@ type Props<T extends HighlightColor> = {
   iconStyles: ColorStyles<T>['icon'];
 };
 
-export function RepositoryFeatures<T extends HighlightColor>({
+export default function RepositoryFeatures<T extends HighlightColor>({
   features,
   iconStyles: { background, color },
 }: Props<T>) {

@@ -5,17 +5,17 @@ import { COLORS_DATA } from '@/constants/colorsData';
 import { URL_GENERATOR } from '@/utils/urlGenerator';
 import { IoReader } from 'react-icons/io5';
 import { FaGithub } from 'react-icons/fa';
-import { MainTitle } from '@/components/mainTitle';
-import { ImageContainer } from '@/components/imageContainer';
 import { MdArrowBackIosNew } from 'react-icons/md';
-import { ToggleModalButton } from '@/components/button/toggleModal';
-import { RepositoryFeatures } from './_features';
 import { cn } from 'cn';
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import MainTitle from '@/components/mainTitle';
+import ImageContainer from '@/components/imageContainer';
+import ToggleModalButton from '@/components/button/toggleModal';
+import RepositoryFeatures from './_features';
 
 export default async function Page(params: RepositoryPageParams) {
   const repository = await findRepositoryFromParams(params);

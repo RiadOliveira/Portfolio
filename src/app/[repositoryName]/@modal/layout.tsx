@@ -4,11 +4,12 @@ import type { RepositoryPageParams } from '@/types/repository/pageParams';
 import { MODAL_ID } from '@/constants/modalId';
 import { COLORS_DATA } from '@/constants/colorsData';
 import { IoMdClose } from 'react-icons/io';
-import { ThemeButton } from '@/components/button/theme';
-import { ToggleModalButton } from '@/components/button/toggleModal';
 import { cn } from 'cn';
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
+
+import ThemeButton from '@/components/button/theme';
+import ToggleModalButton from '@/components/button/toggleModal';
 
 type Props = DefaultProps & RepositoryPageParams;
 

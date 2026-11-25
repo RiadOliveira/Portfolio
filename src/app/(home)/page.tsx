@@ -4,12 +4,12 @@ import type { Technology } from '@/types/repository/technology';
 import { COLORS_DATA } from '@/constants/colorsData';
 import { URL_GENERATOR } from '@/utils/urlGenerator';
 import { TECHNOLOGIES_DATA } from '@/constants/technologiesData';
-import { MainTitle } from '@/components/mainTitle';
-import { ImageContainer } from '@/components/imageContainer';
 import { cn } from 'cn';
 import { getShowcasedRepositories } from '@/services/getShowcasedRepositories';
 
 import Link from 'next/link';
+import MainTitle from '@/components/mainTitle';
+import ImageContainer from '@/components/imageContainer';
 
 export default async function Page() {
   const repositories = await getShowcasedRepositories();

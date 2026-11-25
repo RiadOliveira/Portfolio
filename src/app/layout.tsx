@@ -6,9 +6,10 @@ import type { DefaultProps } from '@/types/defaultProps';
 export { metadata } from '@/constants/metadata';
 import { USER_DATA } from '@/constants/userData';
 import { POPPINS, SPACE_GROTESK } from '@/constants/fonts';
-import { ThemeButton } from '@/components/button/theme';
-import { ImageContainer } from '@/components/imageContainer';
 import { cn } from 'cn';
+
+import ThemeButton from '@/components/button/theme';
+import ImageContainer from '@/components/imageContainer';
 
 export default function RootLayout({ children }: DefaultProps) {
   return (

@@ -23,7 +23,7 @@ type Props = Omit<ImageProps, 'fill' | 'sizes'> & {
   sizes: SizeDefinition;
 };
 
-export function ImageContainer({
+export default function ImageContainer({
   alt,
   children,
   className,

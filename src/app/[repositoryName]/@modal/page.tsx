@@ -1,10 +1,10 @@
-import { ReadmeLink } from './_readmeLink';
 import { fetchReadme } from '@/services/fetchReadme';
 
-import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import remarkEmoji from 'remark-emoji';
+import ReadmeLink from './_readmeLink';
+import ReactMarkdown from 'react-markdown';
 
 type Props = { params: Promise<{ repositoryName: string }> };
 

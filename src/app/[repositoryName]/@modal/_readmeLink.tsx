@@ -2,7 +2,9 @@
 
 import type { AnchorHTMLAttributes, MouseEventHandler } from 'react';
 
-export function ReadmeLink(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
+export default function ReadmeLink(
+  props: AnchorHTMLAttributes<HTMLAnchorElement>,
+) {
   const internalLink = props.href?.startsWith('#');
 
   if (internalLink) return <a onClick={handleInternalLink} {...props} />;
