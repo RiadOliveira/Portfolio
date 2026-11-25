@@ -1,5 +1,5 @@
 import { USER_DATA } from '@/constants/userData';
-import { GITHUB_URLS } from '@/constants/requests';
+import { GITHUB_URLS } from '@/constants/githubURLs';
 import { cachedJSONFetch } from '@/utils/cachedJSONFetch';
 
 export function fetchReadme(repositoryName: string) {

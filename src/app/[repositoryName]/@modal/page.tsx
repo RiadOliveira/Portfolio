@@ -1,4 +1,4 @@
-import { ReadmeLink } from '@/components/client/readmeLink';
+import { ReadmeLink } from './_readmeLink';
 import { fetchReadme } from '@/services/fetchReadme';
 
 import ReactMarkdown from 'react-markdown';
@@ -6,11 +6,9 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import remarkEmoji from 'remark-emoji';
 
-type Props = {
-  params: Promise<{ repositoryName: string }>;
-};
+type Props = { params: Promise<{ repositoryName: string }> };
 
-export default async function RepositoryModal({ params }: Props) {
+export default async function Page({ params }: Props) {
   const { repositoryName } = await params;
   const readmeContent = await fetchReadme(repositoryName);
 

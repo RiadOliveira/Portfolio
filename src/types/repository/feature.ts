@@ -1,4 +1,34 @@
-import type { FeatureIcon } from './featureIcon';
+export type FeatureIcon =
+  | 'boxOpen'
+  | 'building'
+  | 'users'
+  | 'qrcode'
+  | 'database'
+  | 'fileInvoiceDollar'
+  | 'chartBar'
+  | 'userShield'
+  | 'briefcase'
+  | 'chartLine'
+  | 'userCircle'
+  | 'searchLocation'
+  | 'fileExport'
+  | 'clock'
+  | 'image'
+  | 'cloud'
+  | 'calculator'
+  | 'desktop'
+  | 'keyboard'
+  | 'adjust'
+  | 'searchPlus'
+  | 'eyeSlash'
+  | 'eye'
+  | 'balanceScale'
+  | 'tachometerAlt'
+  | 'terminal'
+  | 'folderTree'
+  | 'codeBranch'
+  | 'syncAlt'
+  | 'projectDiagram';
 
 export type Feature = {
   name: string;

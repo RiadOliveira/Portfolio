@@ -88,13 +88,13 @@ $ npm run dev
 
 Projects are displayed when they contain a ```.portfolio/displayData.json``` file with the following structure:
 ```ts
-type DisplayData = {
+type RepositoryShowcase = {
   title: string;               // Display name
-  extendedDescription: string; // Detailed project description
   imageId: string;             // GitHub image identifier
-  highlightColor: HighlightColor; // Tailwind color for UI accents
-  technologies: Technology[];  // Technologies used
+  extendedDescription: string; // Detailed project description
   features: Feature[];         // Key features (max 3)
+  technologies: Technology[];  // Technologies used
+  highlightColor: HighlightColor; // Tailwind color for UI accents
   attachmentsUrl?: boolean;    // Image URL format flag
 }
 ```

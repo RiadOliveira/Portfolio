@@ -1,4 +1,9 @@
-import { MODAL_CLASSES, MODAL_ID } from '@/constants/modal';
+import { MODAL_ID } from '@/constants/modalId';
+
+const MODAL_CLASSES = {
+  showing: 'showing',
+  closing: 'closing',
+} as const;
 
 export function addModalListeners() {
   window.addEventListener('popstate', handlePopState);

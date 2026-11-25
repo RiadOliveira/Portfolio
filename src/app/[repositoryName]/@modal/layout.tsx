@@ -1,36 +1,29 @@
 import type { DefaultProps } from '@/types/defaultProps';
-import type { RepositoryPageParams } from '@/types/repository/repositoryPageParams';
+import type { RepositoryPageParams } from '@/types/repository/pageParams';
 
-import { MODAL_ID } from '@/constants/modal';
+import { MODAL_ID } from '@/constants/modalId';
 import { COLORS_DATA } from '@/constants/colorsData';
 import { IoMdClose } from 'react-icons/io';
-import { ThemeButton } from '@/components/client/themeButton';
-import { ToggleModalButton } from '@/components/client/toggleModalButton';
+import { ThemeButton } from '@/components/button/theme';
+import { ToggleModalButton } from '@/components/button/toggleModal';
 import { cn } from 'cn';
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 
 type Props = DefaultProps & RepositoryPageParams;
 
-export default async function RepositoryModalLayout({
-  params,
-  children,
-}: Props) {
+export default async function Layout({ params, children }: Props) {
   const repository = await findRepositoryFromParams({ params });
   if (!repository) return redirect('/');
 
-  const {
-    displayData: { highlightColor },
-  } = repository;
-  const { modal } = COLORS_DATA[highlightColor];
-
+  const { modal } = COLORS_DATA[repository.showcase.highlightColor];
   return (
     <dialog id={MODAL_ID} className="animated-modal">
       <div className="bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-175 flex-col overflow-y-hidden rounded-xl shadow">
         <header
           className={cn(
-            modal,
             'text-light z-10 flex max-h-12.5 min-h-12.5 w-full items-center justify-between rounded-t-lg bg-linear-to-b px-3.5 shadow-md',
+            modal,
           )}
         >
           <ToggleModalButton

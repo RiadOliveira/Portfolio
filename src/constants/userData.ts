@@ -1,6 +1,6 @@
 import type { SocialData } from '@/types/socialData';
 
-import { GITHUB_URLS } from './requests';
+import { GITHUB_URLS } from './githubURLs';
 import { MdEmail } from 'react-icons/md';
 import { TbFileCv } from 'react-icons/tb';
 import { FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';

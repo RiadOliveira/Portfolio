@@ -1,5 +1,5 @@
 import type { DefaultProps } from '@/types/defaultProps';
-import type { RepositoryPageParams } from '@/types/repository/repositoryPageParams';
+import type { RepositoryPageParams } from '@/types/repository/pageParams';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 import { redirect } from 'next/navigation';
@@ -14,14 +14,11 @@ export async function generateMetadata(
   const repository = await findRepositoryFromParams(params);
   if (!repository) return redirect('/');
 
-  const {
-    description,
-    displayData: { title },
-  } = repository;
-  return { title: `Project | ${title}`, description };
+  const { description, showcase } = repository;
+  return { title: `Project | ${showcase.title}`, description };
 }
 
-export default function RepositoryViewLayout({ children, modal }: Props) {
+export default function Layout({ children, modal }: Props) {
   return (
     <>
       {children}

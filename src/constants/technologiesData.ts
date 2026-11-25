@@ -59,6 +59,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: '%2361DAFB',
     },
   },
+
   NodeJs: {
     Icon: FaNodeJs,
     badgeComponents: {
@@ -67,6 +68,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Spring: {
     Icon: SiSpring,
     badgeComponents: {
@@ -75,6 +77,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   ReactNative: {
     Icon: FaReact,
     badgeComponents: {
@@ -83,6 +86,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: '61DAFB',
     },
   },
+
   Electron: {
     Icon: IoLogoElectron,
     badgeComponents: {
@@ -91,6 +95,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   NextJs: {
     Icon: RiNextjsFill,
     badgeComponents: {
@@ -99,6 +104,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Vite: {
     Icon: SiVite,
     badgeComponents: {
@@ -107,6 +113,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Expo: {
     Icon: SiExpo,
     badgeComponents: {
@@ -115,6 +122,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: '#D04A37',
     },
   },
+
   NestJs: {
     Icon: SiNestjs,
     badgeComponents: {
@@ -123,6 +131,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Express: {
     Icon: SiExpress,
     badgeComponents: {
@@ -131,6 +140,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: '%2361DAFB',
     },
   },
+
   Fastify: {
     Icon: SiFastify,
     badgeComponents: {
@@ -139,6 +149,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   JavaScript: {
     Icon: SiJavascript,
     badgeComponents: {
@@ -147,6 +158,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: '%23F7DF1E',
     },
   },
+
   TypeScript: {
     Icon: SiTypescript,
     badgeComponents: {
@@ -155,6 +167,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Java: {
     Icon: FaJava,
     badgeComponents: {
@@ -163,6 +176,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   C: {
     Icon: SiC,
     badgeComponents: {
@@ -171,6 +185,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   'C++': {
     Icon: SiCplusplus,
     badgeComponents: {
@@ -179,6 +194,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Python: {
     Icon: FaPython,
     badgeComponents: {
@@ -187,6 +203,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Docker: {
     Icon: FaDocker,
     badgeComponents: {
@@ -195,6 +212,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Android: {
     Icon: AiFillAndroid,
     badgeComponents: {
@@ -203,6 +221,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Linux: {
     Icon: FaLinux,
     badgeComponents: {
@@ -211,6 +230,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'black',
     },
   },
+
   Arch: {
     Icon: GrArchlinux,
     badgeComponents: {
@@ -219,6 +239,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'fff',
     },
   },
+
   Ubuntu: {
     Icon: FaUbuntu,
     badgeComponents: {
@@ -227,6 +248,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Swagger: {
     Icon: SiSwagger,
     badgeComponents: {
@@ -235,6 +257,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Jest: {
     Icon: SiJest,
     badgeComponents: {
@@ -243,6 +266,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   AWS: {
     Icon: FaAws,
     badgeComponents: {
@@ -251,6 +275,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Firebase: {
     Icon: IoLogoFirebase,
     badgeComponents: {
@@ -259,6 +284,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   StyledComponents: {
     Icon: SiStyledcomponents,
     badgeComponents: {
@@ -267,6 +293,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   TailwindCSS: {
     Icon: SiTailwindcss,
     badgeComponents: {
@@ -275,6 +302,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   TypeORM: {
     Icon: SiTypeorm,
     badgeComponents: {
@@ -283,6 +311,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Prisma: {
     Icon: SiPrisma,
     badgeComponents: {
@@ -291,6 +320,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   PostgreSQL: {
     Icon: SiPostgresql,
     badgeComponents: {
@@ -299,6 +329,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   MongoDB: {
     Icon: SiMongodb,
     badgeComponents: {
@@ -307,6 +338,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   Redis: {
     Icon: DiRedis,
     badgeComponents: {
@@ -315,6 +347,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   SQLite: {
     Icon: SiSqlite,
     badgeComponents: {
@@ -323,6 +356,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   HTML: {
     Icon: FaHtml5,
     badgeComponents: {
@@ -331,6 +365,7 @@ export const TECHNOLOGIES_DATA: TechnologiesData = {
       logoColor: 'white',
     },
   },
+
   CSS: {
     Icon: FaCss3Alt,
     badgeComponents: {

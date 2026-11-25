@@ -1,5 +1,5 @@
 import type { IconType } from 'react-icons';
-import type { FeatureIcon } from '@/types/repository/featureIcon';
+import type { FeatureIcon } from '@/types/repository/feature';
 
 import {
   FaBoxOpen,
