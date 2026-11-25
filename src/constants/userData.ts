@@ -1,8 +1,9 @@
-import { FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import type { SocialData } from '@/types/user/SocialData';
+
+import { GITHUB_URLS } from './requests';
 import { MdEmail } from 'react-icons/md';
 import { TbFileCv } from 'react-icons/tb';
-import { SocialData } from '@/types/user/SocialData';
-import { GITHUB_URLS } from './requests';
+import { FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 
 type UserData = {
   id: number;

@@ -1,6 +1,7 @@
-import { Metadata, ResolvingMetadata } from 'next';
-import { DefaultProps } from '@/types/DefaultProps';
-import { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import type { DefaultProps } from '@/types/DefaultProps';
+import type { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import type { Metadata, ResolvingMetadata } from 'next';
+
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 

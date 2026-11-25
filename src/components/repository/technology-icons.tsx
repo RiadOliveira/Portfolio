@@ -1,5 +1,6 @@
+import type { Technology } from '@/types/technology/Technology';
+
 import { TECHNOLOGIES_DATA } from '@/constants/technologiesData';
-import { Technology } from '@/types/technology/Technology';
 
 const TECHNOLOGY_INDICES = [0, 1] as const;
 

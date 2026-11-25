@@ -1,6 +1,6 @@
 'use client';
 
-import { AnchorHTMLAttributes, MouseEventHandler } from 'react';
+import type { AnchorHTMLAttributes, MouseEventHandler } from 'react';
 
 export function ReadmeLink(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
   const internalLink = props.href?.startsWith('#');

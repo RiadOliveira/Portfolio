@@ -1,6 +1,7 @@
 'use client';
 
-import { DefaultProps } from '@/types/DefaultProps';
+import type { DefaultProps } from '@/types/DefaultProps';
+
 import { useEffect } from 'react';
 import {
   addModalListeners,

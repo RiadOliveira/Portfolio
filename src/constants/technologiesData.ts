@@ -1,6 +1,7 @@
-import { IconType } from 'react-icons';
-import { AiFillAndroid } from 'react-icons/ai';
-import { DiRedis } from 'react-icons/di';
+import type { IconType } from 'react-icons';
+import type { Technology } from '@/types/technology/Technology';
+import type { BadgeComponents } from '@/types/technology/BadgeComponents';
+
 import {
   FaAws,
   FaCss3Alt,
@@ -13,9 +14,6 @@ import {
   FaReact,
   FaUbuntu,
 } from 'react-icons/fa';
-import { GrArchlinux } from 'react-icons/gr';
-import { IoLogoElectron, IoLogoFirebase } from 'react-icons/io5';
-import { RiNextjsFill } from 'react-icons/ri';
 import {
   SiC,
   SiCplusplus,
@@ -37,8 +35,11 @@ import {
   SiTypescript,
   SiVite,
 } from 'react-icons/si';
-import { BadgeComponents } from '@/types/technology/BadgeComponents';
-import { Technology } from '@/types/technology/Technology';
+import { DiRedis } from 'react-icons/di';
+import { GrArchlinux } from 'react-icons/gr';
+import { RiNextjsFill } from 'react-icons/ri';
+import { AiFillAndroid } from 'react-icons/ai';
+import { IoLogoElectron, IoLogoFirebase } from 'react-icons/io5';
 
 type TechnologiesData = {
   [key in Technology]: { Icon: IconType; badgeComponents: BadgeComponents };

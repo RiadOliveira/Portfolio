@@ -1,11 +1,12 @@
-import Link from 'next/link';
+import type { RepositoryData } from '@/types/repository/RepositoryData';
 
 import { COLORS_DATA } from '@/constants/colorsData';
 import { ImageContainer } from '../container/image-container';
-import { RepositoryData } from '@/types/repository/RepositoryData';
 import { TechnologyIcons } from './technology-icons';
 import { cn } from 'cn';
 import { getRepositoryImageUrl } from '@/utils/getRepositoryImageUrl';
+
+import Link from 'next/link';
 
 type Props = { repository: RepositoryData };
 

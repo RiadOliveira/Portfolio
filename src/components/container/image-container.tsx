@@ -1,5 +1,8 @@
+import type { ImageProps } from 'next/image';
+
 import { cn } from 'cn';
-import Image, { ImageProps } from 'next/image';
+
+import Image from 'next/image';
 
 const THRESHHOLDS_VALUES = {
   sm: '40rem',

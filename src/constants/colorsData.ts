@@ -1,5 +1,5 @@
-import { ColorStyles } from '@/types/repository/ColorStyles';
-import { HighlightColor } from '@/types/repository/HighlightColor';
+import type { ColorStyles } from '@/types/repository/ColorStyles';
+import type { HighlightColor } from '@/types/repository/HighlightColor';
 
 type ColorsData = { [key in HighlightColor]: ColorStyles<key> };
 

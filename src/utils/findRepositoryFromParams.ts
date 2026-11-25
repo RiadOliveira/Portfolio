@@ -1,5 +1,6 @@
+import type { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+
 import { getRepositoriesData } from '@/services/getRepositoriesData';
-import { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
 
 export async function findRepositoryFromParams({
   params,

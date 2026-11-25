@@ -1,10 +1,11 @@
-import { generateDisplayDataURL } from '@/utils/generateDisplayDataURL';
-import { fetchRepositories } from './fetchRepositories';
-import { cachedJSONFetch } from '@/utils/cachedJSONFetch';
-import { APIRepository } from '@/types/repository/APIRepository';
+import type { DisplayData } from '@/types/repository/DisplayData';
+import type { APIRepository } from '@/types/repository/APIRepository';
+import type { RepositoryData } from '@/types/repository/RepositoryData';
+
 import { USER_DATA } from '@/constants/userData';
-import { RepositoryData } from '@/types/repository/RepositoryData';
-import { DisplayData } from '@/types/repository/DisplayData';
+import { cachedJSONFetch } from '@/utils/cachedJSONFetch';
+import { fetchRepositories } from './fetchRepositories';
+import { generateDisplayDataURL } from '@/utils/generateDisplayDataURL';
 
 export async function getRepositoriesData() {
   const repositories = await fetchRepositories();

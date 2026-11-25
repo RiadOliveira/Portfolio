@@ -1,14 +1,15 @@
-import { ImageContainer } from '@/components/container/image-container';
-import { MainTitle } from '@/components/main-title';
+import type { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+
 import { COLORS_DATA } from '@/constants/colorsData';
+import { Features } from '@/components/repository/features';
+import { MainTitle } from '@/components/main-title';
+import { ActionButtons } from '@/components/repository/action-buttons';
+import { ImageContainer } from '@/components/container/image-container';
+import { TechnologyBadges } from '@/components/repository/technology-badges';
+import { cn } from 'cn';
 import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 import { getRepositoryImageUrl } from '@/utils/getRepositoryImageUrl';
-import { TechnologyBadges } from '@/components/repository/technology-badges';
-import { Features } from '@/components/repository/features';
-import { ActionButtons } from '@/components/repository/action-buttons';
-import { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
-import { cn } from 'cn';
 
 export default async function RepositoryView(params: RepositoryPageParams) {
   const repository = await findRepositoryFromParams(params);

@@ -1,6 +1,7 @@
+import type { SocialData } from '@/types/user/SocialData';
+
 import { USER_DATA } from '@/constants/userData';
 import { ImageContainer } from './image-container';
-import { SocialData } from '@/types/user/SocialData';
 import { cn } from 'cn';
 
 export function HeaderContainer() {

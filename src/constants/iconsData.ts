@@ -1,3 +1,6 @@
+import type { IconType } from 'react-icons';
+import type { FeatureIcon } from '@/types/repository/FeatureIcon';
+
 import {
   FaBoxOpen,
   FaBriefcase,
@@ -29,9 +32,6 @@ import {
   FaSyncAlt,
   FaCodeBranch,
 } from 'react-icons/fa';
-
-import { IconType } from 'react-icons';
-import { FeatureIcon } from '@/types/repository/FeatureIcon';
 import { FaFolderTree } from 'react-icons/fa6';
 
 type IconsData = { [key in FeatureIcon]: IconType };

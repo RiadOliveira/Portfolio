@@ -1,6 +1,7 @@
-import { GITHUB_URLS } from '@/constants/requests';
+import type { APIRepository } from '@/types/repository/APIRepository';
+
 import { USER_DATA } from '@/constants/userData';
-import { APIRepository } from '@/types/repository/APIRepository';
+import { GITHUB_URLS } from '@/constants/requests';
 import { cachedJSONFetch } from '@/utils/cachedJSONFetch';
 
 export function fetchRepositories() {
