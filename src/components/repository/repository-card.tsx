@@ -7,13 +7,11 @@ import { TechnologyIcons } from './technology-icons';
 import { cn } from 'cn';
 import { getRepositoryImageUrl } from '@/utils/getRepositoryImageUrl';
 
-interface RepositoryCardProps {
-  repository: RepositoryData;
-}
+type Props = { repository: RepositoryData };
 
 export function RepositoryCard({
   repository: { name, description, displayData },
-}: RepositoryCardProps) {
+}: Props) {
   const { title, technologies, highlightColor } = displayData;
   const { card } = COLORS_DATA[highlightColor];
 

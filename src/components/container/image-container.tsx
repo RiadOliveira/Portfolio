@@ -12,15 +12,13 @@ const THRESHHOLDS_VALUES = {
 type Threshhold = keyof typeof THRESHHOLDS_VALUES;
 type SizeDefinition = {
   defaultSize: string;
-  widthThreshholds?: {
-    [key in Threshhold]?: string;
-  };
+  widthThreshholds?: { [key in Threshhold]?: string };
 };
 
-interface ImageContainerProps extends Omit<ImageProps, 'fill' | 'sizes'> {
+type Props = Omit<ImageProps, 'fill' | 'sizes'> & {
   imageStyles?: string;
   sizes: SizeDefinition;
-}
+};
 
 export function ImageContainer({
   alt,
@@ -29,7 +27,7 @@ export function ImageContainer({
   imageStyles,
   sizes: { defaultSize, widthThreshholds = {} },
   ...props
-}: ImageContainerProps) {
+}: Props) {
   const sizesDefinition = Object.entries(widthThreshholds).reduce(
     (prev, [key, value]) =>
       prev + `(max-width: ${THRESHHOLDS_VALUES[key as Threshhold]}) ${value}, `,

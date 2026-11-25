@@ -1,8 +1,8 @@
 import './globals.css';
 
-export { metadata } from '@/constants/metadata';
-
 import type { DefaultProps } from '@/types/DefaultProps';
+
+export { metadata } from '@/constants/metadata';
 import { POPPINS, SPACE_GROTESK } from '@/constants/fonts';
 import { LayoutContainer } from '@/components/container/layout-container';
 

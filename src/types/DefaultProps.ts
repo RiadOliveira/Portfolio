@@ -1,3 +1,1 @@
-export interface DefaultProps {
-  children?: Readonly<React.ReactNode>;
-}
+export type DefaultProps = { children?: Readonly<React.ReactNode> };

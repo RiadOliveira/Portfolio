@@ -3,11 +3,9 @@ import { Technology } from '@/types/technology/Technology';
 
 const TECHNOLOGY_INDICES = [0, 1] as const;
 
-interface TechnologyIconsProps {
-  technologies: Technology[];
-}
+type Props = { technologies: Technology[] };
 
-export function TechnologyIcons({ technologies }: TechnologyIconsProps) {
+export function TechnologyIcons({ technologies }: Props) {
   return (
     <div className="flex gap-2">
       {TECHNOLOGY_INDICES.map((index) => {

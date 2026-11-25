@@ -1,12 +1,10 @@
 import { Metadata, ResolvingMetadata } from 'next';
-import { redirect } from 'next/navigation';
 import { DefaultProps } from '@/types/DefaultProps';
 import { RepositoryPageParams } from '@/types/repository/RepositoryPageParams';
+import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 
-type Props = DefaultProps & {
-  modal: React.ReactNode;
-};
+type Props = DefaultProps & { modal: React.ReactNode };
 
 export async function generateMetadata(
   params: RepositoryPageParams,
