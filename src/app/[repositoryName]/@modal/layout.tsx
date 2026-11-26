@@ -18,12 +18,17 @@ export default async function Layout({ params, children }: Props) {
   const repository = await findRepositoryFromParams({ params });
   if (!repository) return redirect('/');
 
-  const { modal } = COLORS_DATA[repository.showcase.highlightColor];
+  const { modal, scrollbar } = COLORS_DATA[repository.showcase.highlightColor];
   return (
     <dialog id={MODAL_ID} className="animated-modal">
       <ModalListeners />
 
-      <div className="modal-panel bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-175 flex-col overflow-y-hidden rounded-xl shadow">
+      <div
+        className={cn(
+          'modal-panel bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-175 flex-col overflow-y-hidden rounded-xl shadow',
+          scrollbar,
+        )}
+      >
         <header
           className={cn(
             'text-light z-10 flex h-14 w-full shrink-0 items-center justify-between rounded-t-lg bg-linear-to-b px-3.5 shadow-md',
