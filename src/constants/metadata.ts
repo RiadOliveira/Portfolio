@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
+import { USER_DATA } from './userData';
+
 export const metadata: Metadata = {
-  title: 'Portfolio | Ríad Oliveira de Morais',
-  description:
-    'Explore the portfolio of Ríad Oliveira de Morais, a passionate and results-driven Full Stack Developer specializing in modern web and mobile technologies like Next.js, Nest.js, and Expo. Focused on building clean, efficient, and high-performance solutions since 2020.',
+  title: `Portfolio | ${USER_DATA.fullName}`,
+  description: `Portfolio of ${USER_DATA.fullName}, a ${USER_DATA.role} building web and mobile apps with React, Next.js, Expo, Node.js (Fastify, Nest.js) and Java (Spring) since 2020.`,
 } as const;

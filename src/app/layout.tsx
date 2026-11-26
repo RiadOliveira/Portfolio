@@ -10,11 +10,14 @@ import { cn } from 'cn';
 
 import ThemeButton from '@/components/button/theme';
 import ImageContainer from '@/components/imageContainer';
+import type { Technology } from '@/types/repository/technology';
+import { TECHNOLOGIES_DATA } from '@/constants/technologiesData';
+import TechnologyStack from './_technologyStack';
 
 export default function RootLayout({ children }: DefaultProps) {
   return (
-    <html lang="en">
-      <body className={`${POPPINS} ${SPACE_GROTESK} antialiased`}>
+    <html lang="en" className={`${POPPINS} ${SPACE_GROTESK}`}>
+      <body className="antialiased">
         <div className="animated-gradient flex h-dvh p-2.5 max-sm:flex-col sm:items-center sm:justify-center sm:gap-6 md:p-3.5 lg:gap-20 lg:p-6 xl:gap-8 2xl:gap-20">
           <HeaderContainer />
 
@@ -52,16 +55,19 @@ function HeaderContainer() {
       />
 
       <div className="flex flex-col py-1 max-sm:justify-between sm:gap-3 sm:py-2 lg:w-full lg:items-center lg:gap-10 lg:pt-3">
-        <section className="flex flex-col sm:items-center lg:gap-1">
-          <h1 className="m-0 text-lg leading-none font-bold md:text-xl lg:text-[22px]">
+        <section className="flex flex-col sm:items-center sm:text-center lg:gap-1">
+          <h1 className="m-0 text-lg leading-tight font-bold tracking-tight text-balance md:text-xl lg:text-[26px] 2xl:text-3xl">
             {USER_DATA.fullName}
           </h1>
-          <h2 className="font-secondary text-lg font-semibold md:text-xl lg:text-[22px]">
-            Full Stack Developer
-          </h2>
+
+          <p className="text-light/85 text-base font-medium md:text-lg 2xl:text-xl">
+            {USER_DATA.role}
+          </p>
+
+          <TechnologyStack technologies={USER_DATA.mainStack} />
         </section>
 
-        <section className="flex flex-wrap max-sm:justify-between sm:w-full sm:gap-2.5 md:gap-3 lg:justify-center lg:gap-4">
+        <section className="flex gap-1.5 max-sm:justify-between sm:w-full sm:flex-wrap sm:gap-2.5 md:gap-3 lg:justify-center lg:gap-4">
           {USER_DATA.socials.map(SocialLink)}
         </section>
       </div>

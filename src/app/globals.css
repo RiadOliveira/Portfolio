@@ -9,9 +9,11 @@
   --color-secondary: #e71d36;
   --color-light: #f0f7f4;
   --color-dark: #071e22;
+}
 
-  --font-primary: 'Poppins', sans-serif;
-  --font-secondary: 'Space Grotesk', sans-serif;
+@theme inline {
+  --font-primary: var(--font-poppins), sans-serif;
+  --font-secondary: var(--font-space-grotesk), sans-serif;
 }
 
 @layer base {

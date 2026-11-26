@@ -4,17 +4,21 @@ import { GITHUB_URLS } from './githubURLs';
 import { MdEmail } from 'react-icons/md';
 import { TbFileCv } from 'react-icons/tb';
 import { FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import type { Technology } from '@/types/repository/technology';
 
 type UserData = {
   id: number;
+  role: string;
   login: string;
   fullName: string;
   avatar: `${typeof GITHUB_URLS.avatar}/${number}?v=4`;
   socials: SocialData[];
+  mainStack: Technology[];
 };
 
 export const USER_DATA: UserData = {
   id: 69125013,
+  role: 'Full Stack Developer',
   login: 'RiadOliveira',
   fullName: 'Ríad Oliveira de Morais',
   avatar: `${GITHUB_URLS.avatar}/69125013?v=4`,
@@ -55,4 +59,5 @@ export const USER_DATA: UserData = {
         'hover:bg-green-500 hover:border-green-600 active:bg-green-500 active:border-green-600',
     },
   ],
+  mainStack: ['React', 'NextJs', 'Expo', 'NodeJs', 'Java', 'Spring'],
 } as const;

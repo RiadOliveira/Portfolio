@@ -30,7 +30,7 @@ export default async function Page(params: RepositoryPageParams) {
 
       <section className="no-scrollbar scroll-fade relative flex flex-1 flex-col items-center justify-between overflow-y-scroll pt-3 max-sm:px-1.5">
         <div className="flex flex-col items-center sm:max-w-[96%] lg:max-w-[98.5%]">
-          <p className="mb-4.5 text-justify text-base lg:mb-6 lg:text-lg xl:mb-3.5 2xl:mb-7">
+          <p className="mb-4.5 text-base text-pretty lg:mb-6 lg:text-lg xl:mb-3.5 2xl:mb-7">
             {showcase.extendedDescription}
           </p>
 

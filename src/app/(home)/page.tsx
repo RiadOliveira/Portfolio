@@ -68,7 +68,7 @@ function RepositoryCard({ repository, isAboveTheFold }: RepositoryCardProps) {
           <TechnologyIcons technologies={showcase.technologies} />
         </div>
 
-        <p className="px-3 text-justify text-[15px] leading-6">{description}</p>
+        <p className="px-3 text-[15px]/6 text-pretty">{description}</p>
       </Link>
     </div>
   );
