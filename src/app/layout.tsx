@@ -10,8 +10,6 @@ import { cn } from 'cn';
 
 import ThemeButton from '@/components/button/theme';
 import ImageContainer from '@/components/imageContainer';
-import type { Technology } from '@/types/repository/technology';
-import { TECHNOLOGIES_DATA } from '@/constants/technologiesData';
 import TechnologyStack from './_technologyStack';
 
 export default function RootLayout({ children }: DefaultProps) {
