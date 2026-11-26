@@ -35,7 +35,6 @@ function HeaderContainer() {
   return (
     <header className="flex justify-center gap-5 max-sm:pt-3 max-sm:pb-6.5 sm:w-2/5 sm:flex-col sm:items-center sm:gap-3 lg:w-73 2xl:w-88">
       <ImageContainer
-        preload
         src={USER_DATA.avatar}
         alt={USER_DATA.fullName}
         sizes={{
@@ -48,6 +47,7 @@ function HeaderContainer() {
           },
         }}
         loading="eager"
+        fetchPriority="high"
         className="ring-light/25 size-26 overflow-hidden rounded-2xl ring-2 sm:size-30 md:size-34 lg:size-40 2xl:size-48"
       />
 

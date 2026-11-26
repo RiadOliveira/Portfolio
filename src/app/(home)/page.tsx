@@ -11,6 +11,13 @@ import Link from 'next/link';
 import MainTitle from '@/components/mainTitle';
 import ImageContainer from '@/components/imageContainer';
 
+type RepositoryCardProps = {
+  repository: Repository;
+  isAboveTheFold: boolean;
+};
+
+const EAGER_LOADED_CARDS_COUNT = 4;
+
 export default async function Page() {
   const repositories = await getShowcasedRepositories();
 
@@ -19,15 +26,19 @@ export default async function Page() {
       <MainTitle>Portfolio Projects</MainTitle>
 
       <section className="no-scrollbar scroll-fade mt-0.75 flex w-full snap-y flex-wrap gap-6.5 overflow-y-scroll px-2.5 pt-2.5 pb-8 max-2xl:justify-center max-lg:justify-center sm:gap-4.5 sm:px-6 sm:pt-3 lg:mt-2 2xl:gap-6.5">
-        {repositories.map((repository) => (
-          <RepositoryCard key={repository.id} repository={repository} />
+        {repositories.map((repository, index) => (
+          <RepositoryCard
+            key={repository.id}
+            repository={repository}
+            isAboveTheFold={index < EAGER_LOADED_CARDS_COUNT}
+          />
         ))}
       </section>
     </>
   );
 }
 
-function RepositoryCard({ repository }: { repository: Repository }) {
+function RepositoryCard({ repository, isAboveTheFold }: RepositoryCardProps) {
   const { name, description, showcase } = repository;
   const { card } = COLORS_DATA[showcase.highlightColor];
 
@@ -41,13 +52,14 @@ function RepositoryCard({ repository }: { repository: Repository }) {
         )}
       >
         <ImageContainer
-          className="aspect-video w-full overflow-hidden rounded-t-md rounded-br-4xl shadow lg:max-w-96"
           src={URL_GENERATOR.repositoryImage(showcase)}
           alt={name}
           sizes={{
             defaultSize: '24rem',
             widthThreshholds: { lg: '100%' },
           }}
+          loading={isAboveTheFold ? 'eager' : 'lazy'}
+          className="aspect-video w-full overflow-hidden rounded-t-md rounded-br-4xl shadow lg:max-w-96"
         />
 
         <div className="flex items-center justify-between px-3">
