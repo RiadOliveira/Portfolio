@@ -26,7 +26,7 @@ export default async function Layout({ params, children }: Props) {
       <div className="modal-panel bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-175 flex-col overflow-y-hidden rounded-xl shadow">
         <header
           className={cn(
-            'text-light z-10 flex max-h-12.5 min-h-12.5 w-full items-center justify-between rounded-t-lg bg-linear-to-b px-3.5 shadow-md',
+            'text-light z-10 flex h-14 w-full shrink-0 items-center justify-between rounded-t-lg bg-linear-to-b px-3.5 shadow-md',
             modal,
           )}
         >
