@@ -1,7 +1,7 @@
 import type { DefaultProps } from '@/types/defaultProps';
 import type { RepositoryPageParams } from '@/types/repository/pageParams';
 
-import { MODAL_ID } from '@/constants/modalId';
+import { MODAL_ID } from '@/constants/modal';
 import { COLORS_DATA } from '@/constants/colorsData';
 import { IoMdClose } from 'react-icons/io';
 import { cn } from 'cn';
@@ -9,6 +9,7 @@ import { redirect } from 'next/navigation';
 import { findRepositoryFromParams } from '@/utils/findRepositoryFromParams';
 
 import ThemeButton from '@/components/button/theme';
+import ModalListeners from './_listeners';
 import ToggleModalButton from '@/components/button/toggleModal';
 
 type Props = DefaultProps & RepositoryPageParams;
@@ -20,7 +21,9 @@ export default async function Layout({ params, children }: Props) {
   const { modal } = COLORS_DATA[repository.showcase.highlightColor];
   return (
     <dialog id={MODAL_ID} className="animated-modal">
-      <div className="bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-175 flex-col overflow-y-hidden rounded-xl shadow">
+      <ModalListeners />
+
+      <div className="modal-panel bg-light dark:bg-dark text-dark dark:text-light shadow-light/50 dark:shadow-dark/50 relative mx-auto mt-2.5 flex h-[calc(100%-1.25rem)] w-[calc(100%-1.25rem)] max-w-175 flex-col overflow-y-hidden rounded-xl shadow">
         <header
           className={cn(
             'text-light z-10 flex max-h-12.5 min-h-12.5 w-full items-center justify-between rounded-t-lg bg-linear-to-b px-3.5 shadow-md',
@@ -29,7 +32,7 @@ export default async function Layout({ params, children }: Props) {
         >
           <ToggleModalButton
             action="close"
-            className="transition-normal duration-100 hover:scale-120 active:scale-120"
+            className="transition-normal duration-100 hover:scale-110 active:scale-110"
           >
             <IoMdClose className="size-7 sm:size-6.5 md:size-7.5 lg:size-8" />
           </ToggleModalButton>

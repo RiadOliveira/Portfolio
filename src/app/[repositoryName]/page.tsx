@@ -42,10 +42,12 @@ export default async function Page(params: RepositoryPageParams) {
               )}
             >
               <ImageContainer
-                className="aspect-video overflow-hidden rounded-t-md shadow-md"
                 src={URL_GENERATOR.repositoryImage(showcase)}
                 alt={name}
                 sizes={{ defaultSize: '100%' }}
+                loading="eager"
+                fetchPriority="high"
+                className="aspect-video overflow-hidden rounded-t-md shadow-md"
               />
 
               <TechnologyBadges technologies={showcase.technologies} />
@@ -94,7 +96,7 @@ function ActionButtons({ repositoryName }: { repositoryName: string }) {
 
       <div className="flex gap-4 md:gap-5">
         <ToggleModalButton
-          action="show"
+          action="open"
           className="bg-primary/90 flex h-10.5 items-center justify-center gap-2 rounded-md px-3 shadow transition-normal duration-200 hover:scale-106 active:scale-106 xl:h-12 xl:px-4"
         >
           <IoReader className="size-6 xl:size-7" />

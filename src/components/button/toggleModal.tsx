@@ -2,28 +2,15 @@
 
 import type { DefaultProps } from '@/types/defaultProps';
 
-import { useEffect } from 'react';
-import {
-  addModalListeners,
-  closeModal,
-  removeModalListeners,
-  showModal,
-} from '@/utils/modal';
+import { MODAL_ACTIONS } from '@/utils/modal/actions';
 
 type Props = DefaultProps & {
-  action: 'show' | 'close';
+  action: keyof typeof MODAL_ACTIONS;
   className?: string;
 };
 
 export default function ToggleModalButton({ action, ...props }: Props) {
-  useEffect(() => {
-    addModalListeners();
-    return () => removeModalListeners();
-  }, []);
-
-  function handleClick() {
-    (action === 'show' ? showModal : closeModal)();
-  }
-
-  return <button type="button" onClick={handleClick} {...props} />;
+  return (
+    <button {...props} type="button" onClick={() => MODAL_ACTIONS[action]()} />
+  );
 }

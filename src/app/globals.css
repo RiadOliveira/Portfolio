@@ -31,13 +31,12 @@
   }
 
   dialog {
-    @apply bg-dark/30 size-full max-h-none max-w-none;
-
-    backdrop-filter: blur(4px);
+    @apply bg-dark/60 size-full max-h-none max-w-none;
   }
 }
 
 @layer utilities {
+
   .loader {
     @apply relative flex w-full max-w-30 items-center justify-center md:max-w-40;
   }
@@ -79,14 +78,11 @@
   .animated-modal {
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.2s ease;
 
-    &,
-    & div {
-      transition: 0.4s ease;
-    }
-
-    div {
+    &>.modal-panel {
       transform: scale(0.95);
+      transition: transform 0.2s ease;
     }
 
     &[open] {
@@ -96,16 +92,8 @@
     &.showing {
       opacity: 1;
 
-      div {
-        transform: scale(1);
-      }
-    }
-
-    &.closing {
-      opacity: 0;
-
-      div {
-        transform: scale(0.95);
+      &>.modal-panel {
+        transform: none;
       }
     }
   }
@@ -205,6 +193,16 @@
       .badge {
         @apply m-0 rounded-xs;
       }
+    }
+  }
+
+  body:has(dialog[open]) .animated-gradient {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animated-gradient {
+      animation: none;
     }
   }
 }
