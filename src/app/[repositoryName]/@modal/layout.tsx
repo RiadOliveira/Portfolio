@@ -30,14 +30,14 @@ export default async function Layout({ params, children }: Props) {
             modal,
           )}
         >
+          <ThemeButton />
+
           <ToggleModalButton
             action="close"
             className="transition-normal duration-100 hover:scale-110 active:scale-110"
           >
             <IoMdClose className="size-7 sm:size-6.5 md:size-7.5 lg:size-8" />
           </ToggleModalButton>
-
-          <ThemeButton />
         </header>
 
         {children}

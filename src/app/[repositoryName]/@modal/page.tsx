@@ -15,7 +15,7 @@ export default async function Page({ params }: RepositoryPageParams) {
   const readmeContent = await fetchReadme(repositoryName);
 
   return (
-    <div className="prose prose-sm scroll-fade dark:prose-invert text-dark dark:text-light no-scroll-bg min-w-full overflow-y-scroll p-5">
+    <div className="prose prose-sm scroll-fade dark:prose-invert text-dark dark:text-light no-scroll-bg min-w-full overflow-y-scroll p-5 transition-colors duration-300">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkEmoji]}
         rehypePlugins={[rehypeRaw]}
